@@ -6,7 +6,7 @@ module.exports = () => ({
     entry: [
         "@babel/polyfill",
         path.join(__dirname, "client", "style.css"),
-        path.join(__dirname, "client", "src", "start.js"),
+        path.join(__dirname, "client", "src", "start.tsx"),
     ],
     output: {
         path: path.join(__dirname, "client", "public"),
@@ -33,7 +33,8 @@ module.exports = () => ({
             {
                 test: /\.js$/,
                 loader: "babel-loader",
-            }, {
+            },
+            {
                 test: /\.css$/i,
                 use: [
                     MiniCssExtractPlugin.loader,
@@ -50,12 +51,35 @@ module.exports = () => ({
                 use: "ts-loader",
                 exclude: /node_modules/,
             },
+            {
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: "style-loader",
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                ],
+            },
         ],
     },
     resolve: {
-        extensions: [".tsx", ".ts", ".js"],
+        extensions: [".tsx", ".ts", ".js", ".scss"],
     },
-    plugins: [new MiniCssExtractPlugin({
-        filename: 'bundle.css',
-    })],
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "bundle.css",
+        }),
+    ],
 });
