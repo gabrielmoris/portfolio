@@ -1,3 +1,24 @@
-.works{
-    background-color: #F2D8CE;
+.works {
+    background-color: #f2d8ce;
+    display: flex;
+    flex-direction: column;
+
+    .top {
+        width: 100%;
+        color: #085ca6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0.1;
+        h1 {
+            font-size: 50px;
+            text-shadow: 5px 5px 5px rgba(0, 0.5, 0.5, 0.5);
+            padding: 5px 10px 
+        }
+    }
+
+    .bottom {
+        width: 100%;
+        flex: 0.9;
+    }
 }
