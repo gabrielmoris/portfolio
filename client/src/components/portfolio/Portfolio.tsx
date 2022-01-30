@@ -27,9 +27,6 @@ export default function Portfolio() {
         <div className="portfolio" id="portfolio">
             <motion.div
                 className="left"
-                // initial={{ y: 0 }}
-                // animate={{ rotate: 180 }}
-                // transition={{ type: "spring", restSpeed: 0.5 }}
             >
                 <h1>HOLA</h1>
             </motion.div>

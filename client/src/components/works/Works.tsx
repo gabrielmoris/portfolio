@@ -1,29 +1,53 @@
 import { useEffect, useState } from "react";
 import "./works.scss";
+import WorksList from "./worksList/WorksList";
 
 export default function Works() {
-    const [works, setWorks] = useState([])
+    const [works, setWorks]: any = useState([]);
 
-useEffect(()=>{
-let abort = false;
-fetch(`/works`)
-    .then((res) => res.json())
-    .then((work) => {
-        if (!abort) {
-            setWorks(work);
-            console.log("work",work)
-        }
-    });
-return () => {
-    abort = true;
-};
-},[])
+    useEffect(() => {
+        let abort = false;
+        fetch(`/works`)
+            .then((res) => res.json())
+            .then((work) => {
+                if (!abort) {
+                    setWorks(work);
+                }
+            });
+        return () => {
+            abort = true;
+        };
+    }, []);
 
-console.log("works", works);
-  return <div className="works" id="works">
-    <div className="top">
-      <h1>Check my works </h1>
-    </div>
-    <div className="bottom"></div>
-  </div>;
+    console.log(works);
+
+    return (
+        <div className="works" id="works">
+            <div className="top">
+                <h1>Projects Portfolio</h1>
+            </div>
+            <div className="bottom">
+                {works &&
+                    works.map(
+                        (work: {
+                            id: number;
+                            img: string;
+                            name: string;
+                            url: string;
+                            description: string;
+                        }) => {
+                            return (
+                                <WorksList
+                                    id={work.id}
+                                    img={work.img}
+                                    name={work.name}
+                                    url={work.url}
+                                    description={work.description}
+                                />
+                            );
+                        }
+                    )}
+            </div>
+        </div>
+    );
 }

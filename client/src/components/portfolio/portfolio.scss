@@ -44,6 +44,7 @@
         overflow: hidden;
 
         .icon {
+            cursor:pointer;
             color: #f2d8ce;
             font-size: 100px;
             filter: drop-shadow(5px 5px 5px rgba(0, 0.5, 0.5, 0.5));
@@ -52,12 +53,16 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-
+            
             .icon-text {
                 font-size: 15px;
                 color: #f2d8ce;
                 text-shadow: 5px 5px 5px rgba(0, 0.5, 0.5, 0.5);
             }
+        }
+
+        .icon:hover{
+            color:#f2d8ce65
         }
     }
 }
