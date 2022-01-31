@@ -21,33 +21,53 @@ import { Redux } from "./Redux";
 import { JQuery } from "./JQuery";
 import Board from "./Board";
 import Tech from "./Tech";
+import { Bar } from "react-chartjs-2";
+import { Chart, registerables } from "chart.js";
 
 export default function Opinions() {
-    const [techs, setTechs]:[any ,any] = useState([]);
-    const [result, setResult]:[boolean ,any] = useState(false);
-    const[graf, setGraf]:[any,any]=useState()
+    const [techs, setTechs]: [any, any] = useState([]);
+    const [result, setResult]: [boolean, any] = useState(false);
+    const [techGraf, setTechGraf]: [any, any] = useState([]);
 
     const techCheck = (eachTech: string) => {
         setTechs([...techs, eachTech]);
-        console.log("techs", techs);
     };
 
-      useEffect(() => {
-         let abort = false;
-         fetch(`/votes`)
-             .then((res) => res.json())
-             .then((data) => {
-                 if (!abort) {
-                    //  setGraf(data);
-                    console.log("data from graf",data)
-                 }
-             });
-         return () => {
-             abort = true;
-         };
-      }, []);
+    Chart.register(...registerables);
 
-    const vote =(techs:any)=>{
+    const technologies: any = [];
+    const points: any = [];
+
+    useEffect(() => {
+        let abort = false;
+        fetch(`/votes`)
+            .then((res) => res.json())
+            .then((data) => {
+                if (!abort) {
+                    console.log("THIS IS DATA IN FETCH", data);
+                    setTechGraf(data);
+                }
+            });
+        return () => {
+            abort = true;
+        };
+    }, [technologies]);
+
+    console.log("data from graf", techGraf);
+
+    
+
+    techGraf.forEach((element: any) => {
+        if (element.points===0){
+            console.log("nope");
+        }else{
+        technologies.push(element.tech);
+        points.push(element.points);}
+    });
+
+    console.log("TECHS ONLY", technologies, points);
+
+    const vote = (techs: any) => {
         fetch("/techs", {
             method: "POST",
             headers: {
@@ -58,30 +78,55 @@ export default function Opinions() {
             .then((data) => data.json())
             .then((data) => {
                 if (data.success === true) {
-                    setResult(true)
+                    setResult(true);
+                    techs.forEach((element:any) => {
+                        technologies.push(element);
+                        points.push(1);
+                    });
                 } else {
-                    return
+                    return;
                 }
             })
             .catch((err) => {
                 console.log("Err in fetch /techs", err);
             });
-    }
+    };
 
     return (
         <div className="opinions" id="opinions">
             <div className="left">
                 <h1>Your opinion is very important.</h1>
+                {technologies.length && (
+                    <Bar className="bar"
+                        data={{
+                            labels: technologies,
+                            datasets: [
+                                {
+                                    label: "Favourite Technologies",
+                                    data: points,
+                                    backgroundColor: "#085ca670",
+                                },
+                            ],
+                        }}
+                        options={{}}
+                    ></Bar>
+                )}
             </div>
 
             <div className="right-out">
-                <div>
+                <div className="vote-title-btn">
                     <h2>
                         Drag to the right the most interesting technologies of
-                        my stack:
+                        my stack and click vote:
                     </h2>
-                    {result&&<h3 style={{color:"#085ca670"}}>Success!</h3>}
-                    <button onClick={()=>{vote(techs)}}>Vote</button>
+                    {result && <h3 style={{ color: "#085ca670", zIndex:20000}}>Success!</h3>}
+                    <button
+                        onClick={() => {
+                            vote(techs);
+                        }}
+                    >
+                        Vote
+                    </button>
                 </div>
                 <motion.div className="right">
                     <Board id="board-1" className="board">
@@ -93,11 +138,7 @@ export default function Opinions() {
                             <FontAwesomeIcon icon={faCss3}></FontAwesomeIcon>
                             <p className="icon-text">CSS3</p>
                         </Tech>
-                        <Tech
-                            id="javascript"
-                            className="icon"
-                            draggable="true"
-                        >
+                        <Tech id="javascript" className="icon" draggable="true">
                             <FontAwesomeIcon
                                 icon={faJsSquare}
                             ></FontAwesomeIcon>

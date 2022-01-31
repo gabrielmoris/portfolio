@@ -20,8 +20,6 @@ export default function Works() {
         };
     }, []);
 
-    console.log(works);
-
     return (
         <div className="works" id="works">
             <div className="top">

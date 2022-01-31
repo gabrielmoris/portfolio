@@ -6,23 +6,52 @@
     .left {
         flex: 0.6;
         overflow: hidden;
+        display: grid;
+        grid-template-rows: 80px 1fr;
+        grid-template-columns: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+        .bar {
+            padding: 0 50px;
+        }
     }
 
     .right-out {
         flex: 0.4;
         display: grid;
-        grid-template-rows: 12% 1fr;
+        grid-template-rows: 80px 1fr;
         grid-template-columns: auto;
         overflow: hidden;
         text-align: center;
         align-items: center;
         justify-content: center;
+        margin-bottom: 20px;
 
-        h2 {
-            padding: 10px;
+        .vote-title-btn {
+            transform: translatey(20px);
+
+            h2 {
+                margin: 20px;
+            }
+
+            button {
+                color: #f2d8ce;
+                background-color: #085ca6;
+                border: none;
+                border-radius: 20px;
+                font-size: 20px;
+
+                &:hover {
+                    background-color: #0a7aa6;
+                    cursor: pointer;
+                }
+            }
         }
 
         .right {
+            margin-top: 40px;
             display: grid;
             grid-template-rows: auto;
             grid-template-columns: repeat(2, minmax(200px, 200px));
@@ -53,7 +82,7 @@
             }
 
             .board {
-                margin: 40px 1px;
+                margin: 25px 1px;
                 height: 550px;
                 background-color: #085ca650;
                 border: solid 1px #f2d8ce;
