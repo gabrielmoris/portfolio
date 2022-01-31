@@ -9,7 +9,9 @@ export default function Board(props: any) {
         tech.style.display = "block";
 
         e.target.appendChild(tech);
-        console.log(e.target.appendChild(tech));
+        console.log(e.target.appendChild(tech).getAttribute('id'))
+        
+        
     };
 
     const dragOver = (e: any) => {

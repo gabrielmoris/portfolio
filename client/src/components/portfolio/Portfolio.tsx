@@ -26,79 +26,93 @@ import Tech from "./Tech";
 export default function Portfolio() {
     const constraintsRef = useRef(null);
 
-
-
     return (
         <div className="portfolio" id="portfolio">
             <div className="left">
                 <h1>HOLA</h1>
             </div>
 
-            <motion.div className="right" ref={constraintsRef}>
-                <Board id="board-1" className="board">
-                    <Tech id="html5" className="icon" draggable="true">
-                        <FontAwesomeIcon icon={faHtml5}></FontAwesomeIcon>
-                        <p className="icon-text">HTML5</p>
-                    </Tech>
-                    <Tech id="css3" className="icon" draggable="true">
-                        <FontAwesomeIcon icon={faCss3}></FontAwesomeIcon>
-                        <p className="icon-text">CSS3</p>
-                    </Tech>
-                    <Tech id="javastcript" className="icon" draggable="true">
-                        <FontAwesomeIcon icon={faJsSquare}></FontAwesomeIcon>
-                        <p className="icon-text">JavaScript</p>
-                    </Tech>
-                    <Tech id="jquery" className="icon" draggable="true">
-                        <JQuery />
-                        <p className="icon-text">JQuery</p>
-                    </Tech>
-                    <Tech id="git" className="icon" draggable="true">
-                        <FontAwesomeIcon icon={faGit}></FontAwesomeIcon>
-                        <p className="icon-text">Git</p>
-                    </Tech>
-                    <Tech id="github" className="icon" draggable="true">
-                        <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
-                        <p className="icon-text">GitHub</p>
-                    </Tech>
-                    <Tech id="nodejs-express" className="icon" draggable="true">
-                        <FontAwesomeIcon icon={faNodeJs}></FontAwesomeIcon>
-                        <p className="icon-text">NodeJs & Express</p>
-                    </Tech>
-                    <Tech id="aws" className="icon" draggable="true">
-                        <FontAwesomeIcon icon={faAws}></FontAwesomeIcon>
-                        <p className="icon-text">Amazon Web Service</p>
-                    </Tech>
-                    <Tech id="figma" className="icon" draggable="true">
-                        <FontAwesomeIcon icon={faFigma}></FontAwesomeIcon>
-                        <p className="icon-text">Figma</p>
-                    </Tech>
-                    <Tech id="typescript" className="icon" draggable="true">
-                        <Typescript />
-                        <p className="icon-text">Typescript</p>
-                    </Tech>
-                    <Tech id="postgresql" className="icon" draggable="true">
-                        <PostgreSql />
-                        <p className="icon-text">PostgreSQL</p>
-                    </Tech>
-                    <Tech id="vuejs" className="icon" draggable="true">
-                        <FontAwesomeIcon icon={faVuejs}></FontAwesomeIcon>
-                        <p className="icon-text">Vue.js</p>
-                    </Tech>
-                    <Tech id="jest" className="icon" draggable="true">
-                        <Jest />
-                        <p className="icon-text">Jest</p>
-                    </Tech>
-                    <Tech id="react" className="icon" draggable="true">
-                        <FontAwesomeIcon icon={faReact}></FontAwesomeIcon>
-                        <p className="icon-text">React</p>
-                    </Tech>
-                    <Tech id="redux" className="icon" draggable="true">
-                        <Redux />
-                        <p className="icon-text">Redux</p>
-                    </Tech>
-                </Board>
-                <Board id="board2" className="board"></Board>
-            </motion.div>
+            <div className="right-out">
+                <h2>
+                    Drag to the right the most interesting technologies of my
+                    stack:
+                </h2>
+                <motion.div className="right" ref={constraintsRef}>
+                    <Board id="board-1" className="board">
+                        <Tech id="html5" className="icon" draggable="true">
+                            <FontAwesomeIcon icon={faHtml5}></FontAwesomeIcon>
+                            <p className="icon-text">HTML5</p>
+                        </Tech>
+                        <Tech id="css3" className="icon" draggable="true">
+                            <FontAwesomeIcon icon={faCss3}></FontAwesomeIcon>
+                            <p className="icon-text">CSS3</p>
+                        </Tech>
+                        <Tech
+                            id="javastcript"
+                            className="icon"
+                            draggable="true"
+                        >
+                            <FontAwesomeIcon
+                                icon={faJsSquare}
+                            ></FontAwesomeIcon>
+                            <p className="icon-text">JavaScript</p>
+                        </Tech>
+                        <Tech id="jquery" className="icon" draggable="true">
+                            <JQuery />
+                            <p className="icon-text">JQuery</p>
+                        </Tech>
+                        <Tech id="git" className="icon" draggable="true">
+                            <FontAwesomeIcon icon={faGit}></FontAwesomeIcon>
+                            <p className="icon-text">Git</p>
+                        </Tech>
+                        <Tech id="github" className="icon" draggable="true">
+                            <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+                            <p className="icon-text">GitHub</p>
+                        </Tech>
+                        <Tech
+                            id="nodejs-express"
+                            className="icon"
+                            draggable="true"
+                        >
+                            <FontAwesomeIcon icon={faNodeJs}></FontAwesomeIcon>
+                            <p className="icon-text">NodeJs & Express</p>
+                        </Tech>
+                        <Tech id="aws" className="icon" draggable="true">
+                            <FontAwesomeIcon icon={faAws}></FontAwesomeIcon>
+                            <p className="icon-text">Amazon Web Service</p>
+                        </Tech>
+                        <Tech id="figma" className="icon" draggable="true">
+                            <FontAwesomeIcon icon={faFigma}></FontAwesomeIcon>
+                            <p className="icon-text">Figma</p>
+                        </Tech>
+                        <Tech id="typescript" className="icon" draggable="true">
+                            <Typescript />
+                            <p className="icon-text">Typescript</p>
+                        </Tech>
+                        <Tech id="postgresql" className="icon" draggable="true">
+                            <PostgreSql />
+                            <p className="icon-text">PostgreSQL</p>
+                        </Tech>
+                        <Tech id="vuejs" className="icon" draggable="true">
+                            <FontAwesomeIcon icon={faVuejs}></FontAwesomeIcon>
+                            <p className="icon-text">Vue.js</p>
+                        </Tech>
+                        <Tech id="jest" className="icon" draggable="true">
+                            <Jest />
+                            <p className="icon-text">Jest</p>
+                        </Tech>
+                        <Tech id="react" className="icon" draggable="true">
+                            <FontAwesomeIcon icon={faReact}></FontAwesomeIcon>
+                            <p className="icon-text">React</p>
+                        </Tech>
+                        <Tech id="redux" className="icon" draggable="true">
+                            <Redux />
+                            <p className="icon-text">Redux</p>
+                        </Tech>
+                    </Board>
+                    <Board id="board2" className="board"></Board>
+                </motion.div>
+            </div>
         </div>
     );
 }
