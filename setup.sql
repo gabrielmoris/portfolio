@@ -1,4 +1,5 @@
  DROP TABLE IF EXISTS works;
+ DROP TABLE IF EXISTS techs;
 
  CREATE TABLE works (
       id SERIAL PRIMARY KEY,
@@ -7,6 +8,12 @@
       name TEXT,
       description TEXT,
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  );
+
+  CREATE TABLE techs (
+    id SERIAL PRIMARY KEY,
+    tech VARCHAR,
+    points INT
   );
 
   INSERT INTO works(img, url, name, description) VALUES (
@@ -46,4 +53,66 @@ INSERT INTO works(img, url, name, description) VALUES (
     'https://www.thebrasscollective.com/',
     'The Brass Collective Website',
     'Html, CSS, Javascript, Github, Figma.'
+);
+
+INSERT INTO techs(tech,points) VALUES (
+    'HTML5',
+    0
+);
+INSERT INTO techs(tech,points) VALUES (
+    'CSS3',
+    0
+);
+INSERT INTO techs(tech,points) VALUES (
+    'JavaScript',
+    0
+);
+INSERT INTO techs(tech,points) VALUES (
+    'jQuery',
+    0
+);
+INSERT INTO techs(tech,points) VALUES (
+    'Git',
+    0
+);
+INSERT INTO techs(tech,points) VALUES (
+    'GitHub',
+    0
+);
+INSERT INTO techs(tech,points) VALUES (
+    'Node.js & Express',
+    0
+);
+
+INSERT INTO techs(tech,points) VALUES (
+    'AWS',
+    0
+);
+INSERT INTO techs(tech,points) VALUES (
+    'Figma',
+    0
+);
+INSERT INTO techs(tech,points) VALUES (
+    'TypeScript',
+    0
+);
+INSERT INTO techs(tech,points) VALUES (
+    'PostgreSQL',
+    0
+);
+INSERT INTO techs(tech,points) VALUES (
+    'Vue.js',
+    0
+);
+INSERT INTO techs(tech,points) VALUES (
+    'Jest',
+    0
+);
+INSERT INTO techs(tech,points) VALUES (
+    'React',
+    0
+);
+INSERT INTO techs(tech,points) VALUES (
+    'Redux',
+    0
 );

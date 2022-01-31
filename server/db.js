@@ -16,3 +16,15 @@ module.exports.getWorks = () => {
     const q = `SELECT * FROM works`;
     return db.query(q);
 };
+
+module.exports.voteTech=(technology)=>{
+    const q = `UPDATE techs SET points=points + 1 WHERE tech = $1 RETURNING *`;
+    const params=[technology];
+    return db.query(q,params);
+};
+
+module.exports.votesResult=()=>{
+    const q = `SELECT * FROM techs`;
+    return db.query(q);
+};
+

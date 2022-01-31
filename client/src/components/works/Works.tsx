@@ -4,7 +4,7 @@ import WorksList from "./worksList/WorksList";
 import { Down } from "../intro/Down";
 
 export default function Works() {
-    const [works, setWorks]: any = useState([]);
+    const [works, setWorks] = useState([]);
 
     useEffect(() => {
         let abort = false;

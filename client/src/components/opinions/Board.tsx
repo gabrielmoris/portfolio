@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Board(props: any) {
+   
     const drop = (e: any) => {
         e.preventDefault();
         const tech_id = e.dataTransfer.getData("tech_id");
@@ -9,9 +10,10 @@ export default function Board(props: any) {
         tech.style.display = "block";
 
         e.target.appendChild(tech);
-        console.log(e.target.appendChild(tech).getAttribute('id'))
-        
-        
+
+        const eachTech:string= e.target.appendChild(tech).getAttribute("id");
+        props.techCheck(eachTech);
+
     };
 
     const dragOver = (e: any) => {
