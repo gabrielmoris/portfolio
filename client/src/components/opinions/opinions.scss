@@ -16,6 +16,29 @@
         .bar {
             padding: 0 50px;
         }
+
+        .arrow-contact {
+                color: #085ca65b;
+                position: absolute;
+                font-size: 80px;
+                left:50%;
+                z-index: 2;
+                animation: blinking3 2s infinite;
+
+                @keyframes blinking3 {
+                    0% {
+                        bottom: calc(-280vh + 10px);
+                    }
+
+                    20% {
+                        bottom: calc(-280vh);
+                    }
+
+                    100% {
+                        bottom: calc(-280vh + 10px);
+                    }
+                }
+            }
     }
 
     .right-out {

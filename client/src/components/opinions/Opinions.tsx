@@ -12,7 +12,6 @@ import {
     faJsSquare,
     faVuejs,
 } from "@fortawesome/free-brands-svg-icons";
-import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Typescript } from "./Typescript";
 import { PostgreSql } from "./Postgresql";
@@ -23,6 +22,7 @@ import Board from "./Board";
 import Tech from "./Tech";
 import { Bar } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
+import { Down } from "../intro/Down";
 
 export default function Opinions() {
     const [techs, setTechs]: [any, any] = useState([]);
@@ -97,7 +97,8 @@ export default function Opinions() {
             <div className="left">
                 <h1>Your opinion is very important.</h1>
                 {technologies.length && (
-                    <Bar className="bar"
+                    <Bar
+                        className="bar"
                         data={{
                             labels: technologies,
                             datasets: [
@@ -111,6 +112,9 @@ export default function Opinions() {
                         options={{}}
                     ></Bar>
                 )}
+                <a className="arrow-contact" href="#contact">
+                    <Down />
+                </a>
             </div>
 
             <div className="right-out">
@@ -119,7 +123,11 @@ export default function Opinions() {
                         Drag to the right the most interesting technologies of
                         my stack and click vote:
                     </h2>
-                    {result && <h3 style={{ color: "#085ca670", zIndex:20000}}>Success!</h3>}
+                    {result && (
+                        <h3 style={{ color: "#085ca670", zIndex: 20000 }}>
+                            Success!
+                        </h3>
+                    )}
                     <button
                         onClick={() => {
                             vote(techs);
@@ -128,7 +136,7 @@ export default function Opinions() {
                         Vote
                     </button>
                 </div>
-                <motion.div className="right">
+                <div className="right">
                     <Board id="board-1" className="board">
                         <Tech id="html5" className="icon" draggable="true">
                             <FontAwesomeIcon icon={faHtml5}></FontAwesomeIcon>
@@ -202,7 +210,7 @@ export default function Opinions() {
                         className="board"
                         techCheck={techCheck}
                     ></Board>
-                </motion.div>
+                </div>
             </div>
         </div>
     );
