@@ -18,7 +18,6 @@ export default function WorksList({ id, img, name, url, description }: Props) {
             <div className="item" onClick={() => setOpen(!open)} key={id}>
                 <img src={img} alt={name} />
                 <h3>{name}</h3>
-                {}
             </div>
             {open && (
                 <EachWork

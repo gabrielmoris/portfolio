@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./works.scss";
 import WorksList from "./worksList/WorksList";
+import { Down } from "../intro/Down";
 
 export default function Works() {
     const [works, setWorks]: any = useState([]);
@@ -47,6 +48,9 @@ export default function Works() {
                             );
                         }
                     )}
+                <a className="arrow-portfolio" href="#portfolio">
+                    <Down />
+                </a>
             </div>
         </div>
     );

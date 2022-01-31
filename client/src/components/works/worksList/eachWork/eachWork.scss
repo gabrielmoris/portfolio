@@ -1,21 +1,24 @@
 .work {
     position: absolute;
-    top: 102%;
-    width: 1000px;
-    height: 590px;
+    top: 93.5%;
+    width: 100%;
+    height: 100%;
     z-index: 50;
-    border-radius: 20px;
+    // border-radius: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0.5, 0.5, 0.5);
     margin: 50px 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #085ca6;
+    background-color: #085ca650;
+    overflow: hidden;
 
-    .img {
+    img {
+        margin:150px;
         border-radius: 20px;
     }
+
     .data-work {
         align-self: flex-end;
         position: absolute;
@@ -25,7 +28,7 @@
         background-color: #0d000098;
         border-radius: 20px;
         padding: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 5%;
 
         h2{
             padding-bottom: 5px;
@@ -41,11 +44,11 @@
 
         a {
             text-decoration: none;
-            color: #085ca6;
+             color: #0A7AA6;     
         }
 
         a:hover {
-            color: #0A7AA6;
+           color: #085ca6;
         }
     }
 }

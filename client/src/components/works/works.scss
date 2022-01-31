@@ -28,6 +28,27 @@
         flex-flow: column;
         flex-wrap: wrap;
 
-        
+        .arrow-portfolio {
+            color: #085ca65b;
+            position: absolute;
+            // left: 50%;
+            font-size: 80px;
+            z-index: 2;
+            animation: blinking2 2s infinite;
+
+            @keyframes blinking2 {
+                0% {
+                    bottom: calc(-95vh + 10px);
+                }
+
+                20% {
+                    bottom: calc(-95vh);
+                }
+
+                100% {
+                    bottom: calc(-95vh + 10px);
+                }
+            }
+        }
     }
 }
