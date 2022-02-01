@@ -18,27 +18,27 @@
         }
 
         .arrow-contact {
-                color: #085ca65b;
-                position: absolute;
-                font-size: 80px;
-                left:50%;
-                z-index: 2;
-                animation: blinking3 2s infinite;
+            color: #085ca65b;
+            position: absolute;
+            font-size: 80px;
+            left: 50%;
+            z-index: 2;
+            animation: blinking3 2s infinite;
 
-                @keyframes blinking3 {
-                    0% {
-                        bottom: calc(-280vh + 10px);
-                    }
+            @keyframes blinking3 {
+                0% {
+                    bottom: calc(-280vh + 10px);
+                }
 
-                    20% {
-                        bottom: calc(-280vh);
-                    }
+                20% {
+                    bottom: calc(-280vh);
+                }
 
-                    100% {
-                        bottom: calc(-280vh + 10px);
-                    }
+                100% {
+                    bottom: calc(-280vh + 10px);
                 }
             }
+        }
     }
 
     .right-out {
@@ -65,10 +65,10 @@
                 border: none;
                 border-radius: 20px;
                 font-size: 20px;
-
+                cursor: pointer;
                 &:hover {
                     background-color: #0a7aa6;
-                    cursor: pointer;
+                    box-shadow: 5px 5px 5px rgba(0, 0.5, 0.5, 0.5) inset;
                 }
             }
         }

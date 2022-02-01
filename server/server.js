@@ -3,10 +3,20 @@ const app = express();
 const compression = require("compression");
 const path = require("path");
 const db = require("./db.js");
+const { sendEmail } = require("./ses.js");
+const cookieSession = require("cookie-session");
 
 app.use(compression());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "client", "public")));
+app.use(
+    cookieSession({
+        // secret: secretcookie.cookieSecret,
+        secret: "aB3ErT5F6&5F",
+        maxAge: 1000 * 60 * 60 * 24 * 14,
+        sameSite: true,
+    })
+);
 
 app.get("/works", (req, res) => {
     db.getWorks()
@@ -30,70 +40,105 @@ app.get("/votes", (req, res) => {
 
 app.post("/techs", (req, res) => {
     const data = req.body;
+    if (req.session.voted === true) {
+        res.json({ succes: false });
+    } else {
+        data.forEach((tech) => {
+            if (tech === "html5") {
+                db.voteTech("HTML5").then((result) => {
+                    req.session.voted = true;
+                    res.json({ success: true, result: result });
+                });
+            } else if (tech === "css3") {
+                db.voteTech("CSS3").then((result) => {
+                    req.session.voted = true;
+                    res.json({ success: true, result: result });
+                });
+            } else if (tech === "javascript") {
+                db.voteTech("JavaScript").then((result) => {
+                    req.session.voted = true;
+                    res.json({ success: true, result: result });
+                });
+            } else if (tech === "jquery") {
+                db.voteTech("jQuery").then((result) => {
+                    req.session.voted = true;
+                    res.json({ success: true, result: result });
+                });
+            } else if (tech === "git") {
+                db.voteTech("Git").then((result) => {
+                    req.session.voted = true;
+                    res.json({ success: true, result: result });
+                });
+            } else if (tech === "github") {
+                db.voteTech("GitHub").then((result) => {
+                    req.session.voted = true;
+                    res.json({ success: true, result: result });
+                });
+            } else if (tech === "nodejs-express") {
+                db.voteTech("Node.js & Express").then((result) => {
+                    res.json({ success: true, result: result });
+                    req.session.voted = true;
+                });
+            } else if (tech === "aws") {
+                db.voteTech("AWS").then((result) => {
+                    res.json({ success: true, result: result });
+                    req.session.voted = true;
+                });
+            } else if (tech === "figma") {
+                db.voteTech("Figma").then((result) => {
+                    req.session.voted = true;
+                    res.json({ success: true, result: result });
+                });
+            } else if (tech === "typescript") {
+                db.voteTech("TypeScript").then((result) => {
+                    req.session.voted = true;
+                    res.json({ success: true, result: result });
+                });
+            } else if (tech === "postgresql") {
+                db.voteTech("PostgreSQL").then((result) => {
+                    res.json({ success: true, result: result });
+                    req.session.voted = true;
+                });
+            } else if (tech === "vuejs") {
+                db.voteTech("Vue.js").then((result) => {
+                    req.session.voted = true;
+                    res.json({ success: true, result: result });
+                });
+            } else if (tech === "jest") {
+                db.voteTech("Jest").then((result) => {
+                    req.session.voted = true;
+                    res.json({ success: true, result: result });
+                });
+            } else if (tech === "react") {
+                db.voteTech("React").then((result) => {
+                    req.session.voted = true;
+                    res.json({ success: true, result: result });
+                });
+            } else if (tech === "redux") {
+                db.voteTech("Redux").then((result) => {
+                    req.session.voted = true;
+                    res.json({ success: true, result: result });
+                });
+            }
+        });
+    }
+});
 
-    data.forEach((tech) => {
-        if (tech === "html5") {
-            db.voteTech("HTML5").then((result) => {
-                res.json({ success: true, result: result });
-            });
-        } else if (tech === "css3") {
-            db.voteTech("CSS3").then((result) => {
-                res.json({ success: true, result: result });
-            });
-        } else if (tech === "javascript") {
-            db.voteTech("JavaScript").then((result) => {
-                res.json({ success: true, result: result });
-            });
-        } else if (tech === "jquery") {
-            db.voteTech("jQuery").then((result) => {
-                res.json({ success: true, result: result });
-            });
-        } else if (tech === "git") {
-            db.voteTech("Git").then((result) => {
-                res.json({ success: true, result: result });
-            });
-        } else if (tech === "github") {
-            db.voteTech("GitHub").then((result) => {
-                res.json({ success: true, result: result });
-            });
-        } else if (tech === "nodejs-express") {
-            db.voteTech("Node.js & Express").then((result) => {
-                res.json({ success: true, result: result });
-            });
-        } else if (tech === "aws") {
-            db.voteTech("AWS").then((result) => {
-                res.json({ success: true, result: result });
-            });
-        } else if (tech === "figma") {
-            db.voteTech("Figma").then((result) => {
-                res.json({ success: true, result: result });
-            });
-        } else if (tech === "typescript") {
-            db.voteTech("TypeScript").then((result) => {
-                res.json({ success: true, result: result });
-            });
-        } else if (tech === "postgresql") {
-            db.voteTech("PostgreSQL").then((result) => {
-                res.json({ success: true, result: result });
-            });
-        } else if (tech === "vuejs") {
-            db.voteTech("Vue.js").then((result) => {
-                res.json({ success: true, result: result });
-            });
-        } else if (tech === "jest") {
-            db.voteTech("Jest").then((result) => {
-                res.json({ success: true, result: result });
-            });
-        } else if (tech === "react") {
-            db.voteTech("React").then((result) => {
-                res.json({ success: true, result: result });
-            });
-        } else if (tech === "redux") {
-            db.voteTech("Redux").then((result) => {
-                res.json({ success: true, result: result });
-            });
-        }
-    });
+app.post("/sendmail", (req, res) => {
+    const data = req.body;
+    console.log(data.message, data.email);
+    if (data.email) {
+        sendEmail(
+            "gabrieltrompeta@gmail.com",
+            "I had an email from my portfolio",
+            `${data.email} sends: 
+                ${data.message}`
+        ).then(() => {
+            res.json({ success: true });
+        });
+    }else{
+        res.json({success:false});
+    }
 });
 
 app.get("*", function (req, res) {

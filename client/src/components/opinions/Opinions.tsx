@@ -27,6 +27,7 @@ import { Down } from "../intro/Down";
 export default function Opinions() {
     const [techs, setTechs]: [any, any] = useState([]);
     const [result, setResult]: [boolean, any] = useState(false);
+    const [voted, setVoted]: [boolean, any] = useState(false);
     const [techGraf, setTechGraf]: [any, any] = useState([]);
 
     const techCheck = (eachTech: string) => {
@@ -44,18 +45,13 @@ export default function Opinions() {
             .then((res) => res.json())
             .then((data) => {
                 if (!abort) {
-                    console.log("THIS IS DATA IN FETCH", data);
                     setTechGraf(data);
                 }
             });
         return () => {
             abort = true;
         };
-    }, [technologies]);
-
-    console.log("data from graf", techGraf);
-
-    
+    }, [result]);    
 
     techGraf.forEach((element: any) => {
         if (element.points===0){
@@ -84,7 +80,7 @@ export default function Opinions() {
                         points.push(1);
                     });
                 } else {
-                    return;
+                    setVoted(true)
                 }
             })
             .catch((err) => {
@@ -126,6 +122,11 @@ export default function Opinions() {
                     {result && (
                         <h3 style={{ color: "#085ca670", zIndex: 20000 }}>
                             Success!
+                        </h3>
+                    )}
+                    {voted && (
+                        <h3 style={{ color: "#085ca690", zIndex: 20000 }}>
+                            you already voted!
                         </h3>
                     )}
                     <button
