@@ -1,22 +1,32 @@
 .portfolio {
     background-color: #085ca6;
     display: flex;
-    color: #f2d8ce;
+    // color: #085ca6;
+    color: black;
 
     .left {
         flex: 0.5;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 100px;
+        padding: 5px;
+        margin: 20px;
+        background-color: #f2d8ce2a;
+        border-radius: 20px;
+
+        h1 {
+            text-align: center;
+        }
 
         .spiced {
+            padding: 20px;
             h2 {
                 padding-bottom: 20px;
             }
         }
 
         .master {
+            padding: 20px;
             h2 {
                 padding-bottom: 20px;
             }
@@ -25,6 +35,65 @@
 
     .right {
         flex: 0.5;
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5px;
+        margin: 20px;
+        background-color: #f2d8ce2a;
+        border-radius: 20px;
+
+        h1 {
+            text-align: center;
+        }
+
+        .explanation {
+            padding: 20px 50px;
+            font-weight: 700;
+        }
+
+        .teamwork {
+            padding: 20px;
+            h2 {
+                padding-bottom: 20px;
+            }
+        }
+
+        .communication {
+            padding: 20px;
+            h2 {
+                padding-bottom: 20px;
+            }
+        }
+
+        .creativity {
+            padding: 20px;
+            h2 {
+                padding-bottom: 20px;
+            }
+        }
+    }
+    .arrow-opinions {
+        color: #f2d8ce85;
+        position: absolute;
+        left: 48.5%;
+        font-size: 80px;
+        z-index: 2;
+        animation: blinking4 2s infinite;
+        font-size: 50px;
+
+        @keyframes blinking4 {
+            0% {
+                bottom: calc(-185vh + 10px);
+            }
+
+            20% {
+                bottom: calc(-185vh);
+            }
+
+            100% {
+                bottom: calc(-185vh + 10px);
+            }
+        }
     }
 }
