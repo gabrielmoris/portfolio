@@ -1,3 +1,30 @@
-.portfolio{
-     background-color: #085ca6;
+.portfolio {
+    background-color: #085ca6;
+    display: flex;
+    color: #f2d8ce;
+
+    .left {
+        flex: 0.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 100px;
+
+        .spiced {
+            h2 {
+                padding-bottom: 20px;
+            }
+        }
+
+        .master {
+            h2 {
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+    .right {
+        flex: 0.5;
+        position: relative;
+    }
 }
