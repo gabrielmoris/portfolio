@@ -126,7 +126,7 @@ app.post("/techs", (req, res) => {
 
 app.post("/sendmail", (req, res) => {
     const data = req.body;
-    console.log(data.message, data.email);
+
     if (data.email) {
         sendEmail(
             "gabrieltrompeta@gmail.com",
