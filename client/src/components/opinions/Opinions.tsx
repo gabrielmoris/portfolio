@@ -23,12 +23,16 @@ import Tech from "./Tech";
 import { Bar } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
 import { Down } from "../intro/Down";
+import { useInView } from "react-intersection-observer";
 
 export default function Opinions() {
     const [techs, setTechs]: [any, any] = useState([]);
     const [result, setResult]: [boolean, any] = useState(false);
     const [voted, setVoted]: [boolean, any] = useState(false);
     const [techGraf, setTechGraf]: [any, any] = useState([]);
+     const { ref, inView } = useInView({
+         threshold: 0.2,
+     });
 
     const techCheck = (eachTech: string) => {
         setTechs([...techs, eachTech]);
@@ -41,6 +45,7 @@ export default function Opinions() {
 
     useEffect(() => {
         let abort = false;
+        setTechGraf([])
         fetch(`/votes`)
             .then((res) => res.json())
             .then((data) => {
@@ -51,7 +56,7 @@ export default function Opinions() {
         return () => {
             abort = true;
         };
-    }, [result]);    
+    }, [result,inView]);    
 
     techGraf.forEach((element: any) => {
         if (element.points===0){
@@ -90,9 +95,9 @@ export default function Opinions() {
 
     return (
         <div className="opinions" id="opinions">
-            <div className="left">
+            <div className="left" ref={ref}>
                 <h1>Your opinion is very important.</h1>
-                {technologies.length && (
+                {technologies.length>1 && (
                     <Bar
                         className="bar"
                         data={{
@@ -216,143 +221,3 @@ export default function Opinions() {
         </div>
     );
 }
-
-//put inside of right
-//  <motion.div
-//                     drag
-//                     dragConstraints={constraintsRef}
-//                     className="icon"
-//                     id="html5"
-//                     onClick={() => {
-//                         setId("html5");
-//                     }}
-//                 >
-//                     <FontAwesomeIcon icon={faHtml5}></FontAwesomeIcon>
-//                     <p className="icon-text">HTML5</p>
-//                 </motion.div>
-//                 <motion.div
-//                     drag
-//                     dragConstraints={constraintsRef}
-//                     className="icon"
-//                     id="css3"
-//                 >
-//                     <FontAwesomeIcon icon={faCss3}></FontAwesomeIcon>
-//                     <p className="icon-text">CSS3</p>
-//                 </motion.div>
-//                 <motion.div
-//                     drag
-//                     dragConstraints={constraintsRef}
-//                     className="icon"
-//                     id="javascript"
-//                 >
-//                     <FontAwesomeIcon icon={faJsSquare}></FontAwesomeIcon>
-//                     <p className="icon-text">JavaScript</p>
-//                 </motion.div>
-//                 <motion.div
-//                     drag
-//                     dragConstraints={constraintsRef}
-//                     className="icon"
-//                     id="jquery"
-//                 >
-//                     <JQuery />
-//                     <p className="icon-text">JQuery</p>
-//                 </motion.div>
-//                 <motion.div
-//                     drag
-//                     dragConstraints={constraintsRef}
-//                     className="icon"
-//                     id="git"
-//                 >
-//                     <FontAwesomeIcon icon={faGit}></FontAwesomeIcon>
-//                     <p className="icon-text">Git</p>
-//                 </motion.div>
-//                 <motion.div
-//                     drag
-//                     dragConstraints={constraintsRef}
-//                     className="icon"
-//                     id="github"
-//                 >
-//                     <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
-//                     <p className="icon-text">GitHub</p>
-//                 </motion.div>
-//                 <motion.div
-//                     drag
-//                     dragConstraints={constraintsRef}
-//                     className="icon"
-//                     id="nodejs-express"
-//                 >
-//                     <FontAwesomeIcon icon={faNodeJs}></FontAwesomeIcon>
-//                     <p className="icon-text">NodeJs & Express</p>
-//                 </motion.div>
-//                 <motion.div
-//                     drag
-//                     dragConstraints={constraintsRef}
-//                     className="icon"
-//                     id="aws"
-//                 >
-//                     <FontAwesomeIcon icon={faAws}></FontAwesomeIcon>
-//                     <p className="icon-text">Amazon Web Service</p>
-//                 </motion.div>
-//                 <motion.div
-//                     drag
-//                     dragConstraints={constraintsRef}
-//                     className="icon"
-//                     id="figma"
-//                 >
-//                     <FontAwesomeIcon icon={faFigma}></FontAwesomeIcon>
-//                     <p className="icon-text">Figma</p>
-//                 </motion.div>
-//                 <motion.div
-//                     drag
-//                     dragConstraints={constraintsRef}
-//                     className="icon"
-//                     id="typescript"
-//                 >
-//                     <Typescript />
-//                     <p className="icon-text">Typescript</p>
-//                 </motion.div>
-//                 <motion.div
-//                     drag
-//                     dragConstraints={constraintsRef}
-//                     className="icon"
-//                     id="postgresql"
-//                 >
-//                     <PostgreSql />
-//                     <p className="icon-text">PostgreSQL</p>
-//                 </motion.div>
-//                 <motion.div
-//                     drag
-//                     dragConstraints={constraintsRef}
-//                     className="icon"
-//                     id="vuejs"
-//                 >
-//                     <FontAwesomeIcon icon={faVuejs}></FontAwesomeIcon>
-//                     <p className="icon-text">Vue.js</p>
-//                 </motion.div>
-//                 <motion.div
-//                     drag
-//                     dragConstraints={constraintsRef}
-//                     className="icon"
-//                     id="jest"
-//                 >
-//                     <Jest />
-//                     <p className="icon-text">Jest</p>
-//                 </motion.div>
-//                 <motion.div
-//                     drag
-//                     dragConstraints={constraintsRef}
-//                     className="icon"
-//                     id="react"
-//                 >
-//                     <FontAwesomeIcon icon={faReact}></FontAwesomeIcon>
-//                     <p className="icon-text">React</p>
-//                 </motion.div>
-//                 <motion.div
-//                     drag
-//                     dragConstraints={constraintsRef}
-//                     className="icon"
-//                     id="redux"
-//                 >
-//                     <Redux />
-//                     <p className="icon-text">Redux</p>
-//                 </motion.div>
