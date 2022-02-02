@@ -66,8 +66,6 @@ export default function Opinions() {
         points.push(element.points);}
     });
 
-    console.log("TECHS ONLY", technologies, points);
-
     const vote = (techs: any) => {
         fetch("/techs", {
             method: "POST",

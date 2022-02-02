@@ -10,7 +10,7 @@ const db = spicedPg(
         `postgres:${username}:${password}@localhost:5432/${database}`
 );
 
-console.log(`[db] connecting to the database-> ${database}`);
+console.log(`[db] connecting to the database-> thisis${database}database`);
 
 module.exports.getWorks = () => {
     const q = `SELECT * FROM works`;

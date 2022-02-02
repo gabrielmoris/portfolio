@@ -11,12 +11,10 @@ export default function Contact() {
             ...userInput,
             [e.target.name]: e.target.value,
         });
-        console.log(userInput);
     };
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        // console.log("user wants to submit",this.state)
         fetch("/sendmail", {
             method: "POST",
             headers: {
@@ -26,7 +24,6 @@ export default function Contact() {
         })
             .then((data) => data.json())
             .then((data) => {
-                // console.log("response data from /sendmail", data.success);
                 if (data.success === true) {
                     setSubmited(true);
                     setError(false);
