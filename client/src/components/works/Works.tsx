@@ -46,10 +46,10 @@ export default function Works() {
                             );
                         }
                     )}
+            </div>
                 <a className="arrow-portfolio" href="#portfolio">
                     <Down />
                 </a>
-            </div>
         </div>
     );
 }

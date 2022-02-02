@@ -24,7 +24,7 @@
                 transform: translateX(-100);
 
                 @include mobile {
-                    font-size: 35px;
+                    font-size: 25px;
                     margin-left: 15px;
                 }
             }
@@ -44,51 +44,52 @@
 
             @include mobile {
                 align-items: flex-start;
-                width: 500px;
-                height: 500px;
+                width: 350px;
+                height: 350px;
                 background-color: #f2d8ce00;
                 box-shadow: none;
-                margin-left: 30%;
-                 background: -moz-linear-gradient(
-                        top,
-                        rgba(255, 255, 255, 0) 0%,
-                        #f2d8ce91
-                    );
-                    background: -webkit-gradient(
-                        linear,
-                        left top,
-                        left bottom,
-                        color-stop(0%, rgba(255, 255, 255, 0)),
-                        color-stop(#f2d8ce91)
-                    );
-                    background: -webkit-linear-gradient(
-                        top,
-                        rgba(255, 255, 255, 0) 0%,
-                        #f2d8ce91
-                    );
-                    background: -o-linear-gradient(
-                        top,
-                        rgba(255, 255, 255, 0) 0%,
-                        #f2d8ce91
-                    );
-                    background: -ms-linear-gradient(
-                        top,
-                        rgba(255, 255, 255, 0) 0%,
-                        #f2d8ce91
-                    );
-                    background: linear-gradient(
-                        to bottom,
-                        rgba(255, 255, 255, 0) 0%,
-                        #f2d8ce91
-                    );
-                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+                margin-left: 45%;
+                background: -moz-linear-gradient(
+                    top,
+                    rgba(255, 255, 255, 0) 0%,
+                    #f2d8ce91
+                );
+                background: -webkit-gradient(
+                    linear,
+                    left top,
+                    left bottom,
+                    color-stop(0%, rgba(255, 255, 255, 0)),
+                    color-stop(#f2d8ce91)
+                );
+                background: -webkit-linear-gradient(
+                    top,
+                    rgba(255, 255, 255, 0) 0%,
+                    #f2d8ce91
+                );
+                background: -o-linear-gradient(
+                    top,
+                    rgba(255, 255, 255, 0) 0%,
+                    #f2d8ce91
+                );
+                background: -ms-linear-gradient(
+                    top,
+                    rgba(255, 255, 255, 0) 0%,
+                    #f2d8ce91
+                );
+                background: linear-gradient(
+                    to bottom,
+                    rgba(255, 255, 255, 0) 0%,
+                    #f2d8ce91
+                );
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
             }
 
             img {
                 width: 80%;
 
                 @include mobile {
-                    width: 50%;
+                    width: 45%;
+                    padding-top: 50px;
                 }
             }
         }
@@ -118,7 +119,8 @@
                 overflow: hidden;
 
                 @include mobile {
-                    text-align: center;
+                    // text-align: center;
+                    padding-left: 35px;
                 }
 
                 h2 {
@@ -148,6 +150,11 @@
                 left: 40%;
                 font-size: 80px;
                 animation: blinking 2s infinite;
+
+                @include mobile {
+                    font-size: 40px;
+                    left: 45%;
+                }
 
                 @keyframes blinking {
                     0% {

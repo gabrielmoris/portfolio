@@ -112,9 +112,6 @@ export default function Opinions() {
                         options={{}}
                     ></Bar>
                 )}
-                <a className="arrow-contact" href="#contact">
-                    <Down />
-                </a>
             </div>
 
             <div className="right-out">
@@ -218,6 +215,9 @@ export default function Opinions() {
                 </div>
             </div>
             <h1 className="phone">Use your computer to vote!</h1>
+            <a className="arrow-contact" href="#contact">
+                <Down />
+            </a>
         </div>
     );
 }

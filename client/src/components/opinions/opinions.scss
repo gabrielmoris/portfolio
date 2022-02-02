@@ -40,32 +40,6 @@
             }
         }
 
-        .arrow-contact {
-            color: #085ca65b;
-            position: absolute;
-            font-size: 80px;
-            left: 50%;
-            z-index: 2;
-            animation: blinking3 2s infinite;
-
-             @include mobile {
-                    left: 40%
-                }
-
-            @keyframes blinking3 {
-                0% {
-                    bottom: calc(-280vh + 10px);
-                }
-
-                20% {
-                    bottom: calc(-280vh);
-                }
-
-                100% {
-                    bottom: calc(-280vh + 10px);
-                }
-            }
-        }
     }
 
     .right-out {
@@ -182,7 +156,37 @@
             display: flex;
             flex: 0.2;
             text-align: center;
-             color: #085ca644;
+            color: #085ca644;
+            margin-bottom: 50px;
+        }
+    }
+
+    .arrow-contact {
+        color: #085ca65b;
+        position: absolute;
+        font-size: 80px;
+        left: 50%;
+        z-index: 2;
+        animation: blinking8 2s infinite;
+
+        
+        @keyframes blinking8 {
+            0% {
+                bottom: calc(-280vh + 10px);
+            }
+            
+            20% {
+                bottom: calc(-280vh);
+            }
+            
+            100% {
+                bottom: calc(-280vh + 10px);
+            }
+        }
+        @include mobile {
+            font-size: 40px;
+            transform: translateY(-79px);
+            left:45%;
         }
     }
 }

@@ -36,31 +36,40 @@
         flex-flow: column;
         flex-wrap: wrap;
 
-         @include mobile {
-          
+        @include mobile {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 180px 180px 180px;
+            overflow: hidden;
+            justify-content: end;
+        }
+    }
+    .arrow-portfolio {
+        color: #085ca65b;
+        position: absolute;
+        font-size: 80px;
+        z-index: 2;
+        animation: blinking2 2s infinite;
+        left: 45%;
+
+        @keyframes blinking2 {
+            0% {
+                bottom: calc(-93vh + 10px);
             }
 
-        .arrow-portfolio {
-            color: #085ca65b;
-            position: absolute;
-            // left: 50%;
-            font-size: 80px;
-            z-index: 2;
-            animation: blinking2 2s infinite;
-
-            @keyframes blinking2 {
-                0% {
-                    bottom: calc(-95vh + 10px);
-                }
-
-                20% {
-                    bottom: calc(-95vh);
-                }
-
-                100% {
-                    bottom: calc(-95vh + 10px);
-                }
+            20% {
+                bottom: calc(-93vh);
             }
+
+            100% {
+                bottom: calc(-93vh + 10px);
+            }
+        }
+
+        @include mobile {
+            font-size: 40px;
+            left: 45%;
         }
     }
 }

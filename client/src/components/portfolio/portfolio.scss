@@ -21,7 +21,7 @@
 
         @include mobile {
             padding: 2px;
-            margin: 5px;
+            margin:2px;
             justify-content: start;
         }
 
@@ -29,8 +29,8 @@
             text-align: center;
 
             @include mobile {
-                font-size: 25px;
-                padding-bottom: 10px;
+                font-size: 15px;
+                padding-bottom: 5px;
             }
         }
 
@@ -39,7 +39,7 @@
 
             @include mobile {
                 padding: 0 5px;
-                font-size: 15px;
+                font-size: 10px;
             }
 
             h2 {
@@ -50,7 +50,7 @@
                     font-weight: 700;
                     padding-bottom: 2px;
                     padding-left: 5px;
-                    font-size: 15px;
+                    font-size: 10px;
                 }
             }
 
@@ -60,7 +60,7 @@
                 @include mobile {
                     font-weight: 500;
                     padding-left: 5px;
-                    font-size: 15px;
+                    font-size: 10px;
                 }
             }
         }
@@ -81,7 +81,7 @@
                     font-weight: 700;
                     padding-bottom: 2px;
                     padding-left: 5px;
-                    font-size: 15px;
+                    font-size: 10px;
                 }
             }
 
@@ -91,7 +91,7 @@
                 @include mobile {
                     font-weight: 500;
                     padding-left: 5px;
-                    font-size: 15px;
+                    font-size: 10px;
                 }
             }
         }
@@ -109,7 +109,7 @@
 
         @include mobile {
             padding: 2px;
-            margin: 5px;
+            margin: 2px;
             justify-content: start;
         }
 
@@ -117,8 +117,8 @@
             text-align: center;
 
             @include mobile {
-                font-size: 20px;
-                padding-bottom: 10px;
+                font-size: 15px;
+                padding-bottom: 5px;
             }
         }
 
@@ -128,8 +128,8 @@
 
             @include mobile {
                 padding: 2px 20px;
-                font-size: 15px;
-                padding-bottom: 20px;
+                font-size: 10px;
+                padding-bottom: 10px;
             }
 
             h2 {
@@ -140,16 +140,16 @@
                     font-weight: 700;
                     padding-bottom: 2px;
                     padding-left: 5px;
-                    font-size: 15px;
+                    font-size: 10px;
                 }
             }
             h3 {
                 font-weight: 400;
 
-                @include mobile {
+               @include mobile {
                     font-weight: 500;
                     padding-left: 5px;
-                    font-size: 15px;
+                    font-size: 10px;
                 }
             }
         }
@@ -158,18 +158,18 @@
             padding: 20px;
 
             @include mobile {
-                padding: 2px 20px;
+                padding: 2px 10px;
             }
 
             h2 {
                 padding-bottom: 20px;
                 font-weight: 600;
 
-                @include mobile {
+               @include mobile {
                     font-weight: 700;
                     padding-bottom: 2px;
                     padding-left: 5px;
-                    font-size: 15px;
+                    font-size: 10px;
                 }
             }
             h3 {
@@ -178,7 +178,7 @@
                 @include mobile {
                     font-weight: 500;
                     padding-left: 5px;
-                    font-size: 15px;
+                    font-size: 10px;
                 }
             }
         }
@@ -186,8 +186,8 @@
         .communication {
             padding: 20px;
 
-            @include mobile {
-                padding: 2px 20px;
+           @include mobile {
+                padding: 2px 10px;
             }
 
             h2 {
@@ -198,16 +198,16 @@
                     font-weight: 700;
                     padding-bottom: 2px;
                     padding-left: 5px;
-                    font-size: 15px;
+                    font-size: 10px;
                 }
             }
             h3 {
                 font-weight: 400;
 
-                @include mobile {
+              @include mobile {
                     font-weight: 500;
                     padding-left: 5px;
-                    font-size: 15px;
+                    font-size: 10px;
                 }
             }
         }
@@ -216,27 +216,27 @@
             padding: 20px;
 
             @include mobile {
-                padding: 2px 20px;
+                padding: 2px 10px;
             }
 
             h2 {
                 padding-bottom: 20px;
                 font-weight: 600;
 
-                @include mobile {
+               @include mobile {
                     font-weight: 700;
                     padding-bottom: 2px;
                     padding-left: 5px;
-                    font-size: 15px;
+                    font-size: 10px;
                 }
             }
             h3 {
                 font-weight: 400;
 
-                @include mobile {
+              @include mobile {
                     font-weight: 500;
                     padding-left: 5px;
-                    font-size: 15px;
+                    font-size: 10px;
                 }
             }
         }
@@ -250,18 +250,25 @@
         z-index: 2;
         animation: blinking4 2s infinite;
         font-size: 50px;
+        transform: translateY(50px);
+
+        @include mobile {
+            font-size: 40px;
+            left: 45%;
+            transform: translateY(0);
+        }
 
         @keyframes blinking4 {
             0% {
-                bottom: calc(-185vh + 10px);
+                bottom: calc(-180vh + 10px);
             }
 
             20% {
-                bottom: calc(-185vh);
+                bottom: calc(-180vh);
             }
 
             100% {
-                bottom: calc(-185vh + 10px);
+                bottom: calc(-180vh + 10px);
             }
         }
     }
