@@ -30,9 +30,9 @@ export default function Opinions() {
     const [result, setResult]: [boolean, any] = useState(false);
     const [voted, setVoted]: [boolean, any] = useState(false);
     const [techGraf, setTechGraf]: [any, any] = useState([]);
-     const { ref, inView } = useInView({
-         threshold: 0.2,
-     });
+    const { ref, inView } = useInView({
+        threshold: 0.2,
+    });
 
     const techCheck = (eachTech: string) => {
         setTechs([...techs, eachTech]);
@@ -45,7 +45,7 @@ export default function Opinions() {
 
     useEffect(() => {
         let abort = false;
-        setTechGraf([])
+        setTechGraf([]);
         fetch(`/votes`)
             .then((res) => res.json())
             .then((data) => {
@@ -56,14 +56,15 @@ export default function Opinions() {
         return () => {
             abort = true;
         };
-    }, [result,inView]);    
+    }, [result, inView]);
 
     techGraf.forEach((element: any) => {
-        if (element.points===0){
+        if (element.points === 0) {
             console.log("nope");
-        }else{
-        technologies.push(element.tech);
-        points.push(element.points);}
+        } else {
+            technologies.push(element.tech);
+            points.push(element.points);
+        }
     });
 
     const vote = (techs: any) => {
@@ -78,12 +79,12 @@ export default function Opinions() {
             .then((data) => {
                 if (data.success === true) {
                     setResult(true);
-                    techs.forEach((element:any) => {
+                    techs.forEach((element: any) => {
                         technologies.push(element);
                         points.push(1);
                     });
                 } else {
-                    setVoted(true)
+                    setVoted(true);
                 }
             })
             .catch((err) => {
@@ -95,7 +96,7 @@ export default function Opinions() {
         <div className="opinions" id="opinions">
             <div className="left" ref={ref}>
                 <h1>Your opinion is very important.</h1>
-                {technologies.length>1 && (
+                {technologies.length > 1 && (
                     <Bar
                         className="bar"
                         data={{
@@ -216,6 +217,7 @@ export default function Opinions() {
                     ></Board>
                 </div>
             </div>
+            <h1 className="phone">Use your computer to vote!</h1>
         </div>
     );
 }
