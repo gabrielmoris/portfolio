@@ -1,15 +1,28 @@
+@import "../../global.scss";
+
 .contact {
     background-color: #085ca6;
     display: flex;
     color: #f2d8ce;
+    @include mobile {
+        flex-direction: column;
+    }
 
     .left {
         flex: 1;
         overflow: hidden;
 
+        @include mobile {
+            flex: 0.3;
+        }
+
         img {
             height: 100%;
             filter: opacity(0.7);
+
+            @include mobile {
+                width: 100%;
+            }
         }
     }
 
@@ -20,6 +33,10 @@
         align-items: center;
         justify-content: space-around;
         position: relative;
+
+        @include mobile {
+            flex: 0.7;
+        }
 
         h2 {
             font-size: 30px;

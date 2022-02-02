@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .works {
     background-color: #f2d8ce;
     display: flex;
@@ -13,8 +15,14 @@
         overflow: hidden;
         h1 {
             font-size: 50px;
-            // text-shadow: 5px 5px 5px rgba(0, 0.5, 0.5, 0.5);
             padding: 5px 10px;
+
+            @include mobile {
+                font-size: 30px;
+            }
+        }
+        @include mobile {
+            text-align: center;
         }
     }
 
@@ -27,6 +35,10 @@
         justify-content: center;
         flex-flow: column;
         flex-wrap: wrap;
+
+         @include mobile {
+          
+            }
 
         .arrow-portfolio {
             color: #085ca65b;

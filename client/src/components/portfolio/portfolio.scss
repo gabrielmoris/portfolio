@@ -1,8 +1,13 @@
+@import "../../global.scss";
+
 .portfolio {
     background-color: #085ca6;
     display: flex;
-    // color: #085ca6;
     color: black;
+
+    @include mobile {
+        flex-direction: column;
+    }
 
     .left {
         flex: 0.5;
@@ -14,21 +19,80 @@
         background-color: #f2d8ce2a;
         border-radius: 20px;
 
+        @include mobile {
+            padding: 2px;
+            margin: 5px;
+            justify-content: start;
+        }
+
         h1 {
             text-align: center;
+
+            @include mobile {
+                font-size: 25px;
+                padding-bottom: 10px;
+            }
         }
 
         .spiced {
             padding: 20px;
+
+            @include mobile {
+                padding: 0 5px;
+                font-size: 15px;
+            }
+
             h2 {
                 padding-bottom: 20px;
+                font-weight: 600;
+
+                @include mobile {
+                    font-weight: 700;
+                    padding-bottom: 2px;
+                    padding-left: 5px;
+                    font-size: 15px;
+                }
+            }
+
+            h3 {
+                font-weight: 400;
+
+                @include mobile {
+                    font-weight: 500;
+                    padding-left: 5px;
+                    font-size: 15px;
+                }
             }
         }
 
         .master {
             padding: 20px;
+
+            @include mobile {
+                padding: 2px;
+                font-size: 15px;
+            }
+
             h2 {
                 padding-bottom: 20px;
+                font-weight: 600;
+
+                @include mobile {
+                    font-weight: 700;
+                    padding-bottom: 2px;
+                    padding-left: 5px;
+                    font-size: 15px;
+                }
+            }
+
+            h3 {
+                font-weight: 400;
+
+                @include mobile {
+                    font-weight: 500;
+                    padding-left: 5px;
+                    font-size: 15px;
+                }
             }
         }
     }
@@ -43,36 +107,141 @@
         background-color: #f2d8ce2a;
         border-radius: 20px;
 
+        @include mobile {
+            padding: 2px;
+            margin: 5px;
+            justify-content: start;
+        }
+
         h1 {
             text-align: center;
+
+            @include mobile {
+                font-size: 20px;
+                padding-bottom: 10px;
+            }
         }
 
         .explanation {
             padding: 20px 50px;
             font-weight: 700;
+
+            @include mobile {
+                padding: 2px 20px;
+                font-size: 15px;
+                padding-bottom: 20px;
+            }
+
+            h2 {
+                padding-bottom: 20px;
+                font-weight: 600;
+
+                @include mobile {
+                    font-weight: 700;
+                    padding-bottom: 2px;
+                    padding-left: 5px;
+                    font-size: 15px;
+                }
+            }
+            h3 {
+                font-weight: 400;
+
+                @include mobile {
+                    font-weight: 500;
+                    padding-left: 5px;
+                    font-size: 15px;
+                }
+            }
         }
 
         .teamwork {
             padding: 20px;
+
+            @include mobile {
+                padding: 2px 20px;
+            }
+
             h2 {
                 padding-bottom: 20px;
+                font-weight: 600;
+
+                @include mobile {
+                    font-weight: 700;
+                    padding-bottom: 2px;
+                    padding-left: 5px;
+                    font-size: 15px;
+                }
+            }
+            h3 {
+                font-weight: 400;
+
+                @include mobile {
+                    font-weight: 500;
+                    padding-left: 5px;
+                    font-size: 15px;
+                }
             }
         }
 
         .communication {
             padding: 20px;
+
+            @include mobile {
+                padding: 2px 20px;
+            }
+
             h2 {
                 padding-bottom: 20px;
+                font-weight: 600;
+
+                @include mobile {
+                    font-weight: 700;
+                    padding-bottom: 2px;
+                    padding-left: 5px;
+                    font-size: 15px;
+                }
+            }
+            h3 {
+                font-weight: 400;
+
+                @include mobile {
+                    font-weight: 500;
+                    padding-left: 5px;
+                    font-size: 15px;
+                }
             }
         }
 
         .creativity {
             padding: 20px;
+
+            @include mobile {
+                padding: 2px 20px;
+            }
+
             h2 {
                 padding-bottom: 20px;
+                font-weight: 600;
+
+                @include mobile {
+                    font-weight: 700;
+                    padding-bottom: 2px;
+                    padding-left: 5px;
+                    font-size: 15px;
+                }
+            }
+            h3 {
+                font-weight: 400;
+
+                @include mobile {
+                    font-weight: 500;
+                    padding-left: 5px;
+                    font-size: 15px;
+                }
             }
         }
     }
+
     .arrow-opinions {
         color: #f2d8ce85;
         position: absolute;
