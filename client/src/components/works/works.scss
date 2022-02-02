@@ -37,12 +37,12 @@
         flex-wrap: wrap;
 
         @include mobile {
-            position: relative;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 180px 180px 180px;
+            display: flex;
+            flex-direction: column;
             overflow: hidden;
             justify-content: end;
+            padding-bottom: 100px;
+
         }
     }
     .arrow-portfolio {

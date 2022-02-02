@@ -24,6 +24,7 @@
                 transform: translateX(-100);
 
                 @include mobile {
+                    margin-top: 0;
                     font-size: 25px;
                     margin-left: 15px;
                 }
@@ -43,53 +44,20 @@
             box-shadow: 5px 5px 5px rgba(0, 0.5, 0.5, 0.5);
 
             @include mobile {
+                margin-top: 5px;
                 align-items: flex-start;
-                width: 350px;
-                height: 350px;
+                width: 390px;
+                height: 390px;
                 background-color: #f2d8ce00;
                 box-shadow: none;
-                margin-left: 45%;
-                background: -moz-linear-gradient(
-                    top,
-                    rgba(255, 255, 255, 0) 0%,
-                    #f2d8ce91
-                );
-                background: -webkit-gradient(
-                    linear,
-                    left top,
-                    left bottom,
-                    color-stop(0%, rgba(255, 255, 255, 0)),
-                    color-stop(#f2d8ce91)
-                );
-                background: -webkit-linear-gradient(
-                    top,
-                    rgba(255, 255, 255, 0) 0%,
-                    #f2d8ce91
-                );
-                background: -o-linear-gradient(
-                    top,
-                    rgba(255, 255, 255, 0) 0%,
-                    #f2d8ce91
-                );
-                background: -ms-linear-gradient(
-                    top,
-                    rgba(255, 255, 255, 0) 0%,
-                    #f2d8ce91
-                );
-                background: linear-gradient(
-                    to bottom,
-                    rgba(255, 255, 255, 0) 0%,
-                    #f2d8ce91
-                );
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+                margin-left: 17%;
             }
 
             img {
                 width: 80%;
 
                 @include mobile {
-                    width: 45%;
-                    padding-top: 50px;
+                    width: 60%;
                 }
             }
         }
@@ -129,7 +97,7 @@
                     margin: 10px 0;
 
                     @include mobile {
-                        font-size: 30px;
+                        font-size: 25px;
                     }
                 }
 
@@ -140,7 +108,7 @@
                     height: 100px;
 
                     @include mobile {
-                        font-size: 20px;
+                        font-size: 18px;
                     }
                 }
             }

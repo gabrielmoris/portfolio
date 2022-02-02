@@ -29,7 +29,7 @@
             text-align: center;
 
             @include mobile {
-                font-size: 15px;
+                font-size: 16px;
                 padding-bottom: 5px;
             }
         }
@@ -39,7 +39,7 @@
 
             @include mobile {
                 padding: 0 5px;
-                font-size: 10px;
+                font-size: 13px;
             }
 
             h2 {
@@ -50,7 +50,7 @@
                     font-weight: 700;
                     padding-bottom: 2px;
                     padding-left: 5px;
-                    font-size: 10px;
+                    font-size: 13px;
                 }
             }
 
@@ -60,7 +60,7 @@
                 @include mobile {
                     font-weight: 500;
                     padding-left: 5px;
-                    font-size: 10px;
+                    font-size: 13px;
                 }
             }
         }
@@ -81,7 +81,7 @@
                     font-weight: 700;
                     padding-bottom: 2px;
                     padding-left: 5px;
-                    font-size: 10px;
+                    font-size: 13px;
                 }
             }
 
@@ -91,7 +91,7 @@
                 @include mobile {
                     font-weight: 500;
                     padding-left: 5px;
-                    font-size: 10px;
+                    font-size: 13px;
                 }
             }
         }
@@ -117,7 +117,7 @@
             text-align: center;
 
             @include mobile {
-                font-size: 15px;
+                font-size: 16px;
                 padding-bottom: 5px;
             }
         }
@@ -129,7 +129,7 @@
             @include mobile {
                 padding: 2px 20px;
                 font-size: 10px;
-                padding-bottom: 10px;
+                padding-bottom: 13px;
             }
 
             h2 {
@@ -140,7 +140,7 @@
                     font-weight: 700;
                     padding-bottom: 2px;
                     padding-left: 5px;
-                    font-size: 10px;
+                    font-size: 13px;
                 }
             }
             h3 {
@@ -149,7 +149,7 @@
                @include mobile {
                     font-weight: 500;
                     padding-left: 5px;
-                    font-size: 10px;
+                    font-size: 13px;
                 }
             }
         }
@@ -169,7 +169,7 @@
                     font-weight: 700;
                     padding-bottom: 2px;
                     padding-left: 5px;
-                    font-size: 10px;
+                    font-size: 13px;
                 }
             }
             h3 {
@@ -178,7 +178,7 @@
                 @include mobile {
                     font-weight: 500;
                     padding-left: 5px;
-                    font-size: 10px;
+                    font-size: 13px;
                 }
             }
         }
@@ -198,7 +198,7 @@
                     font-weight: 700;
                     padding-bottom: 2px;
                     padding-left: 5px;
-                    font-size: 10px;
+                    font-size: 13px;
                 }
             }
             h3 {
@@ -207,7 +207,7 @@
               @include mobile {
                     font-weight: 500;
                     padding-left: 5px;
-                    font-size: 10px;
+                    font-size: 13px;
                 }
             }
         }
@@ -227,7 +227,7 @@
                     font-weight: 700;
                     padding-bottom: 2px;
                     padding-left: 5px;
-                    font-size: 10px;
+                    font-size: 13px;
                 }
             }
             h3 {
@@ -236,7 +236,7 @@
               @include mobile {
                     font-weight: 500;
                     padding-left: 5px;
-                    font-size: 10px;
+                    font-size: 13px;
                 }
             }
         }
@@ -252,11 +252,7 @@
         font-size: 50px;
         transform: translateY(50px);
 
-        @include mobile {
-            font-size: 40px;
-            left: 45%;
-            transform: translateY(0);
-        }
+        
 
         @keyframes blinking4 {
             0% {
@@ -270,6 +266,12 @@
             100% {
                 bottom: calc(-180vh + 10px);
             }
+        }
+
+        @include mobile {
+            font-size: 40px;
+            left: 45%;
+            transform: translateY(8px);
         }
     }
 }
