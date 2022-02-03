@@ -5,7 +5,7 @@ import { init } from "ityped";
 import { useEffect, useRef } from "react";
 
 export default function Intro() {
-    const textRef: any = useRef();
+    const textRef: {current:any} = useRef();
 
     useEffect(() => {
         init(textRef.current, {

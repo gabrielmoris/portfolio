@@ -26,10 +26,10 @@ import { Down } from "../intro/Down";
 import { useInView } from "react-intersection-observer";
 
 export default function Opinions() {
-    const [techs, setTechs]: [any, any] = useState([]);
+    const [techs, setTechs]: [string[], any] = useState([]);
     const [result, setResult]: [boolean, any] = useState(false);
     const [voted, setVoted]: [boolean, any] = useState(false);
-    const [techGraf, setTechGraf]: [any, any] = useState([]);
+    const [techGraf, setTechGraf]: [any[], any] = useState([]);
     const { ref, inView } = useInView({
         threshold: 0.2,
     });
@@ -40,8 +40,8 @@ export default function Opinions() {
 
     Chart.register(...registerables);
 
-    const technologies: any = [];
-    const points: any = [];
+    const technologies: string[] = [];
+    const points: number[] = [];
 
     useEffect(() => {
         let abort = false;
@@ -58,7 +58,7 @@ export default function Opinions() {
         };
     }, [result, inView]);
 
-    techGraf.forEach((element: any) => {
+    techGraf.forEach((element: { points: number; tech: string }) => {
         if (element.points === 0) {
             console.log("nope");
         } else {
@@ -67,7 +67,7 @@ export default function Opinions() {
         }
     });
 
-    const vote = (techs: any) => {
+    const vote = (techs: string[]) => {
         fetch("/techs", {
             method: "POST",
             headers: {
@@ -79,7 +79,7 @@ export default function Opinions() {
             .then((data) => {
                 if (data.success === true) {
                     setResult(true);
-                    techs.forEach((element: any) => {
+                    techs.forEach((element: string) => {
                         technologies.push(element);
                         points.push(1);
                     });

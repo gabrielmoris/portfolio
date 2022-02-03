@@ -2,9 +2,10 @@ import "./contact.scss";
 import { useState } from "react";
 
 export default function Contact() {
-    const [submited, setSubmited]: [boolean, any] = useState(false);
+    const [submited, setSubmited]: [boolean, (value: any) => void] =
+        useState(false);
     const [userInput, setUserInput] = useState({});
-    const [error, setError]: [boolean, any] = useState(false);
+    const [error, setError]: [boolean, (value: any) => void] = useState(false);
 
     const handleChange = (e: any) => {
         setUserInput({
