@@ -29,7 +29,8 @@ export default function Opinions() {
     const [techs, setTechs]: [string[], any] = useState([]);
     const [result, setResult]: [boolean, any] = useState(false);
     const [voted, setVoted]: [boolean, any] = useState(false);
-    const [techGraf, setTechGraf]: [any[], any] = useState([]);
+    const [techGraf, setTechGraf]: [{ points: number; tech: string }[], any] =
+        useState([]);
     const { ref, inView } = useInView({
         threshold: 0.2,
     });
