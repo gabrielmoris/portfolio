@@ -47,7 +47,7 @@ export default function Works() {
                         }
                     )}
             </div>
-                <a className="arrow-portfolio" href="#portfolio">
+                <a className="arrow-portfolio" href="#aboutme">
                     <Down />
                 </a>
         </div>

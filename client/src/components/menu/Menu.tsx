@@ -14,7 +14,7 @@ export default function Menu(props: any) {
                     <a href="#works">Projects</a>
                 </li>
                 <li onClick={() => props.setHamburger(false)}>
-                    <a href="#portfolio">Portfolio</a>
+                    <a href="#aboutme">About me</a>
                 </li>
                 <li onClick={() => props.setHamburger(false)}>
                     <a href="#opinions">Opinions</a>

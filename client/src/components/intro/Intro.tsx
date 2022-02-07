@@ -1,21 +1,21 @@
 import "./intro.scss";
 import { motion } from "framer-motion";
 import { Down } from "./Down";
-import { init } from "ityped";
-import { useEffect, useRef } from "react";
+// import { init } from "ityped";
+// import { useEffect, useRef } from "react";
 
 export default function Intro() {
-    const textRef: {current:any} = useRef();
+    // const textRef: {current:any} = useRef();
 
-    useEffect(() => {
-        init(textRef.current, {
-            showCursor: false,
-            typeSpeed: 100,
-            strings: [
-                "― Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master",
-            ],
-        });
-    }, []);
+    // useEffect(() => {
+    //     init(textRef.current, {
+    //         showCursor: false,
+    //         typeSpeed: 100,
+    //         strings: [
+    //             "― Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master",
+    //         ],
+    //     });
+    // }, []);
 
     return (
         <div className="intro" id="intro">
@@ -53,12 +53,19 @@ export default function Intro() {
 
             <div className="right">
                 <div className="wrapper">
-                   <div className="text-wrapper"> <h2>
-                        “An investment in knowledge always pays the best
-                        interest.”
-                        <br />
-                    </h2>
-                    <h3 ref={textRef}></h3></div>
+                    <div className="text-wrapper">
+                        {" "}
+                        <h2>
+                            “An investment in knowledge always pays the best
+                            interest.”
+                            <br />
+                        </h2>
+                        {/* <h3 ref={textRef}> */}
+                        <h3>
+                            ― Andrew Hunt, The Pragmatic Programmer: From
+                            Journeyman to Master
+                        </h3>
+                    </div>
                     <a href="#works">
                         <Down />
                     </a>

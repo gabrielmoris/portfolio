@@ -3,7 +3,7 @@ import Intro from "./components/intro/Intro";
 import Opinions from "./components/opinions/Opinions";
 import Works from "./components/works/Works";
 import Contact from "./components/contact/Contact";
-import Portfolio from "./components/portfolio/Portfolio";
+import AboutMe from "./components/aboutme/Aboutme";
 import Menu from "./components/menu/Menu";
 import "./app.scss";
 import { useState } from "react";
@@ -18,7 +18,7 @@ const [hamburger, setHamburger] = useState(false)
             <div className="sections">
                 <Intro />
                 <Works />
-                <Portfolio />
+                <AboutMe />
                 <Opinions />
                 <Contact />
             </div>

@@ -32,7 +32,7 @@
 );
   INSERT INTO works(img, url, name, description) VALUES (
     'https://onionimageboard.s3.amazonaws.com/signaturesbank.png',
-    'https://signaturebank.herokuapp.com/thanks',
+    'https://signaturebank.herokuapp.com/',
     'Signatures Bank',
     'Html, CSS, Javascript, Node.js, Express, PostgreSql.'
 );

@@ -1,0 +1,47 @@
+@import "../../global.scss";
+
+.aboutme {
+    background-color: #085ca6;
+    display: flex;
+    color: black;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    .arrow-opinions {
+        color: #f2d8ce85;
+        position: absolute;
+        left: 48.5%;
+        font-size: 80px;
+        z-index: 2;
+        animation: blinking4 2s infinite;
+        font-size: 50px;
+        transform: translateY(50px);
+
+        
+
+        @keyframes blinking4 {
+            0% {
+                bottom: calc(-180vh + 10px);
+            }
+
+            20% {
+                bottom: calc(-180vh);
+            }
+
+            100% {
+                bottom: calc(-180vh + 10px);
+            }
+        }
+
+        @include mobile {
+            font-size: 40px;
+            left: 45%;
+            transform: translateY(8px);
+        }
+    }
+}

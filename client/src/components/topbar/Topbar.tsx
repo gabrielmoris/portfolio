@@ -1,14 +1,13 @@
 import "./topbar.scss";
-import{FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import{faPhone, faMailBulk} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faMailBulk } from "@fortawesome/free-solid-svg-icons";
 
-interface Props{
-    hamburger:boolean;
-    setHamburger:(value:boolean)=>void;
+interface Props {
+    hamburger: boolean;
+    setHamburger: (value: boolean) => void;
 }
 
-export default function Topbar({hamburger, setHamburger}:Props) {
-
+export default function Topbar({ hamburger, setHamburger }: Props) {
     return (
         <div className={"topbar " + (hamburger && "active")}>
             <div className="wrapper">
@@ -16,22 +15,20 @@ export default function Topbar({hamburger, setHamburger}:Props) {
                     <a href="#intro" className="logo">
                         Gabriel C. Moris
                     </a>
-                    <div className="item-container">
-                        <FontAwesomeIcon
-                            icon={faPhone}
-                            className="icon"
-                        ></FontAwesomeIcon>
-                        <span>+4915732613658</span>
-                    </div>
-                    <div className="item-container">
-                        <FontAwesomeIcon
-                            icon={faMailBulk}
-                            className="icon"
-                        ></FontAwesomeIcon>
-                        <span>gabrieltrompeta@gmail.com</span>
-                    </div>
                 </div>
-                <h2>Frontend Developer</h2>
+                <div className="item-container">
+                    <ul className="ul-navBar">
+                        <a href="#intro">Home</a>
+
+                        <a href="#works">Projects</a>
+
+                        <a href="#aboutme">About me</a>
+
+                        <a href="#opinions">Opinions</a>
+
+                        <a href="#contact">Contact</a>
+                    </ul>
+                </div>
                 <div className="right">
                     <div
                         className="hamburger"
