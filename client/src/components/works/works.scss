@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .works {
-    background-color: #f2d8ce;
+    background-color: #085CA6;
     display: flex;
     flex-direction: column;
 
@@ -28,7 +28,6 @@
 
     .bottom {
         width: 100%;
-        // flex: 0.9;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -37,11 +36,8 @@
         flex-wrap: wrap;
 
         @include mobile {
-            // display: flex;
             flex-direction: column;
             overflow: hidden;
-            // justify-content: end;
-            // padding-bottom: 100px;
 
         }
     }
