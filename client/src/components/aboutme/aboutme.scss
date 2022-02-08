@@ -7,13 +7,92 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 
-    @include mobile {
-        flex-direction: column;
+    h1 {
+        position: inherit;
+        flex: 0.1;
+    }
+
+    .body-aboutme {
+        flex: 0.9;
+        display: flex;
+        justify-content: center;
+        flex-shrink: 0;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            flex-shrink: 0;
+            flex: 0.5;
+
+            .text-aboutme {
+                width: 90%;
+                text-justify: distribute-all-lines;
+                font-weight: 600;
+                padding: 30px 30px;
+                overflow: hidden;
+                flex: 0.5;
+
+                @include mobile {
+                    padding: 0 10px;
+                    width: 100%;
+                }
+            }
+
+            .icons {
+                display: flex;
+                justify-content: space-between;
+                height: -webkit-fill-available;
+                padding: 0 10%;
+                flex: 0.5;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    font-size: 100px;
+                    width: 15%;
+                    text-align: center;
+
+                    @include mobile {
+                        font-size: 40px;
+                    }
+
+                    &:active {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+
+                    &:hover {
+                        color: #085ca6;
+                    }
+                }
+                .github {
+                    margin-top: 0%;
+                }
+
+                .linkedin {
+                    margin-top: 16%;
+                }
+
+                .envelope {
+                    margin-top: 32%;
+                }
+            }
+        }
+
+        .right {
+            flex: 0.5;
+        }
     }
 
     .arrow-opinions {
-        color: #f2d8ce85;
+        color: #085ca65b;
         position: absolute;
         left: 48.5%;
         font-size: 80px;
@@ -21,8 +100,6 @@
         animation: blinking4 2s infinite;
         font-size: 50px;
         transform: translateY(50px);
-
-        
 
         @keyframes blinking4 {
             0% {
