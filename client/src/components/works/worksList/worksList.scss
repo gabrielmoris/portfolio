@@ -13,6 +13,13 @@
     cursor: pointer;
     color: #085ca6;
     background-color: #f2d8ce;
+    flex-shrink: 0;
+
+    @media screen and (max-height: 780px) {
+        width: 140px;
+        height: 140px;
+        margin: 25px 10px;
+    }
 
     @include mobile {
         width: 140px;
@@ -23,6 +30,11 @@
     h3 {
         position: absolute;
         font-size: 20px;
+
+        @media screen and (max-height: 780px) {
+            text-align: center;
+            font-size: 15px;
+        }
 
         @include mobile {
             text-align: center;
