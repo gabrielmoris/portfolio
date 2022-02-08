@@ -4,7 +4,7 @@ import { Down } from "../intro/Down";
 export default function AboutMe() {
     return (
         <div className="aboutme" id="aboutme">
-            <h1>ABOUT ME: comming soon</h1>
+            <h1>ABOUT ME: coming soon!</h1>
 
             <iframe
                 src="https://giphy.com/embed/JIX9t2j0ZTN9S"
