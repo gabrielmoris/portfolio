@@ -2,9 +2,9 @@
 
 .topbar {
     width: 100%;
-    height: 70px;
-    background-color: #0d0000;
-    color: #f2d8ce;
+    height: 60px;
+    background-color: #FFFFFF;
+    color: #030B00;
     position: fixed;
     top: 0;
     z-index: 9999;
@@ -49,7 +49,7 @@
                 list-style: none;
                 font-size: 20px;
                 font-weight: 600;
-                color: #f2d8ce;
+                color: #030B00;
                 width: 100%;
 
                 a {
@@ -64,7 +64,7 @@
                     }
 
                     &:hover {
-                        color: #085ca6;
+                        color: #8089BA;
                     }
                 }
             }
@@ -89,7 +89,7 @@
                     span {
                         width: 100%;
                         height: 3px;
-                        background-color: #f2d8ce;
+                        background-color: #030B00;
                         transform-origin: left;
                         transition: all 2s ease;
                     }
@@ -99,12 +99,12 @@
     }
 
     &.active {
-        background-color: #f2d8ce;
-        color: #2659bf;
+        background-color: #030B00;
+        color: #ebebf2;
         .hamburger {
             span {
                 &:first-child {
-                    background-color: #2659bf;
+                    background-color: #ebebf2;
                     transform: rotate(45deg);
                 }
 
@@ -113,7 +113,7 @@
                 }
 
                 &:last-child {
-                    background-color: #2659bf;
+                    background-color: #ebebf2;
                     transform: rotate(-45deg);
                 }
             }

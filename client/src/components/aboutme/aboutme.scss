@@ -48,6 +48,7 @@
             .icons {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 height: -webkit-fill-available;
                 padding: 0 10%;
                 flex: 0.5;
@@ -71,17 +72,6 @@
                     &:hover {
                         color: #085ca6;
                     }
-                }
-                .github {
-                    margin-top: 0%;
-                }
-
-                .linkedin {
-                    margin-top: 16%;
-                }
-
-                .envelope {
-                    margin-top: 32%;
                 }
             }
         }
