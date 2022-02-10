@@ -1,9 +1,9 @@
 @import "../../global.scss";
 
 .opinions {
-    background-color: #f2d8ce;
+    background-color: #ffffff;
     display: flex;
-    color: #085ca6;
+    color: #030B00;
 
     @include mobile {
         flex-direction: column;
@@ -77,16 +77,22 @@
             }
 
             button {
-                color: #f2d8ce;
-                background-color: #085ca6;
+                color: #ffffff;
+                background-color: #030B00;
                 border: none;
-                border-radius: 20px;
+                width: 20%;
+                border-radius: 10px;
                 font-size: 20px;
                 cursor: pointer;
                 &:active {
-                    background-color: #0a7aa6;
+                    background-color: #ffffff;
                     box-shadow: 5px 5px 5px rgba(0, 0.5, 0.5, 0.5) inset;
                 }
+
+                &:hover{
+                    background-color: #8089BA;
+                }
+
 
                 @include mobile {
                     font-size: 15;
@@ -105,9 +111,8 @@
 
             .icon {
                 cursor: pointer;
-                color: #085ca6;
+                color: #030B00;
                 font-size: 25px;
-                filter: drop-shadow(5px 5px 5px rgba(0, 0.5, 0.5, 0.5));
                 overflow: hidden;
                 display: flex;
                 flex-direction: row;
@@ -119,21 +124,19 @@
 
                 .icon-text {
                     font-size: 10px;
-                    color: #085ca6;
-                    text-shadow: 5px 5px 5px rgba(0, 0.5, 0.5, 0.5);
+                    color: #030B00;
                 }
             }
 
             .icon:hover {
-                color: #085ca670;
-                filter: drop-shadow(5px 5px 5px #085ca665);
+                color: #030B00;
             }
 
             .board {
                 margin: 25px 1px;
                 height: 550px;
-                background-color: #085ca650;
-                border: solid 1px #f2d8ce;
+                background-color: #030b007a;
+                border: solid 1px #ffffff;
                 display: grid;
                 border-radius: 20px;
                 grid-template-columns: 1fr;
@@ -156,13 +159,13 @@
             display: flex;
             flex: 0.2;
             text-align: center;
-            color: #085ca644;
+            color: #030b0070;
             margin-bottom: 50px;
         }
     }
 
     .arrow-contact {
-        color: #085ca65b;
+        color: #030b0057;
         position: absolute;
         font-size: 80px;
         left: 50%;
