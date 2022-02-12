@@ -32,16 +32,12 @@ export default function Works() {
                             id: number;
                             img: string;
                             name: string;
-                            url: string;
-                            description: string;
                         }) => {
                             return (
                                 <WorksList
                                     id={work.id}
                                     img={work.img}
                                     name={work.name}
-                                    url={work.url}
-                                    description={work.description}
                                 />
                             );
                         }

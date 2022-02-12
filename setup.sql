@@ -57,8 +57,8 @@
 INSERT INTO works(img, url, github, name, description) VALUES (
     'https://onionimageboard.s3.amazonaws.com/brasscollective.png',
     'https://www.thebrasscollective.com/',
-    'The Brass Collective Website',
     'https://github.com/gabrielmoris/www.thebrasscollective.com',
+    'The Brass Collective',
     'Html, CSS, Javascript, Github, Figma.'
 );
 

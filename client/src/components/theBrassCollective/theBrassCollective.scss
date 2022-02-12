@@ -1,0 +1,33 @@
+.theBrassCollective {
+    width: 100%;
+    background-color: #ffffff;
+    position: relative;
+    top: 60px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .up{
+        flex:0.2
+
+    }
+
+    .main{
+        flex:0.7;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+        // .left{
+
+        // }
+    }
+
+    .down{
+        flex:0.1;
+    }
+
+
+
+}
