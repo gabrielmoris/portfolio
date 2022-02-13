@@ -48,11 +48,11 @@
     'Html, CSS, Javascript, jQuery.'
 );
   INSERT INTO works(img, url, github, name, description) VALUES (
-    'https://onionimageboard.s3.amazonaws.com/simongame.png',
-    'https://clever-hoover-4bef8a.netlify.app/',
-    'https://github.com/gabrielmoris/PersonalLearning/tree/master/Simon%20Game%20JS',
-    'Simon Game',
-    'Html, CSS, Javascript, jQuery.'
+    'https://onionimageboard.s3.amazonaws.com/portfolio/spotifyScren.jpg',
+    'https://competent-mestorf-e41da5.netlify.app/',
+    'https://github.com/gabrielmoris/codingChallenges/tree/master/week4/handlebarsSpotify',
+    'Spotify API',
+    'Html, CSS, Javascript, Handlebars.'
 );
 INSERT INTO works(img, url, github, name, description) VALUES (
     'https://onionimageboard.s3.amazonaws.com/brasscollective.png',

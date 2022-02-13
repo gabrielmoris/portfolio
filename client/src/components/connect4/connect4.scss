@@ -1,0 +1,106 @@
+.connect4 {
+    width: 100%;
+    background-color: #ffffff;
+    position: relative;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .up {
+        flex: 0.2;
+    }
+
+    hr {
+        width: 70%;
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.226),
+            rgba(0, 0, 0, 0)
+        );
+    }
+
+    .main {
+        flex: 0.7;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .left {
+            h2 {
+                margin: 20px 0;
+            }
+
+            ul {
+                margin: 20px 0;
+                background-color: rgba(0, 0, 0, 0.027);
+
+                li {
+                    margin-bottom: 8px;
+                }
+            }
+
+            .my-button {
+                box-shadow: 0px 1px 0px 0px #8085ba;
+                background-color: #8085ba;
+                border-radius: 6px;
+                border: 1px solid #8085ba;
+                display: inline-block;
+                cursor: pointer;
+                color: #000000;
+                padding: 12px 44px;
+                text-decoration: none;
+                text-shadow: 0px -1px 0px #032ca6;
+            }
+
+            .my-button:hover {
+                background-color: #8085ba33;
+            }
+            .my-button:active {
+                position: relative;
+                top: 1px;
+            }
+        }
+
+        .right {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 65%;
+            background-color: rgba(0, 0, 0, 0.027);
+
+            div {
+                display: flex;
+                flex-direction: row;
+                .image {
+                    margin: 20px;
+                    border: solid 2px rgba(0, 0, 0, 0.288);
+                    img {
+                        max-width: 750px;
+                        max-height: 375px;
+                        overflow-y: hidden;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            p {
+                margin: 20px 0;
+            }
+
+            h2 {
+                margin: 20px 0;
+            }
+        }
+    }
+
+    .down {
+        flex: 0.1;
+    }
+}
