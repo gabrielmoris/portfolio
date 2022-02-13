@@ -1,6 +1,7 @@
 import "./topbar.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faMailBulk } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faPhone, faMailBulk } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 interface Props {
     hamburger: boolean;
@@ -12,21 +13,21 @@ export default function Topbar({ hamburger, setHamburger }: Props) {
         <div className={"topbar " + (hamburger && "active")}>
             <div className="wrapper">
                 <div className="left">
-                    <a href="#intro" className="logo">
+                    <a href="/#intro" className="logo">
                         Gabriel C. Moris
                     </a>
                 </div>
                 <div className="item-container">
                     <ul className="ul-navBar">
-                        <a href="#intro">Home</a>
+                        <a href="/#intro">Home</a>
 
-                        <a href="#works">Projects</a>
+                        <a href="/#works">Projects</a>
 
-                        <a href="#aboutme">About me</a>
+                        <a href="/#aboutme">About me</a>
 
-                        <a href="#opinions">Opinions</a>
+                        <a href="/#opinions">Opinions</a>
 
-                        <a href="#contact">Contact</a>
+                        <a href="/#contact">Contact</a>
                     </ul>
                 </div>
                 <div className="right">

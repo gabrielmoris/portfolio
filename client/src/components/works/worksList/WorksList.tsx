@@ -14,7 +14,6 @@ export default function WorksList({ id, img, name }: Props) {
     const [open, setOpen]: any = useState(false);
 
     return (
-        <>
                 <Link to={`/work/${id}`}>
                     <div
                         className="item"
@@ -25,6 +24,5 @@ export default function WorksList({ id, img, name }: Props) {
                         <h3>{name}</h3>
                     </div>
                 </Link>
-        </>
     );
 }
