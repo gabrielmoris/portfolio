@@ -23,7 +23,7 @@ export default function Works() {
     return (
         <div className="works" id="works">
             <div className="top">
-                <h1>Projects Portfolio</h1>
+                <h2>Check my projects</h2>
             </div>
             <div className="bottom">
                 {works &&

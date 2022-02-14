@@ -18,7 +18,7 @@
   );
 
   INSERT INTO works(img, url, github, name, description) VALUES (
-    'https://onionimageboard.s3.amazonaws.com/writtersbook.png',
+    'https://onionimageboard.s3.amazonaws.com/portfolio/writersbook.jpg',
     'https://writersbook.herokuapp.com/',
     'https://github.com/gabrielmoris/writersbook',
     'WritersBook',

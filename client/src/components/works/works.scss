@@ -1,21 +1,19 @@
 @import "../../global.scss";
 
 .works {
-    background-color: #085ca6;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
 
     .top {
         width: 100%;
-        color: #085ca6;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        h1 {
-            font-size: 40px;
-            padding: 30px 10px;
-            color: #f2d8ce;
+        h2 {
+            font-size: 25px;
+            padding-top: 50px;
 
             @include mobile {
                 font-size: 20px;
@@ -51,7 +49,7 @@
         }
     }
     .arrow-portfolio {
-        color: #f2d8ce8c;
+        color: #ebebf2;
         position: absolute;
         font-size: 80px;
         z-index: 2;
