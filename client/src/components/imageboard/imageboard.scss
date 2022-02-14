@@ -1,5 +1,5 @@
 .imageboard {
-    width: 100%;
+     width: 100%;
     background-color: #ffffff;
     position: relative;
     top: 60px;
@@ -32,7 +32,7 @@
 
         .left {
             h2 {
-                margin: 20px 0;
+                margin: 50px 0;
             }
 
             ul {
@@ -41,7 +41,6 @@
 
                 li {
                     margin-bottom: 8px;
-                    padding-right: 8px;
                 }
             }
 
@@ -68,23 +67,25 @@
         }
 
         .right {
-            margin-top: 20px;
+            margin-top: 40px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 65%;
             background-color: rgba(0, 0, 0, 0.027);
+            padding-bottom: 20px;
 
             div {
                 display: flex;
                 flex-direction: row;
+                
                 .image {
                     margin: 20px;
                     border: solid 2px rgba(0, 0, 0, 0.288);
                     img {
                         max-width: 750px;
-                        max-height: 375px;
+                        max-height: auto;
                         overflow-y: hidden;
                         object-fit: contain;
                     }
@@ -103,5 +104,6 @@
 
     .down {
         flex: 0.1;
+        padding:50px;
     }
 }
