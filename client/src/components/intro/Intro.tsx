@@ -74,7 +74,7 @@ export default function Intro() {
                                 Journeyman to Master
                             </h3>
                         </div>
-                        <a href="#works">
+                        <a href="#projects">
                             <Down />
                         </a>
                     </div>

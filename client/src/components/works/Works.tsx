@@ -21,7 +21,7 @@ export default function Works() {
     }, []);
 
     return (
-        <div className="works" id="works">
+        <div className="works" id="projects">
             <div className="top">
                 <h2>Check my projects</h2>
             </div>

@@ -20,6 +20,14 @@ export default function AboutMe() {
                             how to explain complex terms in a simple way and
                             find solutions with creativity.
                         </p>
+
+                        <a
+                            className="my-button"
+                            href="https://onionimageboard.s3.amazonaws.com/portfolio/CV+GABRIEL+H.pdf"
+                            download target="_blank"
+                        >
+                            Download my resume
+                        </a>
                     </div>
                     <div className="icons">
                         <a

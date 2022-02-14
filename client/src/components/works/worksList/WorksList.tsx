@@ -14,15 +14,14 @@ export default function WorksList({ id, img, name }: Props) {
     const [open, setOpen]: any = useState(false);
 
     return (
-                <Link to={`/work/${id}`}>
-                    <div
-                        className="item"
-                        onClick={() => setOpen(!open)}
-                        key={id}
-                    >
-                        <img src={img} alt={name} />
-                        <h3>{name}</h3>
-                    </div>
+        <div className="item" onClick={() => setOpen(!open)} key={id}>
+            <img src={img} alt={name} />
+            <div className="content-item">
+                <h3>{name}</h3>
+                <Link className="my-button" to={`/work/${id}`}>
+                    Visit project
                 </Link>
+            </div>
+        </div>
     );
 }

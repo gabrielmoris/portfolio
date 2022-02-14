@@ -1,9 +1,8 @@
 @import "../../global.scss";
 
 .aboutme {
-    background-color: #f2d8ce;
+    background-color: #ffffff;
     display: flex;
-    color: black;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -30,6 +29,8 @@
             justify-content: start;
             flex-shrink: 0;
             flex: 0.5;
+            background-color: #ebebf2;
+            margin:20px;
 
             .text-aboutme {
                 width: 90%;
@@ -43,14 +44,35 @@
                     padding: 0 10px;
                     width: 100%;
                 }
+
+                 .my-button {
+                box-shadow: 0px 1px 0px 0px #8085ba;
+                background-color: #8085ba;
+                border-radius: 6px;
+                border: 1px solid #8085ba;
+                display: inline-block;
+                cursor: pointer;
+                color: #000000;
+                padding: 12px 44px;
+                text-decoration: none;
+                text-shadow: 0px -1px 0px #032ca6;
+            }
+
+            .my-button:hover {
+                background-color: #8085ba33;
+            }
+            .my-button:active {
+                position: relative;
+                top: 1px;
+            }
             }
 
             .icons {
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
+                justify-content: space-around;
+                align-items: flex-end;
                 height: -webkit-fill-available;
-                padding: 0 10%;
+                // padding: 0 10%;
                 flex: 0.5;
 
                 a {
@@ -70,7 +92,7 @@
                     }
 
                     &:hover {
-                        color: #085ca6;
+                        color: rgba(0, 0, 0, 0.26);
                     }
                 }
             }
@@ -82,7 +104,7 @@
     }
 
     .arrow-opinions {
-        color: #085ca65b;
+        color: rgba(0, 0, 0, 0.26);
         position: absolute;
         left: 48.5%;
         font-size: 80px;
@@ -93,15 +115,15 @@
 
         @keyframes blinking4 {
             0% {
-                bottom: calc(-180vh + 10px);
+                bottom: calc(-183vh + 10px);
             }
 
             20% {
-                bottom: calc(-180vh);
+                bottom: calc(-183vh);
             }
 
             100% {
-                bottom: calc(-180vh + 10px);
+                bottom: calc(-183vh + 10px);
             }
         }
 

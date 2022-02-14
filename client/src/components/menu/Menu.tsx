@@ -6,12 +6,12 @@ export default function Menu(props: any) {
 
     return (
         <div className={"menu " + (props.hamburger && "active")}>
-            <ul className={(props.hamburger && "active")}>
+            <ul className={props.hamburger && "active"}>
                 <li onClick={() => props.setHamburger(false)}>
                     <a href="/#intro">Home</a>
                 </li>
                 <li onClick={() => props.setHamburger(false)}>
-                    <a href="/#works">Projects</a>
+                    <a href="/#projects">Projects</a>
                 </li>
                 <li onClick={() => props.setHamburger(false)}>
                     <a href="/#aboutme">About me</a>

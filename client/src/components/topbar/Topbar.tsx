@@ -21,7 +21,7 @@ export default function Topbar({ hamburger, setHamburger }: Props) {
                     <ul className="ul-navBar">
                         <a href="/#intro">Home</a>
 
-                        <a href="/#works">Projects</a>
+                        <a href="/#projects">Projects</a>
 
                         <a href="/#aboutme">About me</a>
 
