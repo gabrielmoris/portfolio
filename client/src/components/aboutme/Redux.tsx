@@ -3,8 +3,8 @@ export const Redux= () => {
         <svg
             aria-hidden="true"
             role="img"
-            width="25px"
-            height="25px"
+            width="30px"
+            height="30px"
             preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 24 24"
         >

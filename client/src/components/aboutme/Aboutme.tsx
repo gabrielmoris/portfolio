@@ -21,7 +21,7 @@ import { Typescript } from "./Typescript";
 import { PostgreSql } from "./Postgresql";
 import { Jest } from "./Jest";
 import { Redux } from "./Redux";
-import { JQuery } from "./JQuery";
+// import { JQuery } from "./JQuery";
 import Board from "./Board";
 import Tech from "./Tech";
 import { Bar } from "react-chartjs-2";
@@ -159,6 +159,14 @@ export default function AboutMe() {
                                 Drag to the right the most interesting
                                 technologies of my stack and click vote:
                             </h3>
+                            <button
+                                className="my-button"
+                                onClick={() => {
+                                    vote(techs);
+                                }}
+                            >
+                                Vote
+                            </button>
                             <div className="vote-title-btn">
                                 {result && (
                                     <h3
@@ -182,14 +190,6 @@ export default function AboutMe() {
                                         you already voted!
                                     </h3>
                                 )}
-                                <button
-                                    className="my-button"
-                                    onClick={() => {
-                                        vote(techs);
-                                    }}
-                                >
-                                    Vote
-                                </button>
                             </div>
                             <div className="boards">
                                 <Board id="board-1" className="board">
@@ -223,14 +223,14 @@ export default function AboutMe() {
                                         ></FontAwesomeIcon>
                                         <p className="icon-text">JavaScript</p>
                                     </Tech>
-                                    <Tech
+                                    {/* <Tech
                                         id="jquery"
                                         className="icon"
                                         draggable="true"
                                     >
                                         <JQuery />
                                         <p className="icon-text">JQuery</p>
-                                    </Tech>
+                                    </Tech> */}
                                     <Tech
                                         id="git"
                                         className="icon"
@@ -261,18 +261,6 @@ export default function AboutMe() {
                                         ></FontAwesomeIcon>
                                         <p className="icon-text">
                                             NodeJs & Express
-                                        </p>
-                                    </Tech>
-                                    <Tech
-                                        id="aws"
-                                        className="icon"
-                                        draggable="true"
-                                    >
-                                        <FontAwesomeIcon
-                                            icon={faAws}
-                                        ></FontAwesomeIcon>
-                                        <p className="icon-text">
-                                            Amazon Web Service
                                         </p>
                                     </Tech>
                                     <Tech
@@ -337,6 +325,18 @@ export default function AboutMe() {
                                         <Redux />
                                         <p className="icon-text">Redux</p>
                                     </Tech>
+                                    <Tech
+                                        id="aws"
+                                        className="icon"
+                                        draggable="true"
+                                    >
+                                        <FontAwesomeIcon
+                                            icon={faAws}
+                                        ></FontAwesomeIcon>
+                                        <p className="icon-text">
+                                            Amazon Web Service
+                                        </p>
+                                    </Tech>
                                 </Board>
                                 <Board
                                     id="board2"
@@ -355,7 +355,7 @@ export default function AboutMe() {
                                             {
                                                 label: "Favourite Technologies",
                                                 data: points,
-                                                backgroundColor: "#085ca670",
+                                                backgroundColor: "#8085ba33",
                                             },
                                         ],
                                     }}

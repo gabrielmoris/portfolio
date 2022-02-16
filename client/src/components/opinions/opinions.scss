@@ -3,7 +3,7 @@
 .opinions {
     background-color: #ffffff;
     display: flex;
-    color: #030B00;
+    color: #030b00;
 
     @include mobile {
         flex-direction: column;
@@ -39,7 +39,6 @@
                 text-align: center;
             }
         }
-
     }
 
     .right-out {
@@ -78,7 +77,7 @@
 
             button {
                 color: #ffffff;
-                background-color: #030B00;
+                background-color: #030b00;
                 border: none;
                 width: 20%;
                 border-radius: 10px;
@@ -89,10 +88,9 @@
                     box-shadow: 5px 5px 5px rgba(0, 0.5, 0.5, 0.5) inset;
                 }
 
-                &:hover{
-                    background-color: #8089BA;
+                &:hover {
+                    background-color: #8089ba;
                 }
-
 
                 @include mobile {
                     font-size: 15;
@@ -111,11 +109,13 @@
 
             .icon {
                 cursor: pointer;
-                color: #030B00;
+                color: #030b00;
                 font-size: 25px;
                 overflow: hidden;
                 display: flex;
                 flex-direction: row;
+                align-items: center;
+                justify-content: center;
                 margin: 5px 20px;
 
                 @include mobile {
@@ -123,13 +123,13 @@
                 }
 
                 .icon-text {
-                    font-size: 10px;
-                    color: #030B00;
+                    font-size: 20px;
+                    color: #030b00;
                 }
             }
 
             .icon:hover {
-                color: #030B00;
+                color: #030b00;
             }
 
             .board {
@@ -172,16 +172,15 @@
         z-index: 2;
         animation: blinking8 2s infinite;
 
-        
         @keyframes blinking8 {
             0% {
                 bottom: calc(-280vh + 10px);
             }
-            
+
             20% {
                 bottom: calc(-280vh);
             }
-            
+
             100% {
                 bottom: calc(-280vh + 10px);
             }
@@ -189,7 +188,7 @@
         @include mobile {
             font-size: 40px;
             transform: translateY(-65px);
-            left:45%;
+            left: 45%;
         }
     }
 }
