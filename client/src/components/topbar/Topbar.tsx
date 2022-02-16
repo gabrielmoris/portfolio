@@ -25,8 +25,6 @@ export default function Topbar({ hamburger, setHamburger }: Props) {
 
                         <a href="/#aboutme">About me</a>
 
-                        <a href="/#opinions">Opinions</a>
-
                         <a href="/#contact">Contact</a>
                     </ul>
                 </div>

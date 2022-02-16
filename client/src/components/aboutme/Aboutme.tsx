@@ -172,7 +172,7 @@ export default function AboutMe() {
                                     <h3
                                         className="result-vote"
                                         style={{
-                                            color: "#085ca670",
+                                            color: "rgba(0, 0, 0, 0.5)",
                                             zIndex: 20000,
                                         }}
                                     >
@@ -183,7 +183,7 @@ export default function AboutMe() {
                                     <h3
                                         className="result-vote"
                                         style={{
-                                            color: "#085ca690",
+                                            color: "rgba(0, 0, 0, 0.5)",
                                             zIndex: 20000,
                                         }}
                                     >
@@ -355,7 +355,8 @@ export default function AboutMe() {
                                             {
                                                 label: "Favourite Technologies",
                                                 data: points,
-                                                backgroundColor: "#8085ba33",
+                                                backgroundColor:
+                                                    "rgba(0, 0, 0, 0.5)",
                                             },
                                         ],
                                     }}
