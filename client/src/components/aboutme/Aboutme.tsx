@@ -154,31 +154,15 @@ export default function AboutMe() {
 
                     <div className="right" ref={ref}>
                         <h1>Your opinion is very important.</h1>
-                        {technologies.length > 1 && (
-                            <Bar
-                                className="bar"
-                                data={{
-                                    labels: technologies,
-                                    datasets: [
-                                        {
-                                            label: "Favourite Technologies",
-                                            data: points,
-                                            backgroundColor: "#085ca670",
-                                        },
-                                    ],
-                                }}
-                                options={{}}
-                            ></Bar>
-                        )}
-
                         <div className="right-out">
+                            <h3>
+                                Drag to the right the most interesting
+                                technologies of my stack and click vote:
+                            </h3>
                             <div className="vote-title-btn">
-                                <h2>
-                                    Drag to the right the most interesting
-                                    technologies of my stack and click vote:
-                                </h2>
                                 {result && (
                                     <h3
+                                        className="result-vote"
                                         style={{
                                             color: "#085ca670",
                                             zIndex: 20000,
@@ -189,6 +173,7 @@ export default function AboutMe() {
                                 )}
                                 {voted && (
                                     <h3
+                                        className="result-vote"
                                         style={{
                                             color: "#085ca690",
                                             zIndex: 20000,
@@ -359,6 +344,24 @@ export default function AboutMe() {
                                     techCheck={techCheck}
                                 ></Board>
                             </div>
+                        </div>
+                        <h2>Results</h2>
+                        <div className="bar">
+                            {technologies.length > 1 && (
+                                <Bar
+                                    data={{
+                                        labels: technologies,
+                                        datasets: [
+                                            {
+                                                label: "Favourite Technologies",
+                                                data: points,
+                                                backgroundColor: "#085ca670",
+                                            },
+                                        ],
+                                    }}
+                                    options={{}}
+                                ></Bar>
+                            )}
                         </div>
                         <h1 className="phone">Use your computer to vote!</h1>
                     </div>
