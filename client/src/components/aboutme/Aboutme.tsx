@@ -349,7 +349,7 @@ export default function AboutMe() {
                         <h2>Results</h2>
                         <div className="bar">
                             {technologies.length > 1 && (
-                                <Bar
+                                <Bar className="bar-in"
                                     data={{
                                         labels: technologies,
                                         datasets: [
