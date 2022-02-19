@@ -166,9 +166,15 @@
                 .boards {
                     display: flex;
                     flex-direction: row;
-                    align-items: space-around;
-                    justify-content: space-around;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
                     padding-top: 10px;
+
+                    .between-board-arrow{
+                            font-size: 50px;
+                            font-weight: 800;
+                        }
 
                     .board {
                         display: flex;

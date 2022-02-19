@@ -338,6 +338,7 @@ export default function AboutMe() {
                                         </p>
                                     </Tech>
                                 </Board>
+                                <p className="between-board-arrow">➡</p>
                                 <Board
                                     id="board2"
                                     className="board"
