@@ -126,18 +126,23 @@ app.post("/techs", (req, res) => {
 
 app.post("/sendmail", (req, res) => {
     const data = req.body;
+    let email;
+    const regex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+    
+    if (data.email.match(regex)) {
+        email = data.email;
+    }
 
-    if (data.email) {
+    if (email) {
         sendEmail(
             "gabrieltrompeta@gmail.com",
             "I had an email from my portfolio",
-            `${data.email} sends: 
-                ${data.message}`
+            `Email: \n ${email} \n\n Name: \n ${data.name} \n\n Message: \n ${data.message}`
         ).then(() => {
             res.json({ success: true });
         });
-    }else{
-        res.json({success:false});
+    } else {
+        res.json({ success: false });
     }
 });
 

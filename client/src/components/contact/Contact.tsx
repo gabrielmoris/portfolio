@@ -41,12 +41,13 @@ export default function Contact() {
 
     return (
         <div className="contact" id="contact">
-            <div className="left">
+            {/* <div className="left">
                 <img src="./assets/contact.png" alt="contact" />
-            </div>
+            </div> */}
             <div className="right">
                 <h2>Contact me:</h2>
                 <form>
+                    <label>Your E-mail:</label>
                     <input
                         type="email"
                         name="email"
@@ -54,12 +55,23 @@ export default function Contact() {
                         placeholder="email"
                     />
 
+                    <label>Your name:</label>
+                    <input
+                        type="text"
+                        name="name"
+                        onChange={handleChange}
+                        placeholder="name"
+                    />
+
+                    <label>Write a message:</label>
                     <textarea
                         placeholder="Write me here"
                         name="message"
                         onChange={handleChange}
                     ></textarea>
-                    <button onClick={handleSubmit}>Send</button>
+                    <button className="my-button" onClick={handleSubmit}>
+                        Send
+                    </button>
                     {submited && (
                         <span style={{ color: "#f2d8ce9f" }}>
                             Thank you!
@@ -73,8 +85,8 @@ export default function Contact() {
                                 fontWeight: 900,
                             }}
                         >
-                            An unexpected error ocurred.
-                            <br /> I will solve it as soon as possible.
+                            Error.
+                            <br /> Email not valid.
                         </span>
                     )}
                 </form>
