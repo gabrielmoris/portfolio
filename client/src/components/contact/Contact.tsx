@@ -90,10 +90,10 @@ export default function Contact() {
                         </span>
                     )}
                 </form>
-                <footer>
-                    <p className="copyright">© Gabriel C. Moris 2022</p>
-                </footer>
             </div>
+            <footer>
+                <p className="copyright">© Gabriel C. Moris 2022</p>
+            </footer>
         </div>
     );
 }

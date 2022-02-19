@@ -4,39 +4,45 @@
     background-color: #ffffff;
     display: flex;
     background-image: url("https://images.unsplash.com/photo-1627398242454-45a1465c2479");
-    background-size:cover;
-	background-position: right center;
+    background-size: cover;
+    background-position: right center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
     @include mobile {
         flex-direction: column;
     }
 
-    .left {
-        flex: 1;
-        overflow: hidden;
+    // .left {
+    //     flex: 1;
+    //     overflow: hidden;
 
-        @include mobile {
-            flex: 0.3;
-        }
+    //     @include mobile {
+    //         flex: 0.3;
+    //     }
 
-        img {
-            height: 100%;
-            width: 100%;
-            // filter: opacity(0.85);
+    //     img {
+    //         height: 100%;
+    //         width: 100%;
+    //         // filter: opacity(0.85);
 
-            @include mobile {
-                width: 100%;
-            }
-        }
-    }
+    //         @include mobile {
+    //             width: 100%;
+    //         }
+    //     }
+    // }
 
     .right {
-        flex: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         position: relative;
+        width: 40%;
+        height: 70%;
+        background-color: #ebebf2f6;
 
         @include mobile {
             flex: 0.7;
@@ -47,14 +53,12 @@
         }
 
         form {
-            width: 50%;
-            height: 70%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
             font-family: "Open Sans", sans-serif;
-            background-color: #ebebf2f6;
+            height: 75%;
 
             span {
                 text-align: center;
@@ -102,13 +106,16 @@
                 top: 1px;
             }
         }
-        .copyright {
-            position: absolute;
-            bottom: 10px;
-            font-size: 15px;
-            font-weight: 700;
-            color: #0d00005d;
-            right: 5px;
-        }
+    }
+
+    .copyright {
+        width:200px;
+        font-size: 15px;
+        font-weight: 700;
+        color: #ebebf2f6;
+        position: absolute;
+        bottom:10px;
+        text-align: center;
+        right: calc(50% - 100px );
     }
 }
