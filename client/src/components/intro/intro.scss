@@ -44,13 +44,26 @@
         flex-shrink: 0;
 
         @include mobile {
-            flex-direction: column;
-            align-items: center;
+            display: grid;
+            // flex-direction: column;
+            // align-items: center;
+            // justify-content: space-between;
+            grid-template-rows: 3fr 5fr;
+            grid-template-columns: 100%;
         }
+
+        @media (max-width: 380px) {
+                   grid-template-rows: 3fr 3fr; 
+                }
+
         .left {
             flex: 0.5;
             overflow: hidden;
             flex-shrink: 0;
+
+            // @include mobile {
+            //     justify-content: space-between;
+            // }
 
             .img-container {
                 margin-top: 50px;
@@ -63,7 +76,6 @@
                 height: 700px;
                 float: left;
                 flex-shrink: 0;
-                // box-shadow: 5px 5px 5px rgba(0, 0.5, 0.5, 0.5);
                 overflow: hidden;
                 flex-shrink: 0;
 
@@ -72,10 +84,10 @@
                 }
 
                 @include mobile {
-                    margin-top: 20%;
-                    align-items: flex-start;
-                    width: 390px;
-                    height: 390px;
+                    margin-top: 0;
+                    align-items: space-between;
+                    width: 350px;
+                    height: 300px;
                     background-color: #f2d8ce00;
                     background-color: #f2d8ce00;
                     box-shadow: none;
@@ -85,8 +97,8 @@
                     width: 80%;
 
                     @include mobile {
-                        width: 60%;
-                        border-radius: 100%;
+                        width: 70%;
+                        // border-radius: 100%;
                     }
                 }
             }
@@ -162,24 +174,45 @@
                     font-size: 80px;
                     animation: blinking 2s infinite;
 
-                    @include mobile {
-                        font-size: 40px;
-                        left: 45%;
-                    }
+                    // @include mobile {
+                    //     font-size: 40px;
+                    //     left: 45%;
+                    // }
 
                     @keyframes blinking {
                         0% {
-                            bottom: 25px;
+                            bottom: 35px;
                         }
 
                         20% {
-                            bottom: 15px;
+                            bottom: 25px;
                         }
 
                         100% {
-                            bottom: 25px;
+                            bottom: 35px;
                         }
                     }
+
+                    @include mobile {
+                        font-size: 40px;
+                        left: 45%;
+                        bottom:50px;
+
+                        @keyframes blinking {
+                        0% {
+                            bottom: 50px;
+                        }
+
+                        20% {
+                            bottom: 40px;
+                        }
+
+                        100% {
+                            bottom: 50px;
+                        }
+                    }
+                    }
+                    
                 }
             }
         }
