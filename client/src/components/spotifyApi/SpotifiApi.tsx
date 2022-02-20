@@ -1,6 +1,5 @@
 import "./spotifyApi.scss";
 
-
 export default function SpotifiApi() {
     return (
         <div className="spotifyApi">
@@ -32,10 +31,10 @@ export default function SpotifiApi() {
                 <div className="right">
                     <h2>About</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Natus, dignissimos molestiae quidem cupiditate quisquam
-                        et hic soluta dolor voluptate illum, nam rem labore
-                        aspernatur molestias neque iure quo consectetur nisi.
+                        APIs have vital importance in all industries. Allows us
+                        to use the capabilities of one computer program to be
+                        used by another. This project covers the necessity to
+                        learn this important tool for the industry.
                     </p>
                     <div>
                         <div className="image">
@@ -47,11 +46,10 @@ export default function SpotifiApi() {
                     </div>
                     <h2>Description</h2>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Unde modi illum, dolor rerum perferendis
-                        asperiores quod eos autem, facilis animi sequi sunt a
-                        laudantium corrupti accusantium velit recusandae, quas
-                        eaque?
+                        Using the Spotify API, I developed a searching engine
+                        that gives me all the Artists or Albums which coincide
+                        with the input. The results are shown in clickable cards
+                        that bring you to the actual Spotify player.
                     </p>
                 </div>
             </div>

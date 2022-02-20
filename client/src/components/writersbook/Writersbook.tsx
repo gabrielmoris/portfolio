@@ -33,10 +33,10 @@ export default function Writersbook() {
                 <div className="right">
                     <h2>About</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Natus, dignissimos molestiae quidem cupiditate quisquam
-                        et hic soluta dolor voluptate illum, nam rem labore
-                        aspernatur molestias neque iure quo consectetur nisi.
+                        As a Frontend is necessary to know libraries like React
+                        and this project was a way to show and practice my
+                        skills with this library as well as with Redux, aws, and
+                        socket.io.
                     </p>
                     <div>
                         <div className="image">
@@ -48,11 +48,8 @@ export default function Writersbook() {
                     </div>
                     <h2>Description</h2>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Unde modi illum, dolor rerum perferendis
-                        asperiores quod eos autem, facilis animi sequi sunt a
-                        laudantium corrupti accusantium velit recusandae, quas
-                        eaque?
+                        The app needs registration, afterwards, the user can
+                        upload a profile picture and write a biography.
                     </p>
                     <div>
                         <div className="image">
@@ -62,6 +59,13 @@ export default function Writersbook() {
                             />
                         </div>
                     </div>
+                    <p>
+                        Redux allows me to update the data at the same moment
+                        the user interacts, for example when following another
+                        user. In addition, with socket.io, the user can write in
+                        the chat where the rest of the users will have the data
+                        instantaneously.
+                    </p>
                 </div>
             </div>
             <div className="down"></div>
