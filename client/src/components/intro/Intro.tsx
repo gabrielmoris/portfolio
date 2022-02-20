@@ -56,7 +56,8 @@ export default function Intro() {
                             duration: 2,
                         }}
                     >
-                        <img src="./assets/yo.png" alt="Gabriel C. Moris" />
+                        <img src="./assets/bust.svg" alt="Gabriel C. Moris" />
+                        {/* <img src="./assets/yo.png" alt="Gabriel C. Moris" /> */}
                     </motion.div>
                 </div>
 

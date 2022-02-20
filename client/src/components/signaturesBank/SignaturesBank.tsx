@@ -15,6 +15,7 @@ export default function SignaturesBank() {
                         <li>CSS3</li>
                         <li>JavaScript</li>
                         <li>Handlebars</li>
+                        <li>PostgreSQL</li>
                     </ul>
 
                     <a
@@ -28,10 +29,10 @@ export default function SignaturesBank() {
                 <div className="right">
                     <h2>About</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Natus, dignissimos molestiae quidem cupiditate quisquam
-                        et hic soluta dolor voluptate illum, nam rem labore
-                        aspernatur molestias neque iure quo consectetur nisi.
+                        When I want to sign documents online I face the
+                        difficulty of doing It with the mouse.<br/> I developed this
+                        website to take advantage of the touch screen of the
+                        phone and download the signature on the computer.
                     </p>
                     <div>
                         <div className="image">
@@ -43,11 +44,13 @@ export default function SignaturesBank() {
                     </div>
                     <h2>Description</h2>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Unde modi illum, dolor rerum perferendis
-                        asperiores quod eos autem, facilis animi sequi sunt a
-                        laudantium corrupti accusantium velit recusandae, quas
-                        eaque?
+                        The website requires registration and works on the phone
+                        and desktop.
+                        After registration you can store your signature drawing
+                        in a canvas with your finger or, if you prefer, you can
+                        do it with the mouse. You can delete and redo your
+                        signature all the times you want and download the
+                        signature as a .png without background.
                     </p>
                     <div>
                         <div className="image">
@@ -57,6 +60,11 @@ export default function SignaturesBank() {
                             />
                         </div>
                     </div>
+                    <p>
+                        As an additional feature, you can check the names,
+                        cities, and websites (if provided) of the people who also
+                        signed, but never their signatures.
+                    </p>
                 </div>
             </div>
             <div className="down"></div>

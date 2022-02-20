@@ -31,10 +31,10 @@ export default function Imageboard() {
                 <div className="right">
                     <h2>About</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Natus, dignissimos molestiae quidem cupiditate quisquam
-                        et hic soluta dolor voluptate illum, nam rem labore
-                        aspernatur molestias neque iure quo consectetur nisi.
+                        When I see a beautiful landscape or something that
+                        attracts my attention I take pictures. I wanted to do an
+                        imageboard to store and show my pictures and give the
+                        opportunity of adding some pictures to more people.
                     </p>
                     <div>
                         <div className="image">
@@ -46,11 +46,8 @@ export default function Imageboard() {
                     </div>
                     <h2>Description</h2>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Unde modi illum, dolor rerum perferendis
-                        asperiores quod eos autem, facilis animi sequi sunt a
-                        laudantium corrupti accusantium velit recusandae, quas
-                        eaque?
+                        No registration is needed. Just enter, upload a picture
+                        and a description.
                     </p>
                     <div>
                         <div className="image">
@@ -60,6 +57,11 @@ export default function Imageboard() {
                             />
                         </div>
                     </div>
+                    <p>
+                        The users can leave comments and add pictures. I used
+                        Vue.js and AWS as a practice to learn these technologies
+                        and improve my coding skills.
+                    </p>
                 </div>
             </div>
             <div className="down"></div>
