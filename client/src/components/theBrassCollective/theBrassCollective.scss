@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .theBrassCollective {
     width: 100%;
     background-color: #ffffff;
@@ -10,6 +12,10 @@
 
     .up {
         flex: 0.2;
+
+        @include mobile {
+            flex: 0.3;
+        }
     }
 
     hr {
@@ -30,7 +36,19 @@
         flex-direction: row;
         justify-content: space-evenly;
 
+        @include mobile {
+            flex: 0.8;
+            flex-direction: column-reverse;
+        }
+
         .left {
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
             h2 {
                 margin: 20px 0;
             }
@@ -41,6 +59,10 @@
 
                 li {
                     margin-bottom: 8px;
+
+                    @include mobile {
+                        padding-right: 10px;
+                    }
                 }
             }
 
@@ -75,17 +97,39 @@
             width: 65%;
             background-color: rgba(0, 0, 0, 0.027);
 
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
             div {
                 display: flex;
                 flex-direction: row;
+
+                @include mobile {
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+
                 .image {
                     margin: 20px;
                     border: solid 2px rgba(0, 0, 0, 0.288);
+
+                    @include mobile {
+                        width: 60%;
+                    }
+
                     img {
                         max-width: 750px;
                         max-height: 375px;
                         overflow-y: hidden;
                         object-fit: contain;
+                        @include mobile {
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -93,15 +137,24 @@
             p {
                 margin: 20px 20px;
                 text-align: justify;
+
+                @include mobile {
+                    width: 80%;
+                }
             }
 
             h2 {
                 margin: 20px 0;
+
+                @include mobile {
+                    width: 80%;
+                }
             }
         }
     }
 
     .down {
         flex: 0.1;
+        padding: 50px;
     }
 }
