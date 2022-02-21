@@ -212,19 +212,19 @@
                         left: 45%;
                         bottom: 50px;
 
-                    //     @keyframes blinking {
-                    //         0% {
-                    //             bottom: 55px;
-                    //         }
+                        @keyframes blinking {
+                            0% {
+                                bottom: 65px;
+                            }
 
-                    //         20% {
-                    //             bottom: 45px;
-                    //         }
+                            20% {
+                                bottom: 55px;
+                            }
 
-                    //         100% {
-                    //             bottom: 55px;
-                    //         }
-                    //     }
+                            100% {
+                                bottom: 65px;
+                            }
+                        }
                     }
                 }
             }

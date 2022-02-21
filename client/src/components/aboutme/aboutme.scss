@@ -11,6 +11,11 @@
     h1 {
         position: inherit;
         flex: 0.1;
+
+        @include mobile {
+            flex: 0.05;
+            overflow: hidden;
+        }
     }
 
     .body-aboutme {
@@ -21,6 +26,7 @@
 
         @include mobile {
             flex-direction: column;
+            flex: 0.9;
         }
 
         .left {
@@ -126,6 +132,7 @@
 
                 @include mobile {
                     overflow: hidden;
+                    flex: 0.1;
                 }
             }
 
@@ -247,19 +254,24 @@
                 @include mobile {
                     flex: 1;
                     width: 100%;
+                    border: none;
                 }
 
                 .bar-in {
                     margin: 0 20px;
 
                     @include mobile {
-                        margin: 0;
+                        margin: 0 5px;
                     }
                 }
             }
 
             .phone {
                 display: none;
+
+                @include mobile {
+                    display: block;
+                }
             }
         }
     }
