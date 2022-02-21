@@ -73,7 +73,8 @@ export default function Contact() {
                         Send
                     </button>
                     {submited && (
-                        <span style={{ color: "#f2d8ce9f" }}>
+                        <span>
+                            <img className="img-span" src="./assets/avatar.svg" alt="my-avatar" />
                             Thank you!
                             <br /> I will contact you as soon as possible.
                         </span>
