@@ -39,32 +39,40 @@
                 padding: 30px 30px;
                 overflow: hidden;
                 flex: 0.5;
+                display: flex;
+                flex-direction: column;
 
                 @include mobile {
                     padding: 0 10px;
                     width: 100%;
-                }
-            }
-
-            .my-button {
-                box-shadow: 0px 1px 0px 0px #8085ba;
-                background-color: #8085ba;
-                border-radius: 6px;
-                border: 1px solid #8085ba;
-                display: inline-block;
-                cursor: pointer;
-                color: #000000;
-                padding: 12px 44px;
-                text-decoration: none;
-                text-shadow: 0px -1px 0px #032ca6;
-
-                .my-button:hover {
-                    background-color: #8085ba33;
+                    flex: 0.8;
                 }
 
-                .my-button:active {
-                    position: relative;
-                    top: 1px;
+                p {
+                    padding-bottom: 30px;
+                }
+
+                .my-button {
+                    box-shadow: 0px 1px 0px 0px #8085ba;
+                    background-color: #8085ba;
+                    border-radius: 6px;
+                    border: 1px solid #8085ba;
+                    display: inline-block;
+                    cursor: pointer;
+                    color: #000000;
+                    padding: 12px 44px;
+                    text-decoration: none;
+                    text-shadow: 0px -1px 0px #032ca6;
+                    align-self: center;
+
+                    .my-button:hover {
+                        background-color: #8085ba33;
+                    }
+
+                    .my-button:active {
+                        position: relative;
+                        top: 1px;
+                    }
                 }
             }
 
@@ -73,8 +81,12 @@
                 justify-content: space-around;
                 align-items: flex-end;
                 height: -webkit-fill-available;
-                // padding: 0 10%;
+                padding: 0 10%;
                 flex: 0.5;
+
+                @include mobile {
+                    flex: 0.2;
+                }
 
                 a {
                     text-decoration: none;
@@ -111,6 +123,10 @@
             h1 {
                 font-size: 20px;
                 padding: 5px;
+
+                @include mobile {
+                    overflow: hidden;
+                }
             }
 
             .right-out {
@@ -119,6 +135,10 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+
+                @include mobile {
+                    display: none;
+                }
 
                 h3 {
                     font-size: 15px;
@@ -224,8 +244,17 @@
                 margin-bottom: 20px;
                 background-color: #ebebf2;
 
+                @include mobile {
+                    flex: 1;
+                    width: 100%;
+                }
+
                 .bar-in {
                     margin: 0 20px;
+
+                    @include mobile {
+                        margin: 0;
+                    }
                 }
             }
 
