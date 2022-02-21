@@ -349,7 +349,8 @@ export default function AboutMe() {
                         <h2>Results</h2>
                         <div className="bar">
                             {technologies.length > 1 && (
-                                <Bar className="bar-in"
+                                <Bar
+                                    className="bar-in"
                                     data={{
                                         labels: technologies,
                                         datasets: [
@@ -368,10 +369,10 @@ export default function AboutMe() {
                         <h1 className="phone">Use your computer to vote!</h1>
                     </div>
                 </div>
+                <a className="arrow-opinions" href="#opinions">
+                    <Down />
+                </a>
             </div>
-            <a className="arrow-opinions" href="#opinions">
-                <Down />
-            </a>
         </>
     );
 }

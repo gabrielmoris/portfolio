@@ -13,13 +13,13 @@
         flex: 0.1;
 
         @include mobile {
-            flex: 0.05;
+            flex: 0.06;
             overflow: hidden;
         }
     }
 
     .body-aboutme {
-        flex: 0.9;
+        flex: 0.95;
         display: flex;
         justify-content: center;
         flex-shrink: 0;
@@ -32,30 +32,42 @@
         .left {
             display: flex;
             flex-direction: column;
-            justify-content: start;
+            justify-content: flex-end;
+            align-items: center;
             flex-shrink: 0;
             flex: 0.5;
             background-color: #ebebf2;
             margin: 20px;
 
+            @include mobile {
+                margin: 8px 10px;
+            }
+
             .text-aboutme {
                 width: 90%;
                 text-justify: distribute-all-lines;
                 font-weight: 600;
-                padding: 30px 30px;
+                font-size: 20px;
+                padding: 60px 60px;
                 overflow: hidden;
-                flex: 0.5;
+                flex: 0.6;
                 display: flex;
                 flex-direction: column;
 
                 @include mobile {
-                    padding: 0 10px;
+                    font-size: 12px;
+                    padding: 3px 5px;
                     width: 100%;
-                    flex: 0.8;
+                    flex: 0.75;
+                    overflow: hidden;
                 }
 
                 p {
-                    padding-bottom: 30px;
+                    padding-bottom: 60px;
+
+                    @include mobile {
+                        padding-bottom: 5px;
+                    }
                 }
 
                 .my-button {
@@ -84,25 +96,25 @@
 
             .icons {
                 display: flex;
-                justify-content: space-around;
-                align-items: flex-end;
-                height: -webkit-fill-available;
                 padding: 0 10%;
-                flex: 0.5;
+                flex: 0.4;
 
                 @include mobile {
-                    flex: 0.2;
+                    flex: 0.25;
+                    overflow: hidden;
                 }
 
                 a {
                     text-decoration: none;
                     color: black;
-                    font-size: 100px;
-                    width: 15%;
+                    font-size: 80px;
                     text-align: center;
+                    margin: 0 40px;
 
                     @include mobile {
                         font-size: 40px;
+                        overflow: hidden;
+                        margin: 5px 45px;
                     }
 
                     &:active {
@@ -126,6 +138,10 @@
             background-color: #ebebf2;
             margin: 20px;
 
+            @include mobile {
+                margin: 8px 10px;
+            }
+
             h1 {
                 font-size: 20px;
                 padding: 5px;
@@ -133,6 +149,7 @@
                 @include mobile {
                     overflow: hidden;
                     flex: 0.1;
+                    font-size: 12px;
                 }
             }
 
@@ -253,7 +270,7 @@
 
                 @include mobile {
                     flex: 1;
-                    width: 100%;
+                    width: 90%;
                     border: none;
                 }
 
@@ -301,9 +318,22 @@
         }
 
         @include mobile {
-            font-size: 40px;
+            font-size: 60px;
             left: 45%;
-            transform: translateY(8px);
+
+            @keyframes blinking4 {
+                0% {
+                    bottom: calc(-185vh + 10px);
+                }
+
+                20% {
+                    bottom: calc(-185vh);
+                }
+
+                100% {
+                    bottom: calc(-185vh + 10px);
+                }
+            }
         }
     }
 }
