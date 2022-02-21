@@ -29,6 +29,10 @@
                 font-size: 25px;
                 margin-left: 0;
             }
+
+            @media screen and (max-height: 680px) {
+                font-size: 20px;
+            }
         }
         @include mobile {
             .im-gabriel {
@@ -58,10 +62,6 @@
             overflow: hidden;
             flex-shrink: 0;
             justify-content: flex-end;
-
-            // @include mobile {
-            //     justify-content: space-between;
-            // }
 
             .img-container {
                 @media (max-width: 4000px) {
@@ -93,6 +93,7 @@
                     overflow: hidden;
                     flex-shrink: 0;
                 }
+
                 @media (max-width: 1410px) {
                     background-color: #f2d8ce00;
                 }
@@ -105,6 +106,11 @@
                     background-color: #f2d8ce00;
                     background-color: #f2d8ce00;
                     box-shadow: none;
+
+                    @media screen and (max-height: 680px) {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
 
                 img {
@@ -164,6 +170,10 @@
                         @include mobile {
                             font-size: 25px;
                         }
+
+                        @media screen and (max-height: 680px) {
+                            font-size: 20px;
+                        }
                     }
 
                     h3 {
@@ -178,6 +188,10 @@
 
                         @include mobile {
                             font-size: 18px;
+                        }
+
+                        @media screen and (max-height: 680px) {
+                            font-size: 15px;
                         }
                     }
                 }
@@ -223,6 +237,24 @@
 
                             100% {
                                 bottom: 65px;
+                            }
+                        }
+                    }
+
+                    @media screen and (max-height: 680px) {
+                        font-size: 60px;
+
+                        @keyframes blinking {
+                            0% {
+                                bottom: 15px;
+                            }
+
+                            20% {
+                                bottom: 10px;
+                            }
+
+                            100% {
+                                bottom: 15px;
                             }
                         }
                     }

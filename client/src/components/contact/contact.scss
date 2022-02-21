@@ -3,7 +3,11 @@
 .contact {
     background-color: #ffffff;
     display: flex;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.616)), url("https://images.unsplash.com/photo-1627398242454-45a1465c2479");
+    background-image: linear-gradient(
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.616)
+        ),
+        url("https://images.unsplash.com/photo-1627398242454-45a1465c2479");
     background-size: cover;
     background-position: right center;
     flex-direction: column;
@@ -49,6 +53,10 @@
             flex: 0.7;
         }
 
+        @media screen and (max-height: 680px) {
+            flex: 1;
+        }
+
         h2 {
             font-size: 30px;
         }
@@ -64,7 +72,7 @@
             span {
                 text-align: center;
 
-                .img-span{
+                .img-span {
                     width: 30px;
                     height: auto;
                 }
@@ -123,5 +131,9 @@
         bottom: 10px;
         text-align: center;
         right: calc(50% - 100px);
+
+        @media screen and (max-height: 680px) {
+            bottom: 2px;
+        }
     }
 }
