@@ -49,10 +49,10 @@ export default function Intro() {
                         className="img-container"
                         // animate={{ x: -155 }}
                         initial={{ x: -200 }}
-                        animate={{ x: -5 }}
+                        animate={{ x: -10 }}
                         transition={{
                             type: "spring",
-                            bounce: 0.5,
+                            bounce: 0.1,
                             duration: 2,
                         }}
                     >

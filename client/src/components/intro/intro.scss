@@ -45,40 +45,54 @@
 
         @include mobile {
             display: grid;
-            // flex-direction: column;
-            // align-items: center;
-            // justify-content: space-between;
             grid-template-rows: 3fr 5fr;
             grid-template-columns: 100%;
         }
 
         @media (max-width: 380px) {
-                   grid-template-rows: 3fr 3fr; 
-                }
+            grid-template-rows: 3fr 3fr;
+        }
 
         .left {
             flex: 0.5;
             overflow: hidden;
             flex-shrink: 0;
+            justify-content: flex-end;
 
             // @include mobile {
             //     justify-content: space-between;
             // }
 
             .img-container {
-                margin-top: 50px;
-                display: flex;
-                align-items: flex-end;
-                justify-content: center;
-                background-color: #ebebf2;
-                border-radius: 50%;
-                width: 700px;
-                height: 700px;
-                float: left;
-                flex-shrink: 0;
-                overflow: hidden;
-                flex-shrink: 0;
+                @media (max-width: 4000px) {
+                    margin-top: 15%;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    background-color: #ebebf2;
+                    border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
+                    float: left;
+                    flex-shrink: 0;
+                    overflow: hidden;
+                    flex-shrink: 0;
+                }
 
+                @media (max-width: 2000px) {
+                    margin-top: 50px;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    background-color: #ebebf2;
+                    border-radius: 50%;
+                    width: 700px;
+                    height: 700px;
+                    float: left;
+                    flex-shrink: 0;
+                    overflow: hidden;
+                    flex-shrink: 0;
+                }
                 @media (max-width: 1410px) {
                     background-color: #f2d8ce00;
                 }
@@ -194,25 +208,24 @@
                     }
 
                     @include mobile {
-                        font-size: 40px;
+                        font-size: 80px;
                         left: 45%;
-                        bottom:50px;
+                        bottom: 50px;
 
-                        @keyframes blinking {
-                        0% {
-                            bottom: 50px;
-                        }
+                    //     @keyframes blinking {
+                    //         0% {
+                    //             bottom: 55px;
+                    //         }
 
-                        20% {
-                            bottom: 40px;
-                        }
+                    //         20% {
+                    //             bottom: 45px;
+                    //         }
 
-                        100% {
-                            bottom: 50px;
-                        }
+                    //         100% {
+                    //             bottom: 55px;
+                    //         }
+                    //     }
                     }
-                    }
-                    
                 }
             }
         }
