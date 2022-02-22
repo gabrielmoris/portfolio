@@ -135,7 +135,7 @@ app.post("/sendmail", (req, res) => {
 
     if (email) {
         sendEmail(
-            "gabrieltrompeta@gmail.com",
+            "gabrielcmoris@gmail.com",
             "I had an email from my portfolio",
             `Email: \n ${email} \n\n Name: \n ${data.name} \n\n Message: \n ${data.message}`
         ).then(() => {
