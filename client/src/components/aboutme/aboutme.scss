@@ -8,17 +8,22 @@
     justify-content: center;
     flex-shrink: 0;
 
-    h1 {
+    @include mobile {
+        justify-content: flex-start;
+    }
+
+    .title {
         position: inherit;
         flex: 0.1;
 
         @include mobile {
-            flex: 0.06;
+            flex: 0.04;
             overflow: hidden;
+            font-size: 20px;
         }
 
         @media screen and (max-height: 680px) {
-            font-size: 20px;
+            font-size: 15px;
         }
     }
 
@@ -51,12 +56,12 @@
                 width: 90%;
                 text-justify: distribute-all-lines;
                 font-weight: 600;
-                font-size: 20px;
-                padding: 60px 60px;
-                overflow: hidden;
+                font-size: 18px;
+                padding: 60px 40px;
                 flex: 0.6;
                 display: flex;
                 flex-direction: column;
+                overflow: hidden;
 
                 @include mobile {
                     font-size: 12px;
@@ -67,19 +72,20 @@
                 }
                 @media screen and (max-height: 680px) {
                     width: 90%;
-                    font-size: 10px;
+                    font-size: 9px;
                     padding: 5px;
                 }
 
                 p {
                     padding-bottom: 60px;
+                    overflow: hidden;
 
                     @include mobile {
-                        padding-bottom: 5px;
+                        margin: 5px;
                     }
 
                     @media screen and (max-height: 680px) {
-                        padding-bottom: 0;
+                        margin: 1px;
                     }
                 }
 
@@ -170,7 +176,13 @@
                 @include mobile {
                     overflow: hidden;
                     flex: 0.1;
-                    font-size: 12px;
+                    font-size: 15px;
+                }
+            }
+
+            h2 {
+                @include mobile {
+                    display: none;
                 }
             }
 
@@ -323,7 +335,7 @@
     }
 
     .arrow-opinions {
-        color: rgba(0, 0, 0, 0.26);
+        color: #ebebf2;
         position: absolute;
         left: 48.5%;
         font-size: 80px;
@@ -361,6 +373,23 @@
 
                 100% {
                     bottom: calc(-185vh + 10px);
+                }
+            }
+        }
+
+        @media screen and (max-height: 680px) {
+            font-size: 40px;
+            @keyframes blinking4 {
+                0% {
+                    bottom: calc(-175vh + 10px);
+                }
+
+                20% {
+                    bottom: calc(-175vh);
+                }
+
+                100% {
+                    bottom: calc(-175vh + 10px);
                 }
             }
         }

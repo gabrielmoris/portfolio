@@ -104,14 +104,21 @@ export default function AboutMe() {
                     <div className="left">
                         <div className="text-aboutme">
                             <p>
-                                From the first moment I saw a "Hello World" in
-                                the browser I took the decision of mastering
-                                this magic and I joined a bootcamp. Always
-                                trying to follow the DRY principle and write
-                                clean and reusable code. <br />
-                                With my experience as a teacher and musician I
-                                learn how to explain complex terms in a simple
-                                way and find solutions with creativity.
+                                From the first moment, I saw a "Hello World" in
+                                the browser I took upon myself the challenge of
+                                mastering the intricacies of the magic world of
+                                computer science. That was when I decided to
+                                join a boot camp and started my journey. I
+                                always do my best to follow the DRY principle
+                                and write clean and reusable code.
+                                <br /> <br />
+                                Thanks to my experience as a teacher and a
+                                musician, I am a specialist in conveying and
+                                explaining complex concepts and ideas in a
+                                simple way. I also consider myself a creative
+                                person who loves a challenge and finds a
+                                solution for any setback that may arise along
+                                the way.
                             </p>
 
                             <a
@@ -120,7 +127,7 @@ export default function AboutMe() {
                                 download
                                 target="_blank"
                             >
-                                Download my resume
+                                Download my CV
                             </a>
                         </div>
                         <div className="icons">
@@ -153,7 +160,7 @@ export default function AboutMe() {
                     </div>
 
                     <div className="right" ref={ref}>
-                        <h1>Your opinion is very important.</h1>
+                        <h1>Your opinion counts!</h1>
                         <div className="right-out">
                             <h3>
                                 Drag to the right the most interesting
@@ -369,7 +376,7 @@ export default function AboutMe() {
                         <h1 className="phone">Use your computer to vote!</h1>
                     </div>
                 </div>
-                <a className="arrow-opinions" href="#opinions">
+                <a className="arrow-opinions" href="#contact">
                     <Down />
                 </a>
             </div>
