@@ -63,9 +63,7 @@ export default function AboutMe() {
     }, [result, inView]);
 
     techGraf.forEach((element: { points: number; tech: string }) => {
-        if (element.points === 0) {
-            console.log("nope");
-        } else {
+        if (element.points != 0) {
             technologies.push(element.tech);
             points.push(element.points);
         }
