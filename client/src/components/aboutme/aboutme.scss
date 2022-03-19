@@ -71,11 +71,24 @@
                     flex: 0.75;
                     overflow: hidden;
                 }
-                @media screen and (max-height: 680px) {
-                    width: 90%;
+
+                 @media screen and (max-height: 900px) {
+                    width: 100%;
                     font-size: 9px;
                     padding: 2px;
                     flex:0.9;
+                }
+
+                @media screen and (max-height: 680px) {
+                    width: 100%;
+                    font-size: 9px;
+                    padding: 2px;
+                    flex:0.9;
+                }
+
+                @media screen and (max-width: 350px) {
+                    width: 95%;
+                    font-size: 9px;
                 }
 
                 p {

@@ -112,11 +112,10 @@ export default function AboutMe() {
                                 <br /> <br />
                                 Thanks to my experience as a teacher and a
                                 musician, I am a specialist in conveying and
-                                explaining complex concepts and ideas in a
-                                simple way. I also consider myself a creative
-                                person who loves a challenge and finds a
-                                solution for any setback that may arise along
-                                the way.
+                                simplifying complex concepts and ideas. I also
+                                consider myself a creative person who loves
+                                challenges and finds a solution for any setback
+                                that may arise along the way.
                             </p>
 
                             <a

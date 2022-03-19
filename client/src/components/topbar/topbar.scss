@@ -29,15 +29,23 @@
                 font-size: 30px;
                 font-weight: 700;
                 text-decoration: none;
-                color: inherit;
+                color: black;
                 margin-right: 40px;
+
+                &.active {
+                    color: #ffffff;
+                }
 
                 @include mobile {
                     font-size: 25px;
                 }
 
-                @media screen and (max-height: 680px) {
+                @media screen and (max-width: 400px) {
                     font-size: 20px;
+                }
+
+                @media screen and (max-width: 250px) {
+                    display: none;
                 }
             }
         }
@@ -83,7 +91,7 @@
 
             @include mobile {
                 display: inherit;
-                
+
                 .hamburger {
                     width: 32px;
                     height: 25px;

@@ -13,7 +13,10 @@ export default function Topbar({ hamburger, setHamburger }: Props) {
         <div className={"topbar " + (hamburger && "active")}>
             <div className="wrapper">
                 <div className="left">
-                    <a href="/#intro" className="logo">
+                    <a
+                        href="/#intro"
+                        className={"logo " + (hamburger && "active")}
+                    >
                         Gabriel C. Moris
                     </a>
                 </div>
