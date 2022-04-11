@@ -67,7 +67,7 @@ export default function Connect4() {
                         </div>
                     </div>
                     <p>
-                        As a former musician, I know the importance of showing
+                        As a musician myself, I know the importance of showing
                         his work to the customers. I offered the solution to
                         show his repertory more directly with clickable
                         components which open audio to listen to excerpts of his
