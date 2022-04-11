@@ -15,7 +15,7 @@ export default function Connect4() {
                     <ul>
                         <li>Figma</li>
                         <li>Next.js</li>
-                        <li>Typescropt</li>
+                        <li>Typescript</li>
                         <li>SCSS</li>
                         <li>Youtube API</li>
                         <li>AJAX(formsubmit.co)</li>
