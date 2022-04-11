@@ -51,7 +51,7 @@ export default function TheBrassCollective() {
                     <h2>Description</h2>
                     <p>
                         The design of the website is focused on the colors of
-                        the brass instruments and the dark color from the
+                        the brass instruments and the dark color of the
                         background contrasts the content more clear. The media
                         section shows the latest works of the brass band and the
                         footer allows visiting the Instagram, phone, email, and

@@ -41,11 +41,11 @@
     'Html, CSS, Javascript, Node.js, Express, PostgreSql.'
 );
  INSERT INTO works(img, url, github, name, description) VALUES (
-    'https://onionimageboard.s3.amazonaws.com/connect4.png',
-    'https://jovial-mestorf-9b8260.netlify.app/',
-    'https://github.com/gabrielmoris/codingChallenges/tree/master/week3/connect4',
-    'Connect 4',
-    'Html, CSS, Javascript, jQuery.'
+    'https://onionimageboard.s3.amazonaws.com/portfolio/manuelcasaresimg.jpg',
+    'https://www.manuelcasares.com',
+    'https://github.com/gabrielmoris/Manuel-Casares',
+    'Manuel Casares Website',
+    'Next.js, SCSS, Youtube API, Typescript, AJAX(formsubmit.co).'
 );
   INSERT INTO works(img, url, github, name, description) VALUES (
     'https://onionimageboard.s3.amazonaws.com/portfolio/spotifyScren.jpg',
