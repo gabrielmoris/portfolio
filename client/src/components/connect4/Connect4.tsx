@@ -35,7 +35,7 @@ export default function Connect4() {
                         The customer needed a website to reach more potential
                         clients. The website was designed following all the
                         requirements of the customer and offers solutions to
-                        engage possible customers with interesting features.
+                        engage the users with interesting features.
                     </p>
                     <div>
                         <div className="image">
@@ -48,7 +48,7 @@ export default function Connect4() {
                     <h2>Description</h2>
                     <p>
                         The mockup is done in Figma to afterward style with
-                        SCSS. the colors are dark and elegant as the customer
+                        SCSS. The colors are dark and elegant as the customer
                         requested and the layout is clean but shows the most
                         relevant information. The media section shows the latest
                         works of his youtube channel using the API of Youtube
