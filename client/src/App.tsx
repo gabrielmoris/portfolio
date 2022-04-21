@@ -3,6 +3,7 @@ import Intro from "./components/intro/Intro";
 import Works from "./components/works/Works";
 import Contact from "./components/contact/Contact";
 import AboutMe from "./components/aboutme/Aboutme";
+import Opinions from "./components/opinions/Opinions";
 import Menu from "./components/menu/Menu";
 import "./app.scss";
 import { useState } from "react";
@@ -20,6 +21,7 @@ function Home() {
             <Intro />
             <Works />
             <AboutMe />
+            <Opinions/>
             <Contact />
         </div>
     );
