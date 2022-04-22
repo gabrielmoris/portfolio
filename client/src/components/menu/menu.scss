@@ -1,10 +1,11 @@
 .menu {
-    width: 300px;
+    width: 100%;
     height: 100vh;
-    background-color: #ffffff;
+    background-color: #ffffff5d;
+    backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
-    right: -300px;
+    right: -100%;
     z-index: 999;
     display: flex;
     flex-direction: column;
@@ -14,7 +15,8 @@
 
     &.active {
         right: 0;
-        background-color: #030b00;
+        background-color: #030b0070;
+        backdrop-filter: blur(10px);
     }
 
     ul {

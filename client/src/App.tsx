@@ -17,11 +17,14 @@ import Writersbook from "./components/writersbook/Writersbook"
 
 function Home() {
     return (
-        <div className="sections">
+        <div
+            className="sections"
+            style={{ backgroundImage: `url(./assets/background.svg)` }}
+        >
             <Intro />
             <Works />
             <AboutMe />
-            <Opinions/>
+            <Opinions />
             <Contact />
         </div>
     );
