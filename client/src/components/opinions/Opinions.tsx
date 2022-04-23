@@ -130,7 +130,9 @@ function Opinions() {
                         </h3>
                     )}
                 </div>
-                <div className="boards">
+                <div
+                    className="boards"
+                >
                     <Board id="board-1" className="board">
                         <Tech id="html5" className="icon" draggable="true">
                             <FontAwesomeIcon icon={faHtml5}></FontAwesomeIcon>

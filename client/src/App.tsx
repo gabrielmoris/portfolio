@@ -9,18 +9,15 @@ import "./app.scss";
 import { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import TheBrassCollective from "./components/theBrassCollective/TheBrassCollective";
-import SpotifyApi from "./components/spotifyApi/SpotifiApi"
+import SpotifyApi from "./components/spotifyApi/SpotifiApi";
 import Connect4 from "./components/connect4/Connect4";
-import SignaturesBank from "./components/signaturesBank/SignaturesBank"
+import SignaturesBank from "./components/signaturesBank/SignaturesBank";
 import Imageboard from "./components/imageboard/Imageboard";
-import Writersbook from "./components/writersbook/Writersbook"
+import Writersbook from "./components/writersbook/Writersbook";
 
 function Home() {
     return (
-        <div
-            className="sections"
-            style={{ backgroundImage: `url(./assets/background.svg)` }}
-        >
+        <div className="sections">
             <Intro />
             <Works />
             <AboutMe />

@@ -68,7 +68,8 @@
                     display: flex;
                     align-items: flex-end;
                     justify-content: center;
-                    background-color: #ebebf2;
+                    background-color: #ebebf261;
+                    backdrop-filter: blur(10px);
                     border-radius: 50%;
                     width: 100%;
                     height: 100%;
@@ -83,7 +84,8 @@
                     display: flex;
                     align-items: flex-end;
                     justify-content: center;
-                    background-color: #ebebf2;
+                    background-color: #ebebf261;
+                    backdrop-filter: blur(10px);
                     border-radius: 50%;
                     width: 700px;
                     height: 700px;
@@ -103,7 +105,7 @@
                     width: 350px;
                     height: 300px;
                     background-color: #f2d8ce00;
-                    background-color: #f2d8ce00;
+                    backdrop-filter: blur(0px);
                     box-shadow: none;
 
                     @media screen and (max-height: 680px) {
@@ -128,7 +130,7 @@
             position: relative;
             overflow: hidden;
             flex-shrink: 0;
-
+            padding-right:10%;
             .wrapper {
                 width: 100%;
                 height: 100%;
