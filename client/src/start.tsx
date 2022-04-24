@@ -4,11 +4,13 @@ import App from "./App";
 
 ReactDOM.render(
     <React.StrictMode>
-        <div  style={{
+        <div
+            style={{
                 backgroundImage: `url(./assets/background.svg)`,
                 backgroundSize: `cover`,
-            }}>
-        <App />
+            }}
+        >
+            <App />
         </div>
     </React.StrictMode>,
     document.getElementById("root")
