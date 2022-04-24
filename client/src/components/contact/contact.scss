@@ -47,7 +47,8 @@
         width: 40%;
         height: 70%;
         min-width: 350px;
-        background-color: #ebebf2;
+        background-color: #ebebf261;
+        backdrop-filter: blur(10px);
 
         @include mobile {
             flex: 0.7;

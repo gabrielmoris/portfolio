@@ -91,7 +91,7 @@ function Opinions() {
             });
     };
     return (
-        <div className="opinions" ref={ref}>
+        <div id="opinions" className="opinions" ref={ref}>
             <h1>Your opinion counts!</h1>
             <div className="right-out">
                 <h3>

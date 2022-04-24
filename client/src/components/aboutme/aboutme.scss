@@ -4,8 +4,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
     flex-shrink: 0;
+    height: 200vh !important;
 
     @include mobile {
         justify-content: flex-start;
@@ -13,10 +14,8 @@
 
     .title {
         position: inherit;
-        flex: 0.1;
 
         @include mobile {
-            flex: 0.04;
             overflow: hidden;
             font-size: 20px;
         }
@@ -27,146 +26,142 @@
     }
 
     .body-aboutme {
-        flex: 0.95;
         display: flex;
-        justify-content: center;
         flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        flex: 0.5;
+        background-color: #ebebf261;
+        backdrop-filter: blur(10px);
+        margin: 20px;
 
         @include mobile {
-            flex-direction: column;
-            flex: 0.9;
+            margin: 8px 10px;
         }
 
-        .wrap {
+        .text-aboutme {
+            text-justify: distribute-all-lines;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 60px 40px;
+            flex: 0.6;
             display: flex;
             flex-direction: column;
-            // justify-content: flex-end;
-            align-items: center;
-            flex-shrink: 0;
-            flex: 0.5;
-            background-color: #ebebf2;
-            margin: 20px;
+            justify-content: space-between;
+            overflow: hidden;
 
             @include mobile {
-                margin: 8px 10px;
+                font-size: 12px;
+                padding: 3px 5px;
+                width: 100%;
+                flex: 0.75;
+                overflow: hidden;
             }
 
-            .text-aboutme {
-                width: 95%;
-                text-justify: distribute-all-lines;
-                font-weight: 600;
-                font-size: 18px;
-                padding: 60px 40px;
-                flex: 0.6;
+            @media screen and (max-height: 680px) {
+                width: 100%;
+                font-size: 10px;
+                padding: 4px;
+                flex: 0.9;
+            }
+
+            .aboutmeBTNS {
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                padding: 0 30%;
+            }
+            // @media screen and (max-width: 500px) {
+            //     width: 100%;
+            //     font-size: 9px;
+            //     flex: 0.9;
+            //     padding: 2px;
+            // }
+
+            @media screen and (max-width: 350px) {
+                width: 95%;
+                font-size: 9px;
+                padding: 2px;
+            }
+
+            p {
+                width:70%;
                 overflow: hidden;
 
                 @include mobile {
-                    font-size: 12px;
-                    padding: 3px 5px;
-                    width: 100%;
-                    flex: 0.75;
-                    overflow: hidden;
+                    margin: 5px;
                 }
 
                 @media screen and (max-height: 680px) {
-                    width: 100%;
-                    font-size: 10px;
-                    padding: 4px;
-                    flex: 0.9;
-                }
-
-                // @media screen and (max-width: 500px) {
-                //     width: 100%;
-                //     font-size: 9px;
-                //     flex: 0.9;
-                //     padding: 2px;
-                // }
-
-                @media screen and (max-width: 350px) {
-                    width: 95%;
-                    font-size: 9px;
-                    padding: 2px;
-                }
-
-                p {
-                    // padding-bottom: 60px;
-                    overflow: hidden;
-
-                    @include mobile {
-                        margin: 5px;
-                    }
-
-                    @media screen and (max-height: 680px) {
-                        margin: 1px;
-                    }
-                }
-
-                .my-button {
-                    box-shadow: 0px 1px 0px 0px #8085ba;
-                    background-color: #8085ba;
-                    border-radius: 6px;
-                    border: 1px solid #8085ba;
-                    display: inline-block;
-                    cursor: pointer;
-                    color: #000000;
-                    padding: 12px 44px;
-                    text-decoration: none;
-                    text-shadow: 0px -1px 0px #032ca6;
-                    align-self: center;
-
-                    @media screen and (max-height: 680px) {
-                        padding: 6px 22px;
-                    }
-
-                    .my-button:hover {
-                        background-color: #8085ba33;
-                    }
-
-                    .my-button:active {
-                        position: relative;
-                        top: 1px;
-                    }
+                    margin: 1px;
                 }
             }
 
-            .icons {
-                display: flex;
-                padding: 0 10%;
-                flex: 0.4;
+            .my-button {
+                box-shadow: 0px 1px 0px 0px #8085ba;
+                background-color: #8085ba;
+                border-radius: 6px;
+                border: 1px solid #8085ba;
+                display: inline-block;
+                cursor: pointer;
+                color: #000000;
+                padding: 12px 44px;
+                text-decoration: none;
+                text-shadow: 0px -1px 0px #032ca6;
+                align-self: center;
 
-                @include mobile {
-                    flex: 0.25;
-                    overflow: hidden;
+                @media screen and (max-height: 680px) {
+                    padding: 6px 22px;
                 }
 
-                a {
+                .my-button:hover {
+                    background-color: #8085ba33;
+                }
+
+                .my-button:active {
+                    position: relative;
+                    top: 1px;
+                }
+            }
+        }
+
+        .icons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 30%;
+
+            @include mobile {
+                overflow: hidden;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-size: 80px;
+                text-align: center;
+                // margin: 0 40px;
+
+                @include mobile {
+                    font-size: 40px;
+                    overflow: hidden;
+                    margin: 5px 45px;
+                }
+
+                @media screen and (max-height: 680px) {
+                    font-size: 20px;
+                }
+
+                &:active {
                     text-decoration: none;
-                    color: black;
-                    font-size: 80px;
-                    text-align: center;
-                    margin: 0 40px;
+                    color: inherit;
+                }
 
-                    @include mobile {
-                        font-size: 40px;
-                        overflow: hidden;
-                        margin: 5px 45px;
-                    }
-
-                    @media screen and (max-height: 680px) {
-                        font-size: 20px;
-                    }
-
-                    &:active {
-                        text-decoration: none;
-                        color: inherit;
-                    }
-
-                    &:hover {
-                        color: rgba(0, 0, 0, 0.26);
-                    }
+                &:hover {
+                    color: rgba(0, 0, 0, 0.26);
                 }
             }
         }
