@@ -13,6 +13,7 @@ import Connect4 from "./components/connect4/Connect4";
 import SignaturesBank from "./components/signaturesBank/SignaturesBank"
 import Imageboard from "./components/imageboard/Imageboard";
 import Writersbook from "./components/writersbook/Writersbook"
+import Opinions from "./components/opinions/Opinions";
 
 function Home() {
     return (
@@ -20,6 +21,7 @@ function Home() {
             <Intro />
             <Works />
             <AboutMe />
+            <Opinions/>
             <Contact />
         </div>
     );
