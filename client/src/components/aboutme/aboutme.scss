@@ -1,7 +1,6 @@
 @import "../../global.scss";
 
 .aboutme {
-    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +37,7 @@
             flex: 0.9;
         }
 
-        .left {
+        .wrap {
             display: flex;
             flex-direction: column;
             // justify-content: flex-end;

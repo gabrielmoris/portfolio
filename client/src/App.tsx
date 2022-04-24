@@ -3,17 +3,19 @@ import Intro from "./components/intro/Intro";
 import Works from "./components/works/Works";
 import Contact from "./components/contact/Contact";
 import AboutMe from "./components/aboutme/Aboutme";
+import Opinions from "./components/opinions/Opinions";
 import Menu from "./components/menu/Menu";
 import "./app.scss";
 import { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import TheBrassCollective from "./components/theBrassCollective/TheBrassCollective";
-import SpotifyApi from "./components/spotifyApi/SpotifiApi"
+import SpotifyApi from "./components/spotifyApi/SpotifiApi";
 import Connect4 from "./components/connect4/Connect4";
-import SignaturesBank from "./components/signaturesBank/SignaturesBank"
+import SignaturesBank from "./components/signaturesBank/SignaturesBank";
 import Imageboard from "./components/imageboard/Imageboard";
 import Writersbook from "./components/writersbook/Writersbook"
 import Opinions from "./components/opinions/Opinions";
+
 
 function Home() {
     return (
