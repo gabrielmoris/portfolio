@@ -41,7 +41,7 @@ export default function Writersbook() {
                     <div>
                         <div className="image">
                             <img
-                                src="https://onionimageboard.s3.amazonaws.com/portfolio/writersbook.jpg"
+                                src="/assets/workPics/writtersbook.jpg"
                                 alt="writersbook-screen"
                             />
                         </div>
@@ -72,4 +72,3 @@ export default function Writersbook() {
         </div>
     );
 }
- 

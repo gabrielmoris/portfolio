@@ -51,10 +51,10 @@ export default function Works() {
 
     return (
         <div className="works" id="projects">
-            <div className="top">
+            <div className="works-title">
                 <h2>Check my projects</h2>
             </div>
-            <div className="bottom">
+            <div className="works-body">
                 {works2 &&
                     works2.map(
                         (work: { id: number; img: string; name: string }) => {
