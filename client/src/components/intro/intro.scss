@@ -60,7 +60,9 @@
             flex: 0.5;
             overflow: hidden;
             flex-shrink: 0;
-            justify-content: flex-end;
+            display: flex;
+            justify-content: right;
+            padding-right: 20px;
 
             .img-container {
                 @media (max-width: 4000px) {
