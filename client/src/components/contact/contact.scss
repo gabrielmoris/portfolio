@@ -110,17 +110,17 @@
                 color: #000000;
                 padding: 12px 44px;
                 text-decoration: none;
-                text-shadow: 0px -1px 0px #032ca6;
+                &:hover {
+                    background-color: #8085ba33;
+                }
+                &:active {
+                    position: relative;
+                    top: 1px;
+                }
+            }
             }
 
-            .my-button:hover {
-                background-color: #8085ba33;
-            }
-            .my-button:active {
-                position: relative;
-                top: 1px;
-            }
-        }
+
     }
 
     .copyright {

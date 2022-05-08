@@ -4,40 +4,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: center;
+    justify-content: space-around;
     flex-shrink: 0;
-    height: 200vh !important;
-
-    @include mobile {
-        justify-content: flex-start;
-    }
 
     .title {
-        position: inherit;
-
         @include mobile {
-            overflow: hidden;
-            font-size: 20px;
+            // overflow: hidden;
+            // font-size: 20px;
         }
 
         @media screen and (max-height: 680px) {
-            font-size: 15px;
+            // font-size: 15px;
         }
     }
 
     .body-aboutme {
         display: flex;
         flex-shrink: 0;
-        display: flex;
         flex-direction: column;
         flex-shrink: 0;
-        flex: 0.5;
         background-color: #ebebf261;
         backdrop-filter: blur(10px);
-        margin: 20px;
+        margin: 20px 200px;
 
         @include mobile {
-            margin: 8px 10px;
+            margin: 20px 20px 150px 20px;
         }
 
         .text-aboutme {
@@ -45,7 +36,6 @@
             font-weight: 600;
             font-size: 18px;
             padding: 60px 40px;
-            flex: 0.6;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -55,24 +45,15 @@
                 font-size: 12px;
                 padding: 3px 5px;
                 width: 100%;
-                flex: 0.75;
                 overflow: hidden;
             }
 
-            @media screen and (max-height: 680px) {
-                width: 100%;
-                font-size: 10px;
-                padding: 4px;
-                flex: 0.9;
-            }
-
-            .aboutmeBTNS {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-evenly;
-                padding: 0 30%;
-            }
+            // @media screen and (max-height: 680px) {
+            //     width: 100%;
+            //     font-size: 10px;
+            //     padding: 4px;
+            //     flex: 0.9;
+            // }
 
             @media screen and (max-width: 350px) {
                 width: 95%;
@@ -81,7 +62,7 @@
             }
 
             p {
-                width:70%;
+                width: 70%;
                 align-self: center;
                 overflow: hidden;
 
@@ -94,8 +75,17 @@
                 }
             }
 
+            .aboutmeBTNS {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+
             .my-button {
                 box-shadow: 0px 1px 0px 0px #8085ba;
+                height: 50px;
                 background-color: #8085ba;
                 border-radius: 6px;
                 border: 1px solid #8085ba;
@@ -104,18 +94,23 @@
                 color: #000000;
                 padding: 12px 44px;
                 text-decoration: none;
-                text-shadow: 0px -1px 0px #032ca6;
                 align-self: center;
+                margin: 10px 30px;
+                overflow: hidden;
 
                 @media screen and (max-height: 680px) {
-                    padding: 6px 22px;
+                    padding: 6px 12px;
                 }
 
-                .my-button:hover {
+                @include mobile {
+                    padding: 6px 12px;
+                }
+
+                &:hover {
                     background-color: #8085ba33;
                 }
 
-                .my-button:active {
+                &:active {
                     position: relative;
                     top: 1px;
                 }
@@ -131,6 +126,7 @@
 
             @include mobile {
                 overflow: hidden;
+                padding: 0 5%;
             }
 
             a {
@@ -143,7 +139,7 @@
                 @include mobile {
                     font-size: 40px;
                     overflow: hidden;
-                    margin: 5px 45px;
+                    margin: 5px 25px;
                 }
 
                 @media screen and (max-height: 680px) {

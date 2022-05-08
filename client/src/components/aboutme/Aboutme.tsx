@@ -34,7 +34,7 @@ export default function AboutMe() {
                                 download
                                 target="_blank"
                             >
-                                Download my CV in English
+                                CV in English
                             </a>
                             <a
                                 className="my-button"
@@ -42,7 +42,7 @@ export default function AboutMe() {
                                 download
                                 target="_blank"
                             >
-                                Download my CV in German
+                                CV in German
                             </a>
                         </div>
                     </div>
