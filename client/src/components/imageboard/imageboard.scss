@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .imageboard {
-     width: 100%;
+    width: 100%;
     position: relative;
     top: 60px;
     display: flex;
@@ -55,6 +55,7 @@
             ul {
                 margin: 20px 0;
                 background-color: rgba(0, 0, 0, 0.027);
+                backdrop-filter: blur(5px);
 
                 li {
                     margin-bottom: 8px;
@@ -90,6 +91,7 @@
             justify-content: center;
             width: 65%;
             background-color: rgba(0, 0, 0, 0.027);
+            backdrop-filter: blur(5px);
             padding-bottom: 20px;
 
             @include mobile {

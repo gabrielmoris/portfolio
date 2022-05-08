@@ -13,8 +13,7 @@ import SpotifyApi from "./components/spotifyApi/SpotifiApi";
 import Connect4 from "./components/connect4/Connect4";
 import SignaturesBank from "./components/signaturesBank/SignaturesBank";
 import Imageboard from "./components/imageboard/Imageboard";
-import Writersbook from "./components/writersbook/Writersbook"
-
+import Writersbook from "./components/writersbook/Writersbook";
 
 function Home() {
     return (
@@ -22,7 +21,7 @@ function Home() {
             <Intro />
             <Works />
             <AboutMe />
-            <Opinions/>
+            <Opinions />
             <Contact />
         </div>
     );

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Down } from "./Down";
 // import { init } from "ityped";
 // import { useEffect, useRef } from "react";
+import { ParticlesBackground } from "../particles/ParticlesBackground";
 
 export default function Intro() {
     // const textRef: {current:any} = useRef();
@@ -19,6 +20,7 @@ export default function Intro() {
 
     return (
         <div className="intro" id="intro">
+            <ParticlesBackground />
             <div className="text-over-img">
                 <motion.div
                     initial={{ x: 1000 }}

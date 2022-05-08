@@ -10,8 +10,8 @@
     overflow: hidden;
 
     @include mobile {
-            display:none;
-        }
+        display: none;
+    }
 
     // @include mobile {
     //     margin: 8px 10px;
@@ -147,8 +147,8 @@
         justify-content: center;
         border: solid 2px rgba(0, 0, 0, 0.288);
         margin-bottom: 20px;
-        background-color: #ebebf261;
-        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.027);
+        backdrop-filter: blur(5px);
 
         // @include mobile {
         //     flex: 1;
@@ -182,4 +182,3 @@
         // }
     }
 }
-
