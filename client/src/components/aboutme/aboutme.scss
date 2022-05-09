@@ -4,17 +4,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
     flex-shrink: 0;
 
     .title {
+        margin: 80px 0;
         @include mobile {
-            // overflow: hidden;
-            // font-size: 20px;
+            margin: 0;
         }
 
         @media screen and (max-height: 680px) {
-            // font-size: 15px;
+            margin: 0;
         }
     }
 
@@ -25,14 +24,13 @@
         flex-shrink: 0;
         background-color: rgba(0, 0, 0, 0.027);
         backdrop-filter: blur(5px);
-        margin: 20px 200px;
+        margin: 20px 10%;
 
         @include mobile {
-            margin: 20px 20px 150px 20px;
+            margin: 100px 20px 150px 20px;
         }
 
         .text-aboutme {
-            text-justify: distribute-all-lines;
             font-weight: 600;
             font-size: 18px;
             padding: 60px 40px;
@@ -65,13 +63,15 @@
                 width: 70%;
                 align-self: center;
                 overflow: hidden;
+                text-align: justify;
+                margin-bottom: 20px;
 
                 @include mobile {
-                    margin: 5px;
+                    margin: 20px 10px;
                 }
 
                 @media screen and (max-height: 680px) {
-                    margin: 1px;
+                    margin: 20px 10px;
                 }
             }
 
@@ -97,13 +97,16 @@
                 align-self: center;
                 margin: 10px 30px;
                 overflow: hidden;
+                text-justify: center;
 
                 @media screen and (max-height: 680px) {
                     padding: 6px 12px;
+                    height: 30px;
                 }
 
                 @include mobile {
                     padding: 6px 12px;
+                    height: 30px;
                 }
 
                 &:hover {

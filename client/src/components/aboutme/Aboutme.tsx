@@ -8,24 +8,25 @@ export default function AboutMe() {
     return (
         <>
             <div className="aboutme" id="aboutme">
-                <h1 className="title">About me</h1>
+                <h2 className="title">About me</h2>
                 <div className="body-aboutme">
                     <div className="text-aboutme">
                         <p>
+                            <b>Web Development Intern at Beehivve</b>
+                            <br />
+                            <br />
                             From the first moment, I saw a "Hello World" in the
                             browser I took upon myself the challenge of
-                            mastering the intricacies of the magic world of
-                            computer science. That was when I decided to join a
-                            boot camp and started my journey. I always do my
-                            best to follow the DRY principle and write clean and
-                            reusable code.
+                            mastering the world of the Web development. That was
+                            when I decided to join a bootcamp and started my
+                            journey. I always do my best to follow the DRY
+                            principle and write clean and reusable code.
                             <br /> <br />
                             Thanks to my experience as a teacher and a musician,
-                            I am a specialist in conveying and simplifying
-                            complex concepts and ideas. I also consider myself a
-                            creative person who loves challenges and finds a
-                            solution for any setback that may arise along the
-                            way.
+                            I am a specialist in simplifying complex concepts
+                            and ideas. I also consider myself a creative person
+                            who loves challenges and finds a solution for any
+                            setback that may arise along the way.
                         </p>
                         <div className="aboutmeBTNS">
                             <a
