@@ -49,6 +49,7 @@
         min-width: 350px;
         background-color: #ebebf261;
         backdrop-filter: blur(10px);
+        border-radius: 8px;
 
         @include mobile {
             flex: 0.7;
@@ -89,6 +90,7 @@
                 font-size: 15px;
                 padding-left: 10px;
                 border-radius: 3px;
+                border-radius: 8px;
             }
 
             textarea {
@@ -98,6 +100,7 @@
                 padding-left: 10px;
                 border-radius: 3px;
                 border: solid 2px black;
+                border-radius: 8px;
             }
 
             .my-button {

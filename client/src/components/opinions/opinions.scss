@@ -109,6 +109,7 @@
                 align-items: center;
                 justify-content: center;
                 border: solid 2px rgba(0, 0, 0, 0.288);
+                border-radius: 8px;
 
                 .icon {
                     cursor: pointer;
@@ -149,6 +150,7 @@
         margin-bottom: 20px;
         background-color: rgba(0, 0, 0, 0.027);
         backdrop-filter: blur(5px);
+        border-radius: 8px;
 
         // @include mobile {
         //     flex: 1;
