@@ -23,7 +23,7 @@ export default function Imageboard() {
                     <a
                         className="my-button"
                         target="_blank"
-                        href="https://gabrielimageboard.herokuapp.com/"
+                        href="https://imageboard-production.up.railway.app/"
                     >
                         View website
                     </a>
