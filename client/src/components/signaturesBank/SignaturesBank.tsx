@@ -21,7 +21,7 @@ export default function SignaturesBank() {
                     <a
                         className="my-button"
                         target="_blank"
-                        href="https://signaturebank.herokuapp.com/"
+                        href="https://signaturesbank-production.up.railway.app/"
                     >
                         View website
                     </a>
@@ -30,9 +30,10 @@ export default function SignaturesBank() {
                     <h2>About</h2>
                     <p>
                         When I want to sign documents online I face the
-                        difficulty of doing It with the mouse.<br/> I developed this
-                        website to take advantage of the touch screen of the
-                        phone and download the signature on the computer.
+                        difficulty of doing It with the mouse.
+                        <br /> I developed this website to take advantage of the
+                        touch screen of the phone and download the signature on
+                        the computer.
                     </p>
                     <div>
                         <div className="image">
@@ -45,12 +46,11 @@ export default function SignaturesBank() {
                     <h2>Description</h2>
                     <p>
                         The website requires registration and works on the phone
-                        and desktop.
-                        After registration you can store your signature drawing
-                        in a canvas with your finger or, if you prefer, you can
-                        do it with the mouse. You can delete and redo your
-                        signature all the times you want and download the
-                        signature as a .png without background.
+                        and desktop. After registration you can store your
+                        signature drawing in a canvas with your finger or, if
+                        you prefer, you can do it with the mouse. You can delete
+                        and redo your signature all the times you want and
+                        download the signature as a .png without background.
                     </p>
                     <div>
                         <div className="image">
@@ -62,8 +62,8 @@ export default function SignaturesBank() {
                     </div>
                     <p>
                         As an additional feature, you can check the names,
-                        cities, and websites (if provided) of the people who also
-                        signed, but never their signatures.
+                        cities, and websites (if provided) of the people who
+                        also signed, but never their signatures.
                     </p>
                 </div>
             </div>
