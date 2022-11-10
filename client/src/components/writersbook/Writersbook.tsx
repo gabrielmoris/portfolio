@@ -25,7 +25,7 @@ export default function Writersbook() {
                     <a
                         className="my-button"
                         target="_blank"
-                        href="https://writersbook.herokuapp.com/"
+                        href="https://writersbook-production.up.railway.app/"
                     >
                         View website
                     </a>
