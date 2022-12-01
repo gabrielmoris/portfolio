@@ -12,7 +12,7 @@ export default function AboutMe() {
                 <div className="body-aboutme">
                     <div className="text-aboutme">
                         <p>
-                            <b>Web Development Intern at Beehivve</b>
+                            <b>Junior Frontend at Ameropa-reisen GmbH</b>
                             <br />
                             <br />
                             From the first moment, I saw a "Hello World" in the

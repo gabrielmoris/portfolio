@@ -9,7 +9,7 @@ import "./app.scss";
 import { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import TheBrassCollective from "./components/theBrassCollective/TheBrassCollective";
-import SpotifyApi from "./components/spotifyApi/SpotifiApi";
+import VueMusic from "./components/vueMusic/VueMusic";
 import Connect4 from "./components/connect4/Connect4";
 import SignaturesBank from "./components/signaturesBank/SignaturesBank";
 import Imageboard from "./components/imageboard/Imageboard";
@@ -40,7 +40,7 @@ function App() {
                         <TheBrassCollective />
                     </Route>
                     <Route path="/work/5">
-                        <SpotifyApi />
+                        <VueMusic />
                     </Route>
                     <Route path="/work/4">
                         <Connect4 />

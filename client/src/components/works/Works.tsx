@@ -3,7 +3,6 @@ import WorksList from "./worksList/WorksList";
 import { Down } from "../intro/Down";
 
 export default function Works() {
-
     const works2 = [
         {
             id: 1,
@@ -35,10 +34,10 @@ export default function Works() {
         },
         {
             id: 5,
-            img: "./assets/workPics/spotifyScren.jpg",
+            img: "https://onionimageboard.s3.amazonaws.com/portfolio/vue-music-app.jpg",
             url: "https://competent-mestorf-e41da5.netlify.app/",
             github: "https://github.com/gabrielmoris/codingChallenges/tree/master/week4/handlebarsSpotify",
-            name: "Spotify API",
+            name: "Vue Music App",
         },
         {
             id: 6,

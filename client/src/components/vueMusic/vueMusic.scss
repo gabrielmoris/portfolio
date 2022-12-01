@@ -1,0 +1,160 @@
+@import "../../global.scss";
+
+.vueMusic {
+    width: 100%;
+    position: relative;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .up {
+        flex: 0.2;
+
+        @include mobile {
+            flex: 0.3;
+        }
+    }
+
+    hr {
+        width: 70%;
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.226),
+            rgba(0, 0, 0, 0)
+        );
+    }
+
+    .main {
+        flex: 0.7;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        @include mobile {
+            flex: 0.8;
+            flex-direction: column-reverse;
+        }
+
+        .left {
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            h2 {
+                margin: 50px 0;
+            }
+
+            ul {
+                margin: 20px 0;
+                background-color: rgba(0, 0, 0, 0.027);
+                backdrop-filter: blur(5px);
+                border-radius: 8px;
+
+                li {
+                    margin-bottom: 8px;
+
+                    @include mobile {
+                        padding-right: 10px;
+                    }
+                }
+            }
+
+            .my-button {
+                box-shadow: 0px 1px 0px 0px #8085ba;
+                background-color: #8085ba;
+                border-radius: 6px;
+                border: 1px solid #8085ba;
+                display: inline-block;
+                cursor: pointer;
+                color: #000000;
+                padding: 12px 44px;
+                text-decoration: none;
+            }
+
+            .my-button:hover {
+                background-color: #8085ba33;
+            }
+            .my-button:active {
+                position: relative;
+                top: 1px;
+            }
+        }
+
+        .right {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 65%;
+            background-color: rgba(0, 0, 0, 0.027);
+            backdrop-filter: blur(5px);
+            padding-bottom: 20px;
+            border-radius: 8px;
+
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            div {
+                display: flex;
+                flex-direction: row;
+
+                @include mobile {
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .image {
+                    margin: 20px;
+                    border: solid 2px rgba(0, 0, 0, 0.288);
+                    border-radius: 8px;
+
+                    @include mobile {
+                        width: 40%;
+                    }
+
+                    img {
+                        max-width: 750px;
+                        max-height: auto;
+                        overflow-y: hidden;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            p {
+                margin: 20px 100px;
+                text-align: justify;
+
+                @include mobile {
+                    width: 40%;
+                }
+            }
+
+            h2 {
+                margin: 20px 0;
+
+                @include mobile {
+                    width: 40%;
+                }
+            }
+        }
+    }
+
+    .down {
+        flex: 0.1;
+        padding: 50px;
+    }
+}
