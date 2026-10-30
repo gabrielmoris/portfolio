@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { NavBar } from "@/components/navbar";
+import { ThemeProvider } from "@/components/themeProvider";
 
 type Props = {
   children: React.ReactNode;
@@ -39,6 +40,7 @@ export default async function RootLayout({ children }: Props) {
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={cn(
         "h-full",
         "antialiased",
@@ -49,8 +51,10 @@ export default async function RootLayout({ children }: Props) {
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider>
-          <NavBar />
-          {children}
+          <ThemeProvider>
+            <NavBar />
+            {children}
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
