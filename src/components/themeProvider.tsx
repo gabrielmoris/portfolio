@@ -1,11 +1,11 @@
-"use client";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
+'use client';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const scriptProps =
-    typeof window === "undefined"
+    typeof window === 'undefined'
       ? undefined
-      : ({ type: "application/json" } as const);
+      : ({ type: 'application/json' } as const);
 
   return (
     <NextThemesProvider
