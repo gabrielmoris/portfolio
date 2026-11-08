@@ -34,11 +34,14 @@ jobs:
       - name: Typecheck (TypeScript)
         run: bun run typecheck
 
-      - name: Test (E2E)
-        run: bun run test:e2e
-
       - name: Build Next.js App
         run: bun run build
+
+      - name: Install Playwright browser
+        run: bunx playwright install --with-deps chromium
+
+      - name: Test (E2E)
+        run: bun run test:e2e
 
 concurrency:
   group: ci-${{ github.ref }}
