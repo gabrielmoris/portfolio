@@ -1,5 +1,7 @@
 import { beehivve, ameropa, me, brasscollective, smartseer } from './images';
 
+// TODO, Internationalization: en, es de, and find a proper place
+
 export const experiences = [
   {
     title: 'Software Engineer',
