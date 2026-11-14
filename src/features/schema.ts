@@ -10,7 +10,7 @@ import { routing } from '@/i18n/routing';
 const keysOf = <T extends object>(obj: T) =>
   Object.keys(obj) as [keyof T & string, ...(keyof T & string)[]];
 
-const locale = z.enum(routing.locales);
+export const locale = z.enum(routing.locales);
 
 const imageKey = z.enum(keysOf(images));
 const image = z.strictObject({
