@@ -21,7 +21,8 @@ tech:
   ]
 cover: menudiario
 links:
-  live: TODO # store link or website, if it was published
+  android: https://play.google.com/store/apps/details?id=com.menudiario.app
+  ios: https://apps.apple.com/es/app/menu-di%C3%A1rio/id6467143567
   repo: https://github.com/gabrielmoris/menudiario
 featured: true
 lang: en
@@ -52,4 +53,5 @@ A cross-platform app (iOS, Android and web) with two sides:
 ## Results
 
 - Built from March to September 2023, from first commit to live Stripe payments and iOS and Android builds, across almost 270 commits.
-- TODO: was it published in the stores, and did any restaurants use it?
+- Published on Google Play and the App Store.
+- TODO: did restaurants use it? Any numbers (restaurants, downloads)?

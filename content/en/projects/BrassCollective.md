@@ -15,7 +15,7 @@ lang: en
 
 ## Problem
 
-The Brass Collective, a quintet founded in Berlin in 2020 with chamber musicians from three continents, promotes contemporary composers from diverse backgrounds. The group needed a home online to present its members, concerts, recordings and merchandise to promoters and audiences.
+The Brass Collective, a quintet founded in Berlin in 2020 with chamber musicians from three continents, promotes contemporary composers from diverse backgrounds. The group needed a website to enter a competition, and a home online to present its members, concerts, recordings and merchandise to promoters and audiences. My cousin, a software engineer, didn't have time to build it, so he showed me how to build it myself.
 
 ## What I built
 
@@ -38,4 +38,4 @@ The ensemble's visual identity and website: I designed the logo, then a multi-pa
 ## Results
 
 - Maintained from 2021 to 2023 across almost 50 commits, as the line-up, repertoire and releases changed.
-- One of my first real-world web projects, built while I was moving from music into software.
+- My first web project, and the one that made me switch careers: I enjoyed building it so much that I kept learning and went on to a full-stack bootcamp.

@@ -6,6 +6,7 @@ location: Frankfurt, Germany # TODO: confirm
 photo: me # key into content/images
 links:
   github: https://github.com/gabrielmoris
+  linkedin: https://www.linkedin.com/in/gabrielcmoris/
   gitlab: https://gitlab.com/gabrielcmoris
   web: https://www.gabrielcmoris.com
 order: 1
@@ -22,7 +23,7 @@ TODO: two or three sentences in your own voice: what you enjoy building and what
 
 Before software, I was a professional trumpet player and teacher in Spain and Germany. I hold a master's degree in secondary-school teaching, taught at music schools and led a brass quintet, The Brass Collective, in Berlin. In 2021 I started freelancing as a web developer, completed a full-stack bootcamp at Spiced Academy, and in 2022 moved into software full-time.
 
-TODO: what carried over from music (practice, teamwork, performing under pressure, teaching) and why you switched.
+The switch started with the quintet. We needed a website to enter a competition, and my cousin, a software engineer, showed me how to build it myself instead of doing it for us. I enjoyed it so much that I kept learning with him, then joined the bootcamp. Teaching taught me to break complex ideas down into simple ones, and leading the quintet taught me to coordinate a team and deliver under pressure. I use both every day as an engineer.
 
 ## How I work
 

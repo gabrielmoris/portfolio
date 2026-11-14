@@ -8,7 +8,7 @@ tech:
   [Figma, Next.js, React, TypeScript, Sass, React Hook Form, YouTube Data API]
 cover: null # TODO: add a screenshot to content/images
 links:
-  live: TODO # e.g. https://www.manuelcasares.com, please confirm
+  live: https://www.manuelcasares.com
   repo: https://github.com/gabrielmoris/Manuel-Casares
 featured: false
 lang: en
