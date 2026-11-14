@@ -3,7 +3,9 @@ title: About me
 name: Gabriel Chamorro Moris
 headline: Software engineer building AI-first web products
 location: Frankfurt, Germany # TODO: confirm
-photo: me # key into content/images
+photo:
+  image: me
+  alt: Illustrated portrait of Gabriel, with blond hair and a dark beard
 links:
   github: https://github.com/gabrielmoris
   linkedin: https://www.linkedin.com/in/gabrielcmoris/

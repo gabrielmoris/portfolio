@@ -2,11 +2,10 @@
 title: Manuel Casares
 slug: manuel-casares
 summary: Website for a concert pianist and teacher, with his recordings, videos pulled live from YouTube and a contact form for lessons.
-date: 2022-03
+date: 2022-03-01
 role: Freelance designer and web developer
 tech:
   [Figma, Next.js, React, TypeScript, Sass, React Hook Form, YouTube Data API]
-cover: null # TODO: add a screenshot to content/images
 links:
   live: https://www.manuelcasares.com
   repo: https://github.com/gabrielmoris/Manuel-Casares

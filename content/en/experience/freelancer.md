@@ -2,7 +2,7 @@
 company: freelancer
 companyName: Freelance
 role: Web Developer
-start: 2021-06
+start: 2021-06-01
 end: null
 location: Berlin, Germany
 employment: freelance

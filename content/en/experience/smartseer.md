@@ -2,7 +2,7 @@
 company: smartseer
 companyName: Smartseer GmbH
 role: Software Engineer
-start: 2025-05
+start: 2025-05-01
 end: null
 location: Frankfurt, Germany
 employment: full-time

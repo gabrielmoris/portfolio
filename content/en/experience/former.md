@@ -2,8 +2,8 @@
 company: music
 companyName: Various orchestras and music schools
 role: Trumpet Player and Teacher
-start: 2016-09
-end: 2022-01
+start: 2016-09-01
+end: 2022-01-01
 location: Berlin, Germany; A Coruña, Spain
 employment: freelance
 tech: []

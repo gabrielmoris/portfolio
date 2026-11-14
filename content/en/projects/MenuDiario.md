@@ -1,8 +1,9 @@
 ---
 title: MenuDiario
 slug: menu-diario
-summary: A mobile app for Spain's "menú del día": diners find nearby restaurants and today's set menu on a map, and restaurants publish their menus with prepaid credits.
-date: 2023-03
+summary: >-
+  A mobile app for Spain's "menú del día": diners find nearby restaurants and today's set menu on a map, and restaurants publish their menus with prepaid credits.
+date: 2023-03-01
 role: Co-developer in a team of two (design, full stack and mobile) # TODO: name your teammate if you want to
 tech:
   [
@@ -19,7 +20,9 @@ tech:
     Mapbox,
     Tailwind CSS,
   ]
-cover: menudiario
+cover:
+  image: menudiario
+  alt: MenuDiario app icon, a fork and knife on a red-and-white checked tablecloth
 links:
   android: https://play.google.com/store/apps/details?id=com.menudiario.app
   ios: https://apps.apple.com/es/app/menu-di%C3%A1rio/id6467143567

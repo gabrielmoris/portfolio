@@ -2,10 +2,12 @@
 title: The Brass Collective
 slug: brass-collective
 summary: Website for The Brass Collective, a Berlin brass quintet dedicated to contemporary music, which I led.
-date: 2021-10
+date: 2021-10-01
 role: Designer (logo and website) and developer, and the band's trumpet player
 tech: [Figma, HTML, CSS, JavaScript, GitHub Pages]
-cover: brasscollective
+cover:
+  image: brasscollective
+  alt: The Brass Collective logo
 links:
   live: https://www.thebrasscollective.com
   repo: https://github.com/gabrielmoris/www.thebrasscollective.com

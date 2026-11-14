@@ -2,8 +2,8 @@
 company: ameropa
 companyName: Ameropa-Reisen GmbH
 role: Frontend Developer
-start: 2022-07
-end: 2025-05
+start: 2022-07-01
+end: 2025-05-01
 location: Bad Homburg, Germany
 employment: full-time
 tech: [Vue.js, React, TypeScript, PHP, PostgreSQL, Docker]

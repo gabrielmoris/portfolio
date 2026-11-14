@@ -2,7 +2,7 @@
 title: Demosratio
 slug: demosratio
 summary: Checks whether Spanish political parties keep their election promises by matching every vote in Congress against their programmes with AI.
-date: 2025-02
+date: 2025-02-01
 role: Solo developer (design, frontend, backend, data pipeline)
 tech:
   [
@@ -18,7 +18,6 @@ tech:
     Tailwind CSS,
     Vitest,
   ]
-cover: null # TODO: add a screenshot to content/images
 links:
   live: https://demosratio.vercel.app
   repo: https://github.com/gabrielmoris/Demosratio

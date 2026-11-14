@@ -2,8 +2,8 @@
 company: beehivve
 companyName: Beehivve
 role: Web Developer Intern
-start: 2022-04
-end: 2022-07
+start: 2022-04-01
+end: 2022-07-01
 location: Vienna, Austria
 employment: internship
 tech: [React, Next.js, Firebase, Node.js, Express, Handlebars]
