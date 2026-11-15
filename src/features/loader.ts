@@ -46,6 +46,31 @@ export const getProjectsData = async (locale: string = 'en') => {
   return projects;
 };
 
-// TODO:  Check `data` with `projectSchema.parse`. On failure, throw an error that names the file path. Throwing here is what makes the build fail on bad frontmatter.
-// TODO: getProject(locale, slug) for single projects
-// TODO: Tests
+export const getProjectData = async (locale: string = 'en', slug: string) => {
+  'use cache';
+  const projectPath = path.join(
+    process.cwd(),
+    'content',
+    locale,
+    'projects',
+    slug + '.md'
+  );
+  const rawProjectFile = await readFile(projectPath, 'utf-8');
+
+  if (!rawProjectFile) {
+    throw new Error(`File ${projectPath} is empty or could not be read.`);
+  }
+
+  const { data, content } = matter(rawProjectFile);
+
+  const { success, error, data: parsedData } = projectSchema.safeParse(data);
+
+  if (!success) {
+    throw new Error(z.prettifyError(error));
+  }
+
+  return {
+    ...parsedData,
+    content,
+  };
+};
