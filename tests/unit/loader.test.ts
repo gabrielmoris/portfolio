@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { describe, expect, it, vi } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { getProjectData, getProjectsData } from '@/features/loader';
 import { projectSchema } from '@/features/schema';
 
