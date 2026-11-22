@@ -1,6 +1,5 @@
 ---
 title: Refhub
-slug: refhub
 summary: A multilingual hub where people share and discover referral codes, available on the web and as an Android app on Google Play.
 date: 2024-09-01
 role: Solo developer (product, design, web and Android)

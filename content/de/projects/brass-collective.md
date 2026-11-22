@@ -1,6 +1,5 @@
 ---
 title: The Brass Collective
-slug: brass-collective
 summary: Website für The Brass Collective, ein von mir geleitetes Berliner Blechbläserquintett für zeitgenössische Musik.
 date: 2021-10-01
 role: Designer (Logo und Website), Entwickler und Trompeter der Band

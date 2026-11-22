@@ -1,6 +1,5 @@
 ---
 title: Demosratio
-slug: demosratio
 summary: Prüft mit KI, ob spanische Parteien ihre Wahlversprechen halten, indem jede Abstimmung im Kongress mit ihren Wahlprogrammen abgeglichen wird.
 date: 2025-02-01
 role: Alleinentwickler (Design, Frontend, Backend, Datenpipeline)

@@ -1,16 +1,16 @@
 import matter from 'gray-matter';
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { projectSchema } from './schema';
+import { Locale, projectSchema } from './schema';
 import { z } from 'zod';
 
-export const getProjectsData = async (locale: string = 'en') => {
+export const getProjectsData = async (locale: Locale = 'en') => {
   'use cache';
   const folderPath = path.join(process.cwd(), 'content', locale, 'projects');
-  const files = await readdir(folderPath);
+  const markdownFiles = await listMarkdownFiles(folderPath);
 
   const projects = await Promise.all(
-    files.map(async (file) => {
+    markdownFiles.map(async (file) => {
       const filePath = path.join(
         process.cwd(),
         'content',
@@ -18,13 +18,8 @@ export const getProjectsData = async (locale: string = 'en') => {
         'projects',
         file
       );
-      const raw = await readFile(filePath, 'utf-8');
 
-      if (!raw) {
-        throw new Error(`File ${filePath} is empty or could not be read.`);
-      }
-
-      const { data, content } = matter(raw);
+      const { data, content } = await loadMarkdownFile(filePath);
 
       const {
         success,
@@ -36,17 +31,29 @@ export const getProjectsData = async (locale: string = 'en') => {
         throw new Error(z.prettifyError(error));
       }
 
-      return {
+      const output = {
         ...parsedData,
+        slug: path.basename(file, '.md'),
         content,
       };
+
+      return output;
     })
   );
 
-  return projects;
+  return projects.sort(
+    (a, b) =>
+      Number(b.featured) - Number(a.featured) ||
+      b.date.getTime() - a.date.getTime()
+  );
 };
 
-export const getProjectData = async (locale: string = 'en', slug: string) => {
+const listMarkdownFiles = async (folderPath: string) => {
+  const files = await readdir(folderPath);
+  return files.filter((file) => file.endsWith('.md'));
+};
+
+export const getProjectData = async (locale: Locale = 'en', slug: string) => {
   'use cache';
   const projectPath = path.join(
     process.cwd(),
@@ -55,13 +62,8 @@ export const getProjectData = async (locale: string = 'en', slug: string) => {
     'projects',
     slug + '.md'
   );
-  const rawProjectFile = await readFile(projectPath, 'utf-8');
 
-  if (!rawProjectFile) {
-    throw new Error(`File ${projectPath} is empty or could not be read.`);
-  }
-
-  const { data, content } = matter(rawProjectFile);
+  const { data, content } = await loadMarkdownFile(projectPath);
 
   const { success, error, data: parsedData } = projectSchema.safeParse(data);
 
@@ -71,6 +73,19 @@ export const getProjectData = async (locale: string = 'en', slug: string) => {
 
   return {
     ...parsedData,
+    slug: path.basename(slug, '.md'),
     content,
   };
+};
+
+const loadMarkdownFile = async (filePath: string) => {
+  const raw = await readFile(filePath, 'utf-8');
+
+  if (!raw) {
+    throw new Error(`File ${filePath} is empty or could not be read.`);
+  }
+
+  const { data, content } = matter(raw);
+
+  return { data, content };
 };

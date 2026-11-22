@@ -1,6 +1,5 @@
 ---
 title: Demosratio
-slug: demosratio
 summary: Checks whether Spanish political parties keep their election promises by matching every vote in Congress against their programmes with AI.
 date: 2025-02-01
 role: Solo developer (design, frontend, backend, data pipeline)

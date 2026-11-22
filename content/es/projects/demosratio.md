@@ -1,6 +1,5 @@
 ---
 title: Demosratio
-slug: demosratio
 summary: Comprueba si los partidos españoles cumplen sus promesas electorales cotejando con IA cada votación del Congreso con sus programas.
 date: 2025-02-01
 role: Desarrollador en solitario (diseño, frontend, backend, pipeline de datos)

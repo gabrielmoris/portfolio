@@ -1,6 +1,5 @@
 ---
 title: Refhub
-slug: refhub
 summary: Ein mehrsprachiger Hub zum Teilen und Entdecken von Empfehlungscodes, im Web und als Android-App bei Google Play.
 date: 2024-09-01
 role: Alleinentwickler (Produkt, Design, Web und Android)

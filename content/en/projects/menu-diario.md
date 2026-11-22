@@ -1,6 +1,5 @@
 ---
 title: MenuDiario
-slug: menu-diario
 summary: >-
   A mobile app for Spain's "menú del día": diners find nearby restaurants and today's set menu on a map, and restaurants publish their menus with prepaid credits.
 date: 2023-03-01

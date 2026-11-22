@@ -1,6 +1,5 @@
 ---
 title: MenuDiario
-slug: menu-diario
 summary: >-
   App móvil para el menú del día en España: los comensales encuentran en un mapa restaurantes cercanos y su menú de hoy, y los restaurantes publican sus menús con créditos de prepago.
 date: 2023-03-01

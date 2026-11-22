@@ -1,6 +1,5 @@
 ---
 title: Manuel Casares
-slug: manuel-casares
 summary: Web para un pianista concertista y profesor, con sus grabaciones, vídeos cargados en directo desde YouTube y un formulario de contacto para clases.
 date: 2022-03-01
 role: Diseñador y desarrollador web autónomo

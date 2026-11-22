@@ -1,6 +1,5 @@
 ---
 title: The Brass Collective
-slug: brass-collective
 summary: Web de The Brass Collective, un quinteto de metales de Berlín dedicado a la música contemporánea, que dirigí.
 date: 2021-10-01
 role: Diseñador (logo y web), desarrollador y trompetista del grupo

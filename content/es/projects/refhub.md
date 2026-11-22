@@ -1,6 +1,5 @@
 ---
 title: Refhub
-slug: refhub
 summary: Un hub multilingüe donde compartir y descubrir códigos de referido, en la web y como app Android en Google Play.
 date: 2024-09-01
 role: Desarrollador en solitario (producto, diseño, web y Android)

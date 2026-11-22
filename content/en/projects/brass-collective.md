@@ -1,6 +1,5 @@
 ---
 title: The Brass Collective
-slug: brass-collective
 summary: Website for The Brass Collective, a Berlin brass quintet dedicated to contemporary music, which I led.
 date: 2021-10-01
 role: Designer (logo and website) and developer, and the band's trumpet player

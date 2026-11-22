@@ -6,6 +6,8 @@ import { routing } from '@/i18n/routing';
 
 // ---------- Shared ----------
 
+export type Locale = z.infer<typeof locale>;
+
 // the array of the specific strings of an object, typed as a tuple of string literals
 const keysOf = <T extends object>(obj: T) =>
   Object.keys(obj) as [keyof T & string, ...(keyof T & string)[]];
@@ -27,12 +29,6 @@ export const projectSchema = z.strictObject({
     .string()
     .min(2, 'Title must be at least 2 characters long')
     .max(100, 'Title must be at most 100 characters long'),
-  slug: z
-    .string()
-    .regex(
-      /^[a-z0-9]+(-[a-z0-9]+)*$/,
-      'Slug must be kebab-case (e.g. menu-diario)'
-    ),
   summary: z
     .string()
     .min(10, 'Summary must be at least 10 characters long')

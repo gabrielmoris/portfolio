@@ -1,6 +1,5 @@
 ---
 title: Manuel Casares
-slug: manuel-casares
 summary: Website für einen Konzertpianisten und Lehrer mit seinen Aufnahmen, live von YouTube geladenen Videos und einem Kontaktformular für Unterricht.
 date: 2022-03-01
 role: Freiberuflicher Designer und Webentwickler

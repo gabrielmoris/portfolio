@@ -12,11 +12,19 @@ describe('getProjectsData', () => {
     expect(slugs).toHaveLength(5);
   });
 
+  it('every project slug is kebab-case', async () => {
+    const projects = await getProjectsData('en');
+
+    for (const { slug } of projects) {
+      expect(slug).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*$/);
+    }
+  });
+
   it('returns validated data, not raw frontmatter', async () => {
     const [first] = await getProjectsData('en');
     if (!first) throw new Error('expected at least one project');
 
-    const { content: _content, ...copy } = first;
+    const { content: _content, slug: _slug, ...copy } = first;
 
     const parsed = projectSchema.parse(copy);
     expect(copy).toEqual(parsed);
@@ -26,13 +34,14 @@ describe('getProjectsData', () => {
     const projects = await getProjectsData('en');
 
     projects.forEach((p) => {
-      const { content: _content, ...copy } = p;
+      const { content: _content, slug: _slug, ...copy } = p;
       const parsed = projectSchema.parse(copy);
       expect(copy).toEqual(parsed);
     });
   });
 
   it('rejects an unknown locale', async () => {
+    // @ts-expect-error fr is not a supported locale
     await expect(getProjectsData('fr')).rejects.toThrow('ENOENT');
   });
 });
