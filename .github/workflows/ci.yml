@@ -40,6 +40,9 @@ jobs:
       - name: Install Playwright browser
         run: bunx playwright install --with-deps chromium
 
+      - name: Test (unit)
+        run: bun run test
+
       - name: Test (E2E)
         run: bun run test:e2e
 

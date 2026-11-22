@@ -33,21 +33,28 @@ describe('getProjectsData', () => {
   });
 
   it('rejects an unknown locale', async () => {
-    await expect(getProjectData('fr', 'refhub')).rejects.toThrow(
-      `ENOENT: no such file or directory, open '/Volumes/ExternalSSD/Projects/web-portfolio/content/fr/projects/refhub.md'`
-    );
+    await expect(getProjectsData('fr')).rejects.toThrow('ENOENT');
   });
 });
 
 describe('getProjectData', () => {
   it('returns the project matching a slug', async () => {
     const projectData = await getProjectData('en', 'refhub');
-    expect(projectData).toBeDefined();
+    expect(projectData.slug).toBe('refhub');
   });
 
   it('throws for a slug that does not exist', async () => {
     await expect(getProjectData('en', 'non-existent-slug')).rejects.toThrow(
-      `ENOENT: no such file or directory, open '/Volumes/ExternalSSD/Projects/web-portfolio/content/en/projects/non-existent-slug.md'`
+      'ENOENT'
     );
+  });
+
+  it('loads every project returned by getProjectsData by its slug', async () => {
+    const projects = await getProjectsData('en');
+
+    for (const { slug } of projects) {
+      const project = await getProjectData('en', slug);
+      expect(project.slug).toBe(slug);
+    }
   });
 });
