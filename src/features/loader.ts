@@ -1,7 +1,7 @@
 import matter from 'gray-matter';
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { Locale, projectSchema } from './schema';
+import { Locale, projectSchema, experienceSchema } from './schema';
 import { z } from 'zod';
 
 export const getProjectsData = async (locale: Locale = 'en') => {
@@ -10,35 +10,14 @@ export const getProjectsData = async (locale: Locale = 'en') => {
   const markdownFiles = await listMarkdownFiles(folderPath);
 
   const projects = await Promise.all(
-    markdownFiles.map(async (file) => {
-      const filePath = path.join(
-        process.cwd(),
-        'content',
-        locale,
-        'projects',
-        file
-      );
-
-      const { data, content } = await loadMarkdownFile(filePath);
-
-      const {
-        success,
-        error,
-        data: parsedData,
-      } = projectSchema.safeParse(data);
-
-      if (!success) {
-        throw new Error(z.prettifyError(error));
-      }
-
-      const output = {
-        ...parsedData,
-        slug: path.basename(file, '.md'),
-        content,
-      };
-
-      return output;
-    })
+    markdownFiles.map(async (file) => ({
+      ...(await parseMarkdownFile(
+        path.join(folderPath, file),
+        projectSchema,
+        locale
+      )),
+      slug: path.basename(file, '.md'),
+    }))
   );
 
   return projects.sort(
@@ -63,19 +42,33 @@ export const getProjectData = async (locale: Locale = 'en', slug: string) => {
     slug + '.md'
   );
 
-  const { data, content } = await loadMarkdownFile(projectPath);
-
-  const { success, error, data: parsedData } = projectSchema.safeParse(data);
-
-  if (!success) {
-    throw new Error(z.prettifyError(error));
-  }
-
   return {
-    ...parsedData,
-    slug: path.basename(slug, '.md'),
-    content,
+    ...(await parseMarkdownFile(projectPath, projectSchema, locale)),
+    slug,
   };
+};
+
+export const getExperienceData = async (locale: Locale = 'en') => {
+  'use cache';
+  const folderPath = path.join(process.cwd(), 'content', locale, 'experience');
+  const markdownFiles = await listMarkdownFiles(folderPath);
+
+  const experience = await Promise.all(
+    markdownFiles.map(async (file) => ({
+      ...(await parseMarkdownFile(
+        path.join(folderPath, file),
+        experienceSchema,
+        locale
+      )),
+      slug: path.basename(file, '.md'),
+    }))
+  );
+
+  return experience.sort(
+    (a, b) =>
+      Number(b.end === null) - Number(a.end === null) ||
+      b.start.getTime() - a.start.getTime()
+  );
 };
 
 const loadMarkdownFile = async (filePath: string) => {
@@ -88,4 +81,25 @@ const loadMarkdownFile = async (filePath: string) => {
   const { data, content } = matter(raw);
 
   return { data, content };
+};
+
+const parseMarkdownFile = async <T extends { lang: Locale }>(
+  filePath: string,
+  schema: z.ZodType<T>,
+  locale: Locale
+) => {
+  const { data, content } = await loadMarkdownFile(filePath);
+  const result = schema.safeParse(data);
+
+  if (!result.success) {
+    throw new Error(`${filePath}\n${z.prettifyError(result.error)}`);
+  }
+
+  if (result.data.lang !== locale) {
+    throw new Error(
+      `${filePath}: lang is "${result.data.lang}" but the folder is "${locale}"`
+    );
+  }
+
+  return { ...result.data, content };
 };
