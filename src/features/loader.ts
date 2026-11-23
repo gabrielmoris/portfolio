@@ -29,16 +29,20 @@ export const getProjectsData = async (locale: Locale = 'en') => {
 
 export const getProjectData = async (locale: Locale = 'en', slug: string) => {
   'use cache';
-  const projectPath = path.join(
-    process.cwd(),
-    'content',
-    locale,
-    'projects',
-    slug + '.md'
-  );
+  const folderPath = path.join(process.cwd(), 'content', locale, 'projects');
+  const markdownFiles = await listMarkdownFiles(folderPath);
+  const fileName = `${slug}.md`;
+
+  if (!markdownFiles.includes(fileName)) {
+    return null;
+  }
 
   return {
-    ...(await parseMarkdownFile(projectPath, projectSchema, locale)),
+    ...(await parseMarkdownFile(
+      path.join(folderPath, fileName),
+      projectSchema,
+      locale
+    )),
     slug,
   };
 };

@@ -49,13 +49,11 @@ describe('getProjectsData', () => {
 describe('getProjectData', () => {
   it('returns the project matching a slug', async () => {
     const projectData = await getProjectData('en', 'refhub');
-    expect(projectData.slug).toBe('refhub');
+    expect(projectData?.slug).toBe('refhub');
   });
 
-  it('throws for a slug that does not exist', async () => {
-    await expect(getProjectData('en', 'non-existent-slug')).rejects.toThrow(
-      'ENOENT'
-    );
+  it('returns null for a slug that does not exist', async () => {
+    await expect(getProjectData('en', 'non-existent-slug')).resolves.toBeNull();
   });
 
   it('loads every project returned by getProjectsData by its slug', async () => {
@@ -63,7 +61,7 @@ describe('getProjectData', () => {
 
     for (const { slug } of projects) {
       const project = await getProjectData('en', slug);
-      expect(project.slug).toBe(slug);
+      expect(project?.slug).toBe(slug);
     }
   });
 });
