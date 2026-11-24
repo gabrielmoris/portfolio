@@ -1,6 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { describe, expect, it } from 'vitest';
-import { getProjectData, getProjectsData } from '@/features/loader';
+import {
+  getExperienceData,
+  getMeData,
+  getProjectData,
+  getProjectsData,
+} from '@/features/loader';
 import { projectSchema } from '@/features/schema';
 
 describe('getProjectsData', () => {
@@ -63,5 +68,27 @@ describe('getProjectData', () => {
       const project = await getProjectData('en', slug);
       expect(project?.slug).toBe(slug);
     }
+  });
+
+  it('rejects an unknown locale', async () => {
+    // @ts-expect-error fr is not a supported locale
+    await expect(getProjectData('fr', 'refhub')).rejects.toThrow('ENOENT');
+  });
+});
+
+describe('getMeData', () => {
+  it('returns about, skills, education, faq ', async () => {
+    const meData = await getMeData('en');
+    expect(meData).toHaveProperty('about');
+    expect(meData).toHaveProperty('skills');
+    expect(meData).toHaveProperty('education');
+    expect(meData).toHaveProperty('faq');
+  });
+});
+
+describe('getExperienceData', () => {
+  it('returns the 5 jobs, with any job where end is null before the finished ones, and finished jobs sorted newest first', async () => {
+    const experienceData = await getExperienceData('en');
+    expect(experienceData).toHaveLength(5);
   });
 });
